@@ -1,12 +1,12 @@
 from typing import List
 from fastapi import FastAPI
 from pydantic import BaseModel
-from summarizer import Summarize
+from Assistant_Api.summarizer import Summarize
 
 
 # class for the input JSON file
 class News_Articles(BaseModel):
-    strings: List[str]
+    articles: List[str]
 
 
 
@@ -18,9 +18,9 @@ app = FastAPI()
 @app.post("/summarize/")
 async def process_strings(payload: News_Articles):
     #get the list of strings from the JSON file
-    articles = payload.strings
+    news_articles = payload.articles
     #call the summarizer function
-    summary = Summarize(articles)
+    summary = Summarize(news_articles)
 
 
     #return JSON file with the summarized text

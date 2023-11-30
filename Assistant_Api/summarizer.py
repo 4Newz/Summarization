@@ -1,6 +1,6 @@
 import logging
 import json
-from object_mapper import serialize_assistant, serialize_chat_thread, serialize_thread_message, serialize_run
+from Assistant_Api.object_mapper import serialize_assistant, serialize_chat_thread, serialize_thread_message, serialize_run
 from openai import OpenAI
 from dotenv import load_dotenv
 import os
@@ -92,7 +92,7 @@ def Summarize(articles):
 
 
     # Retrieve the last message from the conversation thread containing the summarized text
-    summarized_text = messages.data[-1].content[0].text.value
+    summarized_text = messages.data[0].content[0].text.value
 
 
     # Delete the conversation thread once it's done
@@ -103,6 +103,9 @@ def Summarize(articles):
     # Delete the assistant once it's done
     response = client.beta.assistants.delete(my_assistant.id)
     logging.info(f"Assistant deleted: {response}")
+
+
+    logging.info(f"Summarized text: {summarized_text}")
 
     return summarized_text
 
