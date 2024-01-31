@@ -1,1 +1,1 @@
-# Summarization
+pip install -r requirements.txt

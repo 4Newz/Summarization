@@ -4,6 +4,7 @@ from pydantic import BaseModel
 from Assistant_Api.summarizer import Summarize
 from Similarity.similarity import Similarity
 from fastapi.responses import JSONResponse
+from Chirava.chirava import Scraper
 
 from dotenv import load_dotenv
 import json
@@ -23,6 +24,8 @@ class Similarity_Payload(BaseModel):
     prompt: str
     articles: List[Article]
 
+class Chirava_Payload(BaseModel):
+    url: str
 
 app = FastAPI()
 
@@ -52,6 +55,18 @@ async def get_similarity(payload: Similarity_Payload):
     print(response)
     return response
 
+@app.post("/chirava")
+async def get_chirava(payload: Chirava_Payload):
+    response = {}
+    try:
+        if len(payload.url):
+            scraper = Scraper(payload.url)
+            output = await scraper.runner()
+        response["data"] = output
+    except Exception as e:
+        response["error"] = str(e)
+    print(response)
+    return response
 
 @app.get("/")
 async def root():
