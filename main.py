@@ -27,6 +27,16 @@ class Similarity_Payload(BaseModel):
 class Chirava_Payload(BaseModel):
     url: str
 
+class Chirava_Response(BaseModel):
+    title: str
+    text: str
+    keywords: list
+    summary: str
+    authors: list
+    publish_date: str = None
+    top_image: str
+    error: str = None
+
 app = FastAPI()
 
 
@@ -56,18 +66,17 @@ async def get_similarity(payload: Similarity_Payload):
     return response
 
 @app.post("/chirava")
-async def get_chirava(payload: Chirava_Payload):
-    response = {}
+async def get_chirava(payload: Chirava_Payload) -> Chirava_Response:
+    response = Chirava_Response()
     try:
         if len(payload.url):
             scraper = Scraper(payload.url)
             output = await scraper.runner()
-        response["data"] = output
+            response = Chirava_Response(**output)
     except Exception as e:
-        response["error"] = str(e)
-    print(response)
+        response.error = str(e)
     return response
 
 @app.get("/")
 async def root():
-    return {"message": "Hello World"}
+    return {"message": "Hello World from 1-news-app backend!"}

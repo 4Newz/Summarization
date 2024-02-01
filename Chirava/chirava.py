@@ -8,7 +8,7 @@ class Scraper:
         self.article.parse()
         self.article.nlp()
     async def runner(self):
-        response = {
+        return {
             "title": self.article.title,
             "text": self.article.text,
             "keywords": self.article.keywords,
@@ -17,4 +17,3 @@ class Scraper:
             "publish_date": self.article.publish_date,
             "top_image": self.article.top_image,
         }
-        return response
