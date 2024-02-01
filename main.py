@@ -12,7 +12,7 @@ import json
 
 # class for the input JSON file
 class News_Articles(BaseModel):
-    articles: List[str]
+    news_articles: List[Article]
 
 
 class Article(BaseModel):
