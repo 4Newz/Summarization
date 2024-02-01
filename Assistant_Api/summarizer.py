@@ -48,10 +48,13 @@ def Summarize(articles):
 
     # Sending messages to the conversation thread 
     for i in range(len(articles)):
+        # Format the content
+        content = f"{articles[i].date} - {articles[i].heading}\n{articles[i].content}"
+        
         thread_message = client.beta.threads.messages.create(
             thread_id=chat_thread.id,
             role="user",
-            content=articles[i],
+            content=content,
         )
         # logging.info(f"Thread message sent: {serialize_thread_message(thread_message)}")
         logging.info(f"Thread message sent: {thread_message}")

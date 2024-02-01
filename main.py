@@ -1,6 +1,7 @@
 from typing import List
 from fastapi import FastAPI
 from pydantic import BaseModel
+from typing import List
 from Assistant_Api.summarizer import Summarize
 from Similarity.similarity import Similarity
 from fastapi.responses import JSONResponse
@@ -11,14 +12,15 @@ import json
 
 
 # class for the input JSON file
-class News_Articles(BaseModel):
-    news_articles: List[Article]
-
 
 class Article(BaseModel):
     heading: str
     content: str
+    date: str
 
+class News_Articles(BaseModel):
+    prompt: str
+    news_articles: List[Article]
 
 class Similarity_Payload(BaseModel):
     prompt: str
@@ -37,13 +39,14 @@ class Chirava_Response(BaseModel):
     top_image: str
     error: str = None
 
+
 app = FastAPI()
 
 
 @app.post("/summarize/")
 async def process_strings(payload: News_Articles):
     # get the list of strings from the JSON file
-    news_articles = payload.articles
+    news_articles = payload.news_articles
     # call the summarizer function
     summary = Summarize(news_articles)
 
