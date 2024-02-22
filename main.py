@@ -1,23 +1,21 @@
 from typing import List, Optional
 from fastapi import FastAPI
 from pydantic import BaseModel
-from typing import List
 from Assistant_Api.summarizer import Summarize
 from Similarity.similarity import Similarity
+from newsAPI.open_news_data import get_articles_newsAPI, get_articles_newsDataAPI
 from fastapi.responses import JSONResponse
 from Chirava.chirava import Scraper
-
-from dotenv import load_dotenv
-import json
-
-
-# class for the input JSON file
+import logging
 
 
 class Article(BaseModel):
-    heading: str
-    content: str
-    date: str
+    heading: Optional[str] = None
+    content: Optional[str] = None
+    date: Optional[str] = None
+    url: Optional[str] = None
+    source: Optional[str] = None
+    urlToImage: Optional[str] = None
 
 
 class News_Articles(BaseModel):
@@ -27,7 +25,7 @@ class News_Articles(BaseModel):
 
 class Similarity_Payload(BaseModel):
     prompt: str
-    articles: List[Article]
+    news_articles: List[Article]
 
 
 class Chirava_Payload(BaseModel):
@@ -45,14 +43,10 @@ class Chirava_Response(BaseModel):
     error: str = None
 
 
-class Article(BaseModel):
-    heading: str
-    content: str
-
-
 class Get_Article_Payload(BaseModel):
     heading: str
     articles: Optional[List[Article]] = None
+
 
 
 app = FastAPI()
@@ -100,9 +94,55 @@ async def get_chirava(payload: Chirava_Payload) -> Chirava_Response:
     return response
 
 
+
+
+
 @app.get("/")
 async def root():
     return {"message": "Hello World from 1-news-app backend!"}
+
+
+
+
+
+
+# create a new get route for news fetching with return type as News_Articles
+@app.get("/newsfetch")
+async def get_news(query: str) -> News_Articles:
+    # get the articles from the News API first and then from the NewsData API and then combine them into a single News_Articles class
+    list_of_articles = []
+
+    # get the articles from the News API
+    try:
+        response = get_articles_newsAPI(query, number_of_articles = 20 )
+        list_of_articles.extend(response)
+
+    except Exception as e:
+        print(f"Error getting articles: {str(e)}")
+        logging.error(f"Error getting articles: {str(e)}")
+        return None
+
+    # get the articles from the NewsData API
+    try:
+        response = get_articles_newsDataAPI(query)
+        list_of_articles.extend(response)
+
+    except Exception as e:
+        print(f"Error getting articles: {str(e)}")
+        logging.error(f"Error getting articles: {str(e)}")
+        return None
+
+    # return the combined list of articles
+    news = News_Articles(prompt=query, news_articles=list_of_articles)
+    return news
+
+
+
+
+
+
+
+
 
 
 @app.post("/article")

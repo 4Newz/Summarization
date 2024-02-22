@@ -10,7 +10,7 @@ import time
 
 # Configure logging with a custom format
 logging.basicConfig(
-    filename='app.log',
+    filename='openAI.log',
     level=logging.INFO,
     format='%(asctime)s - %(levelname)s - %(message)s',
     datefmt='%Y-%m-%d %H:%M:%S'  # Custom date format
