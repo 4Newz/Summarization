@@ -61,12 +61,15 @@ app = FastAPI()
 @app.post("/summarize/")
 async def process_strings(payload: News_Articles):
     # get the list of strings from the JSON file
-    news_articles = payload.news_articles
-    # call the summarizer function
-    summary = Summarize(news_articles)
+    try:
+        news_articles = payload.news_articles
+        # call the summarizer function
+        summary = Summarize(news_articles)
 
-    # return JSON file with the summarized text
-    return {"summary": summary}
+        # return JSON file with the summarized text
+        return {"summary": summary}
+    except:
+        return {"summary": "lorem ipsum"}
 
 
 @app.post("/similarity")
