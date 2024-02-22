@@ -20,9 +20,9 @@ logging.basicConfig(
 load_dotenv()
 
 # Access the API key from the environment variables
-openai_api_key = os.getenv("OPENAI_API_KEY")
+# openai_api_key = os.getenv("OPENAI_API_KEY")
 
-client = OpenAI()
+# client = OpenAI()
 
 
 

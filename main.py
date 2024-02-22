@@ -35,12 +35,12 @@ class Chirava_Payload(BaseModel):
 class Chirava_Response(BaseModel):
     title: str
     text: str
-    keywords: list
+    keywords: List[str]
     summary: str
-    authors: list
-    publish_date: str = None
+    authors: List[str]
+    publish_date: Optional[str]
     top_image: str
-    error: str = None
+    error: Optional[str]
 
 
 class Get_Article_Payload(BaseModel):
@@ -80,15 +80,12 @@ async def get_similarity(payload: Similarity_Payload):
 
 @app.post("/chirava")
 async def get_chirava(payload: Chirava_Payload) -> Chirava_Response:
-    response = Chirava_Response()
     try:
-        if len(payload.url):
-            scraper = Scraper(payload.url)
-            output = await scraper.runner()
-            response = Chirava_Response(**output)
+        scraper = Scraper(payload.url)
+        output = await scraper.runner()
+        return Chirava_Response(**output)
     except Exception as e:
-        response.error = str(e)
-    return response
+        return Chirava_Response(error=str(e))
 
 
 

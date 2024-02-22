@@ -7,13 +7,29 @@ class Scraper:
         self.article.download()
         self.article.parse()
         self.article.nlp()
+        print("Scraper class created")
+
     async def runner(self):
-        return {
-            "title": self.article.title,
-            "text": self.article.text,
-            "keywords": self.article.keywords,
-            "summary": self.article.summary,
-            "authors": self.article.authors,
-            "publish_date": self.article.publish_date,
-            "top_image": self.article.top_image,
+        output = {
+            "title": "",
+            "text": "",
+            "keywords": [],
+            "summary": "",
+            "authors": [],
+            "publish_date": None,
+            "top_image": "",
+            "error": None
         }
+
+        try:
+            output["title"] = self.article.title
+            output["text"] = self.article.text
+            output["keywords"] = self.article.keywords
+            output["summary"] = self.article.summary
+            output["authors"] = self.article.authors
+            output["publish_date"] = str(self.article.publish_date)
+            output["top_image"] = self.article.top_image
+        except Exception as e:
+            output["error"] = str(e)
+
+        return output
