@@ -3,4 +3,7 @@
 .vscode
 app.log
 /env
+newsApp.log
+openAI.log
+```
 
