@@ -7,7 +7,7 @@ class Scraper:
         self.article.download()
         self.article.parse()
         self.article.nlp()
-        print("Scraper class created")
+        # print("Scraper class created")
 
     async def runner(self):
         output = {

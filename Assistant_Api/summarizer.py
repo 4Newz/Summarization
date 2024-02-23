@@ -9,55 +9,56 @@ import time
 
 
 # Configure logging with a custom format
-logging.basicConfig(
-    filename='openAI.log',
-    level=logging.INFO,
-    format='%(asctime)s - %(levelname)s - %(message)s',
-    datefmt='%Y-%m-%d %H:%M:%S'  # Custom date format
-)
+logger = logging.getLogger(__name__)
+handler = logging.FileHandler('openAI.log')
+formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')
+handler.setFormatter(formatter)
+logger.addHandler(handler)
+logger.setLevel(logging.INFO)
+
 
 # Load environment variables from .env file
 load_dotenv()
 
 # Access the API key from the environment variables
-# openai_api_key = os.getenv("OPENAI_API_KEY")
+openai_api_key = os.getenv("OPENAI_API_KEY")
 
-# client = OpenAI()
-
-
+client = OpenAI()
 
 
 
-def Summarize(articles):
+
+
+async def Summarize(articles, prompt):
 
     # Create assistant and log the response using object mapper serialization
     my_assistant = client.beta.assistants.create(
-        instructions="You are a professional journalist. Summarize the given articles to form a structured chronological ordered story or news without loss of information.",
+        instructions = f"You are a professional journalist for a news paper. Summarize the given articles to form a structured chronological ordered story or news on the topic {prompt} without loss of information.",
         name="NewsAI",
         model="gpt-3.5-turbo-1106",
     )
-    logging.info(f"Assistant created: {serialize_assistant(my_assistant)}")
+    logger.info(f"Assistant created: {serialize_assistant(my_assistant)}")
 
 
 
     # conversation thread and log the response using object mapper serialization
     chat_thread = client.beta.threads.create()
-    logging.info(f"Chat thread created: {serialize_chat_thread(chat_thread)}")
+    logger.info(f"Chat thread created: {serialize_chat_thread(chat_thread)}")
 
 
 
-    # Sending messages to the conversation thread 
+    # Sending messages to the conversation thread
     for i in range(len(articles)):
         # Format the content
         content = f"{articles[i].date} - {articles[i].heading}\n{articles[i].content}"
-        
+
         thread_message = client.beta.threads.messages.create(
             thread_id=chat_thread.id,
             role="user",
             content=content,
         )
-        # logging.info(f"Thread message sent: {serialize_thread_message(thread_message)}")
-        logging.info(f"Thread message sent: {thread_message}")
+        # logger.info(f"Thread message sent: {serialize_thread_message(thread_message)}")
+        logger.info(f"Thread message sent: {thread_message}")
 
 
 
@@ -66,7 +67,7 @@ def Summarize(articles):
         thread_id=chat_thread.id,
         assistant_id=my_assistant.id
     )
-    logging.info(f"Run created: {serialize_run(run)}")
+    logger.info(f"Run created: {serialize_run(run)}")
 
 
 
@@ -77,11 +78,11 @@ def Summarize(articles):
             run_id=run.id
         )
         status = run.status
-        logging.info(f"Run status: {status}")
+        logger.info(f"Run status: {status}")
 
         if status in ["completed", "failed", "cancelled", "expired"]:
             break
-        
+
         time.sleep(2)  # Wait for 5 seconds before checking again
 
 
@@ -91,7 +92,7 @@ def Summarize(articles):
         thread_id=chat_thread.id,
     )
     # print(messages.data)
-    logging.info(f"Messages retrieved: {serialize_thread_message(messages.data)}")
+    logger.info(f"Messages retrieved: {serialize_thread_message(messages.data)}")
 
 
     # Retrieve the last message from the conversation thread containing the summarized text
@@ -100,15 +101,15 @@ def Summarize(articles):
 
     # Delete the conversation thread once it's done
     response = client.beta.threads.delete(chat_thread.id)
-    logging.info(f"Thread deleted: {response}")
+    logger.info(f"Thread deleted: {response}")
 
-    
+
     # Delete the assistant once it's done
     response = client.beta.assistants.delete(my_assistant.id)
-    logging.info(f"Assistant deleted: {response}")
+    logger.info(f"Assistant deleted: {response}")
 
 
-    logging.info(f"Summarized text: {summarized_text}")
+    logger.info(f"Summarized text: {summarized_text}")
 
     return summarized_text
 

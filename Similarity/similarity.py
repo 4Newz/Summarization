@@ -3,6 +3,7 @@ from sklearn.metrics.pairwise import cosine_similarity
 from pydantic import BaseModel
 from transformers import BertTokenizer, BertModel
 import numpy
+from typing import Optional
 
 from dotenv import load_dotenv
 import asyncio
@@ -10,11 +11,29 @@ import requests
 import json
 import os
 import statistics
+import logging
+
+
+# Configure logging with a custom format
+logger = logging.getLogger(__name__)
+handler = logging.FileHandler("similarity.log")
+formatter = logging.Formatter("%(asctime)s - %(name)s - %(levelname)s - %(message)s")
+handler.setFormatter(formatter)
+logger.addHandler(handler)
+logger.setLevel(logging.INFO)
+
+
 
 
 class Article(BaseModel):
-    heading: str
-    content: str
+    heading: Optional[str] = None
+    content: Optional[str] = None
+    date: Optional[str] = None
+    url: Optional[str] = None
+    source: Optional[str] = None
+    urlToImage: Optional[str] = None
+    Similarity: Optional[float] = None
+    db_source: Optional[str] = None
 
 
 class Similarity:
@@ -28,13 +47,17 @@ class Similarity:
         self.tokenizer = None
 
     async def runner(self):
+        logger.info("Running similarity runner")
         async def cosine_runner():
+            logger.info("Running cosine runner")
             return [self.cosine(self.prompt, text.content) for text in self.text]
 
         async def bert_runner():
+            logger.info("Running bert runner")
             return [self.bert(self.prompt, text.content) for text in self.text]
 
         async def sentence_transformer_runner():
+            logger.info("Running sentence transformer runner")
             return self.sentence_transformer(
                 self.prompt, [text.content for text in self.text]
             )
@@ -42,17 +65,26 @@ class Similarity:
         result = await asyncio.gather(
             cosine_runner(), bert_runner(), sentence_transformer_runner()
         )
-        output = []
-        for i in range(len(self.text)):
-            output.append(
-                {
-                    "cosine": result[0][i],
-                    "bert": result[1][i],
-                    "hf": result[2][i],
-                }
-            )
 
-        return output
+        # combine the scores from the different similarity methods using weights and store the result in the Similarity field
+        weights = [0.2, 0.4, 0.4]
+
+        for i in range(len(self.text)):
+            self.text[i].Similarity = sum(
+                [result[j][i] * weights[j] for j in range(len(result))]
+            )
+        logger.info(f"Returning similarity scores: {self.text} ")
+        return self.text
+
+        # output = []
+        # for i in range(len(self.text)):
+        #     output.append(
+        #         {
+        #             "cosine": result[0][i],
+        #             "bert": result[1][i],
+        #             "hf": result[2][i],
+
+        # return output
 
     def cosine(self, text1: str, text2: str):
         vectors = self.vectorizer.fit_transform([text1, text2])
@@ -113,5 +145,5 @@ class Similarity:
             }
         }
         response = requests.post(url, data=json.dumps(data), headers=headers)
-        print(response.json())
+        # print(response.json())
         return response.json()
