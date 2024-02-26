@@ -11,12 +11,11 @@ import logging
 
 # Configure logging with a custom format
 logger = logging.getLogger(__name__)
-handler = logging.FileHandler('app.log')
-formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')
+handler = logging.FileHandler("app.log")
+formatter = logging.Formatter("%(asctime)s - %(name)s - %(levelname)s - %(message)s")
 handler.setFormatter(formatter)
 logger.addHandler(handler)
 logger.setLevel(logging.INFO)
-
 
 
 class Article(BaseModel):
@@ -80,17 +79,21 @@ async def process_strings(payload: News_Articles):
 
 @app.post("/similarity")
 async def get_similarity(payload: Similarity_Payload):
-    try:
-        if len(payload.news_articles):
-            similarity = Similarity(payload.prompt, payload.news_articles)
-            output = await similarity.runner()
-        response = News_Articles(prompt=payload.prompt, news_articles=output)
+    max_tries = 2
+    while max_tries:
+        try:
+            if len(payload.news_articles):
+                similarity = Similarity(payload.prompt, payload.news_articles)
+                output = await similarity.runner()
+            response = News_Articles(prompt=payload.prompt, news_articles=output)
 
-    except Exception as e:
-        res = {}
-        res["error"] = str(e)
-        return res
-    return response
+            return response
+        except Exception as e:
+            if max_tries == 0:
+                res = {}
+                res["error"] = str(e)
+                return res
+            print("Sim Failed", e)
 
 
 @app.post("/chirava")
@@ -116,7 +119,7 @@ async def get_news(query: str) -> News_Articles:
 
     # get the articles from the News API
     try:
-        response = News_Fetcher.get_articles_newsAPI(query, number_of_articles = 30 )
+        response = News_Fetcher.get_articles_newsAPI(query, number_of_articles=30)
         list_of_articles.extend(response)
 
     except Exception as e:
@@ -139,19 +142,11 @@ async def get_news(query: str) -> News_Articles:
     return news
 
 
-
-
-
-
 ##############################################################################################
-
-
-
 
 
 # combine all the routes into a single route one where news is fetched, then scraped and scored for similarity, with highest similar news in top and then sent to summarizer
 @app.get("/kamisama_tasukete")
-
 async def newsAI_api_v1(query: str) -> News_Articles:
     # get news from News_Fetcher
     try:
@@ -165,7 +160,6 @@ async def newsAI_api_v1(query: str) -> News_Articles:
     except Exception as e:
         logger.error(f"Error getting news articles: {str(e)}")
         return JSONResponse(status_code=500, content={"message": str(e)})
-
 
     data = News_Articles(prompt=query, news_articles=response_newsArticles)
 
@@ -184,20 +178,22 @@ async def newsAI_api_v1(query: str) -> News_Articles:
             data.news_articles[i] = None
 
     # remove the articles with None content
-    for i in range(len(data.news_articles)-1, -1, -1):
+    for i in range(len(data.news_articles) - 1, -1, -1):
         if data.news_articles[i] is None:
             del data.news_articles[i]
 
-
-
     # get similarity scores
-    try:
-        similarity = Similarity(query, data.news_articles)
-        response_similarity = await similarity.runner()
-        logger.info("Similarity scores retrieved successfully")
-    except Exception as e:
-        logger.error(f"Error getting similarity scores: {str(e)}")
-        return JSONResponse(status_code=500, content={"message": str(e)})
+    similarity_retries = 2
+    while similarity_retries:
+        try:
+            similarity = Similarity(query, data.news_articles)
+            response_similarity = await similarity.runner()
+            logger.info("Similarity scores retrieved successfully")
+            break
+        except Exception as e:
+            logger.error(f"Error getting similarity scores: {str(e)}")
+            if similarity_retries == 0:
+                return JSONResponse(status_code=500, content={"message": str(e)})
 
     data.news_articles = response_similarity
 
@@ -211,17 +207,3 @@ async def newsAI_api_v1(query: str) -> News_Articles:
     data.summary = summary
 
     return data
-
-
-
-
-
-
-
-
-
-
-
-
-
-

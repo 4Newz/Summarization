@@ -23,8 +23,6 @@ logger.addHandler(handler)
 logger.setLevel(logging.INFO)
 
 
-
-
 class Article(BaseModel):
     heading: Optional[str] = None
     content: Optional[str] = None
@@ -47,20 +45,22 @@ class Similarity:
         self.tokenizer = None
 
     async def runner(self):
-        logger.info("Running similarity runner")
         async def cosine_runner():
-            logger.info("Running cosine runner")
-            return [self.cosine(self.prompt, text.content) for text in self.text]
+            result = [self.cosine(self.prompt, text.content) for text in self.text]
+            logger.info("Executed cosine runner")
+            return result
 
         async def bert_runner():
-            logger.info("Running bert runner")
-            return [self.bert(self.prompt, text.content) for text in self.text]
+            result = [self.bert(self.prompt, text.content) for text in self.text]
+            logger.info("Executed bert runner")
+            return result
 
         async def sentence_transformer_runner():
-            logger.info("Running sentence transformer runner")
-            return self.sentence_transformer(
+            result = self.sentence_transformer(
                 self.prompt, [text.content for text in self.text]
             )
+            logger.info("Executed sentence transformer runner")
+            return result
 
         result = await asyncio.gather(
             cosine_runner(), bert_runner(), sentence_transformer_runner()

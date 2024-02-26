@@ -1,6 +1,7 @@
 .venv
 .env
 .vscode
+*.log
 app.log
 /env
 newsApp.log
