@@ -6,5 +6,7 @@ app.log
 /env
 newsApp.log
 openAI.log
+
+*.pyc
 ```
 
