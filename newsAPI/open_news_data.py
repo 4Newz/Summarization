@@ -35,6 +35,7 @@ class Article(BaseModel):
     urlToImage: Optional[str] = None
     Similarity: Optional[float] = None
     db_source: Optional[str] = None
+    nlp_summary: Optional[str] = None
 
 
 

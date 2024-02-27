@@ -25,11 +25,25 @@ class Article_Data(BaseModel):
     db_source: Optional[str] = None
     nlp_summary: Optional[str] = None
 
+    def to_dict(self):
+        return {
+            "heading": self.heading,
+            "content": self.content,
+            "date": self.date,
+            "url": self.url,
+            "source": self.source,
+            "urlToImage": self.urlToImage,
+            "Similarity": self.Similarity,
+            "db_source": self.db_source,
+            "nlp_summary": self.nlp_summary
+        }
+
 
 class Scraper:
     def __init__(self, data: list[Article_Data]):
         self.news_articles = data
         self.article = None
+        self.article_data = Article_Data()
 
     async def runner(self):
         logger.info("Running chirava runner....")
@@ -43,20 +57,38 @@ class Scraper:
         return [article for article in result if article is not None]
 
 
-    async def chirava(self, article: Article_Data):
+    async def chirava(self, article_data: Article_Data):
+        self.article_data = article_data
 
         try:
-            logger.info(f"Scraping article: {article.url}")
-            self.article = Article(article.url)
+            logger.info(f"Scraping article: {article_data.url}")
+            self.article = Article(article_data.url)
             self.article.download()
             self.article.parse()
             self.article.nlp()
 
-            Article_Data.content = self.article.text
-            Article_Data.nlp_summary = self.article.summary
-            return self.article
+            # update the article object with the new data
+            # resultant_article = Article_Data(
+            #     heading=article_data.heading,
+            #     content=self.article.text,
+            #     date=article_data.date,
+            #     url=article_data.url,
+            #     source=article_data.source,
+            #     urlToImage=article_data.urlToImage,
+            #     Similarity=article_data.Similarity,
+            #     db_source=article_data.db_source,
+            #     nlp_summary=self.article.summary
+            # )
+
+            article_data.content = self.article.text
+            article_data.nlp_summary = self.article.summary
+
+            # logger.info(f"Scraped article type: {type(resultant_article)}")
+            # logger.info(f"return article: {resultant_article}")
+            return article_data
+            # return resultant_article
         except Exception as e:
-            logger.error(f"Error scraping article: {article.url}")
+            logger.error(f"Error scraping article: {article_data.url}")
             logger.error(str(e))
             return None
 

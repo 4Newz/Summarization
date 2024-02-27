@@ -7,7 +7,7 @@ from newsAPI.open_news_data import News_Fetcher
 from fastapi.responses import JSONResponse
 from Chirava.chirava import Scraper
 import logging
-import uvicorn
+import uvicorn, json
 
 # Configure logging with a custom format
 logger = logging.getLogger(__name__)
@@ -77,10 +77,12 @@ async def get_similarity(payload: Similarity_Payload):
             if len(payload.news_articles):
                 similarity = Similarity(payload.prompt, payload.news_articles)
                 output = await similarity.runner()
+                max_tries = 0
             response = News_Articles(prompt=payload.prompt, news_articles=output)
 
             return response
         except Exception as e:
+            max_tries -= 1
             if max_tries == 0:
                 res = {}
                 res["error"] = str(e)
@@ -105,7 +107,7 @@ async def root():
 
 # create a new get route for news fetching with return type as News_Articles
 @app.get("/newsfetch")
-async def get_news(query: str) -> News_Articles:
+async def get_news_v2(query: str) -> News_Articles:
     # get the articles from the News API first and then from the NewsData API and then combine them into a single News_Articles class
     list_of_articles = []
 
@@ -145,9 +147,10 @@ async def newsAI_api_v1(query: str, model: str) -> News_Articles:
     # get news from News_Fetcher
     try:
         if query:
-            get_news = News_Fetcher(query, 30)
+            get_news = News_Fetcher(query, 5)
             response_newsArticles = await get_news.runner()
             logger.info("News articles retrieved successfully")
+            logger.info(f"Number of news articles retrieved: {len(response_newsArticles)}")
         else:
             logger.error("Bad Request - No query provided")
             return JSONResponse(status_code=400, content={"message": "Bad Request"})
@@ -161,26 +164,27 @@ async def newsAI_api_v1(query: str, model: str) -> News_Articles:
     try:
         scraper = Scraper(data.news_articles)
         data.news_articles = await scraper.runner()
-        logger.info("Chirava scraper response retrieved successfully")
+        logger.info(f"Chirava scraper response retrieved successfully")
+        # print data to log
+        # logger.info(f"data after chirava: {data}")
     except Exception as e:
         logger.error(f"Error scraping articles in main.py: {str(e)}")
         return JSONResponse(status_code=500, content={"message": str(e)})
 
-    # remove the articles with None content
-    for i in range(len(data.news_articles) - 1, -1, -1):
-        if data.news_articles[i] is None:
-            del data.news_articles[i]
+    # print data to log to evaluate the responses
+    logger.info(f"data after chirava: {json.dumps(data.dict(), indent=4)}")
 
     # get similarity scores
     similarity_retries = 2
     while similarity_retries:
         try:
-            similarity = Similarity(query, data.news_articles)
-            response_similarity = await similarity.runner()
+            similarity = Similarity(data.prompt, data.news_articles)
+            data.news_articles = await similarity.runner()
             logger.info("Similarity scores retrieved successfully")
             break
         except Exception as e:
             logger.error(f"Error getting similarity scores: {str(e)}")
+            similarity_retries -= 1
             if similarity_retries == 0:
                 return JSONResponse(status_code=500, content={"message": str(e)})
 
