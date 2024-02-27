@@ -97,9 +97,10 @@ class Similarity:
     def bert(self, text1: str, text2: str):
         # Load the BERT model
         if not (self.model and self.tokenizer):
-            self.model = BertModel.from_pretrained("bert-base-uncased")
-            self.tokenizer = BertTokenizer.from_pretrained("bert-base-uncased")
-
+            self.model = BertModel.from_pretrained("./BertModel/")
+            # self.model.save_pretrained()
+            self.tokenizer = BertTokenizer.from_pretrained("./BertTokenizer/")
+            # self.tokenizer.save_pretrained()
         model = self.model
         tokenizer = self.tokenizer
 

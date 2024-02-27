@@ -1,18 +1,40 @@
-2024-02-27 11:49:03,902 - Similarity.similarity - INFO - Executed cosine runner
-2024-02-27 11:49:03,902 - Similarity.similarity - INFO - Executed bert runner
-2024-02-27 11:49:05,807 - Similarity.similarity - INFO - Executed sentence transformer runner
-2024-02-27 11:49:05,807 - Similarity.similarity - INFO - Returning similarity scores: [] 
-2024-02-27 11:54:43,582 - Similarity.similarity - INFO - Executed cosine runner
-2024-02-27 11:54:43,583 - Similarity.similarity - INFO - Executed bert runner
-2024-02-27 11:54:45,543 - Similarity.similarity - INFO - Executed sentence transformer runner
-2024-02-27 11:54:45,543 - Similarity.similarity - INFO - Returning similarity scores: [] 
-2024-02-27 11:57:48,122 - Similarity.similarity - INFO - Executed cosine runner
-2024-02-27 11:57:48,122 - Similarity.similarity - INFO - Executed bert runner
-2024-02-27 11:57:49,984 - Similarity.similarity - INFO - Executed sentence transformer runner
-2024-02-27 11:57:49,984 - Similarity.similarity - INFO - Returning similarity scores: [] 
-2024-02-27 14:48:29,342 - Similarity.similarity - INFO - Executed cosine runner
-2024-02-27 14:49:11,801 - Similarity.similarity - INFO - Executed bert runner
-2024-02-27 14:49:14,210 - Similarity.similarity - INFO - Executed sentence transformer runner
-2024-02-27 14:49:14,311 - Similarity.similarity - INFO - Executed cosine runner
-2024-02-27 14:49:26,009 - Similarity.similarity - INFO - Executed bert runner
-2024-02-27 14:49:28,516 - Similarity.similarity - INFO - Executed sentence transformer runner
+2024-02-27 19:53:53,957 - Similarity.similarity - INFO - Executed cosine runner
+2024-02-27 19:53:55,724 - Similarity.similarity - INFO - Executed sentence transformer runner
+2024-02-27 19:54:38,470 - Similarity.similarity - INFO - Executed cosine runner
+2024-02-27 19:54:39,893 - Similarity.similarity - INFO - Executed sentence transformer runner
+2024-02-27 20:03:00,539 - __main__ - INFO - Executed cosine runner
+2024-02-27 20:03:03,047 - __main__ - INFO - Executed sentence transformer runner
+2024-02-27 20:03:31,857 - __main__ - INFO - Executed cosine runner
+2024-02-27 20:03:35,474 - __main__ - INFO - Executed sentence transformer runner
+2024-02-27 20:03:44,162 - __main__ - INFO - Executed cosine runner
+2024-02-27 20:03:51,843 - __main__ - INFO - Executed bert runner
+2024-02-27 20:03:52,680 - __main__ - INFO - Executed sentence transformer runner
+2024-02-27 20:03:52,681 - __main__ - INFO - Returning similarity scores: [Article(heading=None, content='Good Morning', date=None, url=None, source=None, urlToImage=None, Similarity=1.000000023841858, db_source=None, nlp_summary=None)] 
+2024-02-27 20:04:15,432 - __main__ - INFO - Executed cosine runner
+2024-02-27 20:04:17,637 - __main__ - INFO - Executed bert runner
+2024-02-27 20:04:18,404 - __main__ - INFO - Executed sentence transformer runner
+2024-02-27 20:04:18,404 - __main__ - INFO - Returning similarity scores: [Article(heading=None, content='Good Morning', date=None, url=None, source=None, urlToImage=None, Similarity=1.000000023841858, db_source=None, nlp_summary=None)] 
+2024-02-27 20:04:26,453 - Similarity.similarity - INFO - Executed cosine runner
+2024-02-27 20:04:29,046 - Similarity.similarity - INFO - Executed bert runner
+2024-02-27 20:04:29,744 - Similarity.similarity - INFO - Executed sentence transformer runner
+2024-02-27 20:04:29,744 - Similarity.similarity - INFO - Returning similarity scores: [Article(heading='string', content='string', date='string', url='string', source='string', urlToImage='string', Similarity=1.0000000238418578, db_source='string', nlp_summary='string')] 
+2024-02-27 20:04:39,697 - Similarity.similarity - INFO - Executed cosine runner
+2024-02-27 20:04:40,805 - Similarity.similarity - INFO - Executed bert runner
+2024-02-27 20:04:41,536 - Similarity.similarity - INFO - Executed sentence transformer runner
+2024-02-27 20:04:41,536 - Similarity.similarity - INFO - Returning similarity scores: [Article(heading='string', content='string', date='string', url='string', source='string', urlToImage='string', Similarity=1.0000000238418578, db_source='string', nlp_summary='string')] 
+2024-02-27 20:05:01,091 - Similarity.similarity - INFO - Executed cosine runner
+2024-02-27 20:05:03,301 - Similarity.similarity - INFO - Executed bert runner
+2024-02-27 20:05:04,183 - Similarity.similarity - INFO - Executed sentence transformer runner
+2024-02-27 20:05:04,183 - Similarity.similarity - INFO - Returning similarity scores: [Article(heading='string', content='string', date='string', url='string', source='string', urlToImage='string', Similarity=1.0000000238418578, db_source='string', nlp_summary='string')] 
+2024-02-27 20:08:08,452 - Similarity.similarity - INFO - Executed cosine runner
+2024-02-27 20:08:11,865 - Similarity.similarity - INFO - Executed bert runner
+2024-02-27 20:08:12,702 - Similarity.similarity - INFO - Executed sentence transformer runner
+2024-02-27 20:08:12,702 - Similarity.similarity - INFO - Returning similarity scores: [Article(heading='string', content='string', date='string', url='string', source='string', urlToImage='string', Similarity=1.0000000238418578, db_source='string', nlp_summary='string')] 
+2024-02-27 20:10:07,728 - Similarity.similarity - INFO - Executed cosine runner
+2024-02-27 20:10:08,668 - Similarity.similarity - INFO - Executed bert runner
+2024-02-27 20:10:09,573 - Similarity.similarity - INFO - Executed sentence transformer runner
+2024-02-27 20:10:09,573 - Similarity.similarity - INFO - Returning similarity scores: [Article(heading='string', content='string', date='string', url='string', source='string', urlToImage='string', Similarity=1.0000000238418578, db_source='string', nlp_summary='string')] 
+2024-02-27 21:10:46,605 - Similarity.similarity - INFO - Executed cosine runner
+2024-02-27 21:10:46,605 - Similarity.similarity - INFO - Executed bert runner
+2024-02-27 21:10:48,452 - Similarity.similarity - INFO - Executed sentence transformer runner
+2024-02-27 21:10:48,452 - Similarity.similarity - INFO - Returning similarity scores: [] 
