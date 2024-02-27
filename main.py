@@ -87,7 +87,8 @@ async def get_similarity(payload: Similarity_Payload):
                 res = {}
                 res["error"] = str(e)
                 return res
-            print("Sim Failed", e)
+            else:
+                max_tries -= 1
 
 
 @app.post("/chirava")
@@ -187,7 +188,8 @@ async def newsAI_api_v1(query: str, model: str) -> News_Articles:
             similarity_retries -= 1
             if similarity_retries == 0:
                 return JSONResponse(status_code=500, content={"message": str(e)})
-
+            else:
+                similarity_retries -= 1
     # data = News_Articles(prompt=query, news_articles=response_similarity)
 
     # get summary
