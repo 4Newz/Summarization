@@ -464,3 +464,1107 @@
 **********************************************************************
 
 2024-02-27 22:02:21,222 - Chirava.chirava - INFO - Chirava runner complete and returning result.... [Article(heading='Music Piracy Is Back, Baby', content='“You wouldn’t steal a car. You wouldn’t steal a handbag,” said that infamous 2000s anti-piracy commercial from the Motion Picture Association. “Piracy is stealing.”Read mor', date='2024-02-01T22:10:00Z', url='https://gizmodo.com/music-piracy-is-back-baby-1851218401', source='Gizmodo.com', urlToImage='https://i.kinja-img.com/image/upload/c_fill,h_675,pg_1,q_80,w_1200/6a4bb584d704297d79864bff9a17009a.jpg', Similarity=None, db_source='newsAPI', nlp_summary=None), Article(heading="Pricey stocks and homes, shaky banks, office turmoil, and people's debt woes are all worrying the Fed", content='', date='2024-02-22T14:29:46Z', url='https://www.businessinsider.com/fed-minutes-stocks-house-prices-banks-commercial-real-estate-debt-2024-2', source='Business Insider', urlToImage='https://i.insider.com/65d73673f533b039a885e272?width=1200&format=jpeg', Similarity=None, db_source='newsAPI', nlp_summary=''), Article(heading='Platinum rises from ashes of ‘dieselgate’ to outperform palladium. What’s next.', content='Platinum traded higher than palladium this month for the first time in almost six ye', date='2024-02-16T18:12:00Z', url='https://www.marketwatch.com/story/platinum-rises-from-ashes-of-dieselgate-to-outperform-palladium-whats-next-0d40415e', source='MarketWatch', urlToImage='https://images.mktw.net/im-739030/social', Similarity=None, db_source='newsAPI', nlp_summary=None), Article(heading='Car insurance rates have soared 43% since 2022 and are expected to climb more. Here’s how to lower your premiums.', content='Anyone already feeling burned by sharp increases in their auto insurance rates over the last year should buckle up — it’s only getting more expens', date='2024-02-05T05:01:00Z', url='https://www.marketwatch.com/story/car-insurance-rates-have-soared-43-since-2022-and-are-expected-to-climb-more-heres-how-to-lower-your-premiums-8bd25977', source='MarketWatch', urlToImage='https://images.mktw.net/im-38401511/social', Similarity=None, db_source='newsAPI', nlp_summary=None), Article(heading='French protests: PM offers key concessions to farmers', content='Farmers are targeting major roads around the French capital in protest against low food pri', date='2024-01-26T19:36:02Z', url='https://www.bbc.co.uk/news/world-europe-68104202', source='BBC News', urlToImage='https://ichef.bbci.co.uk/news/1024/branded_news/D11E/production/_132443535_ed7a3f5eb9eb8d0b2042a730312ff3fb2cbb9c84.jpg', Similarity=None, db_source='newsAPI', nlp_summary=None), Article(heading="Elon Musk is cutting Tesla prices because people 'don't love to buy cars in the middle of winter'", content='Tesla cut the price of its Model Y by $1,000 this month to a starting price of $35,490, saying prices will go back up in March. Tesla CEO Elon Musk posted on X the $1,000 cut is an “incentive” because “most people don’t love to buy cars in the middle of wi', date='2024-02-12T17:03:00Z', url='https://qz.com/tesla-model-y-price-elon-musk-winter-1851248293', source='Quartz India', urlToImage='https://i.kinja-img.com/image/upload/c_fill,h_675,pg_1,q_80,w_1200/e894baf8e5e09f7903c8ae888885cdf2.jpg', Similarity=None, db_source='newsAPI', nlp_summary=None), Article(heading='At $32,900, Is This 2018 Telsa Model 3 A Grand Performance?', content='Tesla’s Model 3 was the second best-selling car in California last year, losing out only its sister, the Model Y. Today’s Nice Price or No Dice Performance Model might be a good way to see what all the hubbub is about. That is, if its price proves palatabl', date='2024-02-06T13:00:00Z', url='https://jalopnik.com/at-32-900-is-this-2018-telsa-model-3-p-a-deal-1851225148', source='Jalopnik', urlToImage='https://i.kinja-img.com/image/upload/c_fill,h_675,pg_1,q_80,w_1200/dd4656a607e1ddaed1efce5556c95d23.jpg', Similarity=None, db_source='newsAPI', nlp_summary=None), Article(heading="Why Europe's farmers are taking their anger to the streets", content='Europe is swept by a wave of protests by farmers, who blame EU policies for their hards', date='2024-01-27T00:58:30Z', url='https://www.bbc.co.uk/news/world-europe-68095097', source='BBC News', urlToImage='https://ichef.bbci.co.uk/news/1024/branded_news/DA74/production/_132442955_61452082-fbfd-4f75-ac83-e486ed33d30d.jpg', Similarity=None, db_source='newsAPI', nlp_summary=None), Article(heading='Why car insurance rates are soaring', content='You’re paying a lot more for car insurance than you were in 2020. Here’s ', date='2024-02-21T12:15:00Z', url='https://www.vox.com/2024/2/21/24078362/inflation-car-insurance-distracted-driving-costs', source='Vox', urlToImage='https://cdn.vox-cdn.com/thumbor/vPg306svu-mmkHL49LcaAIpxHDU=/0x0:4800x2513/fit-in/1200x630/cdn.vox-cdn.com/uploads/chorus_asset/file/25295713/GettyImages_1953496423.jpg', Similarity=None, db_source='newsAPI', nlp_summary=None), Article(heading='This $375 Android phone surprised the heck out of me', content="It's hard to be surprised by Android phones in 2024. But this new mid-range option from Poco does exactly t", date='2024-02-10T14:00:35Z', url='https://www.digitaltrends.com/mobile/this-375-dollar-android-phone-surprised-me-poco-x6-pro/', source='Digital Trends', urlToImage='https://www.digitaltrends.com/wp-content/uploads/2024/02/POCO-X6-Pro-back.jpg?resize=1200%2C630&p=1', Similarity=None, db_source='newsAPI', nlp_summary=None), Article(heading='Warning cost of car insurance to rise this year', content='The Financial Conduct Authority says it was "monitoring" the sharp rise in insurance premi', date='2024-01-30T18:03:10Z', url='https://www.bbc.co.uk/news/business-68126885', source='BBC News', urlToImage='https://ichef.bbci.co.uk/news/1024/branded_news/0BAF/production/_130719920_mediaitem130719916.jpg', Similarity=None, db_source='newsAPI', nlp_summary=None), Article(heading="Tesla: Electric carmaker's shares slide after Musk warns of slowdown", content="The electric carmaker's shares fell by more than 12% in New York trading on Thurs", date='2024-01-26T05:28:47Z', url='https://www.bbc.co.uk/news/business-68102516', source='BBC News', urlToImage='https://ichef.bbci.co.uk/news/1024/branded_news/11065/production/_132433796_fc4561b9d97c0c6f3e09d15acf9bed1375b4e004.jpg', Similarity=None, db_source='newsAPI', nlp_summary=None), Article(heading='They Are Trying To Kill The Electric Car Again', content='Anti-EV rhetoric has been on the rise once more. Are we seeing another attempt to ruin the latest EV revolution, and will it succ', date='2024-02-10T10:00:00Z', url='https://www.forbes.com/sites/jamesmorris/2024/02/10/they-are-trying-to-kill-the-electric-car-again/', source='Forbes', urlToImage='https://imageio.forbes.com/specials-images/imageserve/65c526d5372132ff94f72744/0x0.jpg?format=jpg&height=900&width=1600&fit=bounds', Similarity=None, db_source='newsAPI', nlp_summary=None), Article(heading='What is Cost Accounting?', content='What is cost accounting? It is a process for capturing the total cost of production of your business by assessing its variable and fixed co', date='2024-02-16T14:04:30Z', url='https://smallbiztrends.com/2023/09/what-is-cost-accounting.html', source='Small Business Trends', urlToImage='https://media.smallbiztrends.com/2023/09/what-is-cost-accountiung-c-1024x576.png', Similarity=None, db_source='newsAPI', nlp_summary=None), Article(heading='Your Guide to Thrift Store Flipping', content='Thrift store flipping is a full-time or side hustle requiring specific steps, beginning with sourcing the items and then selling them onl', date='2024-01-30T11:00:12Z', url='https://smallbiztrends.com/2024/01/thrift-store-flipping.html', source='Small Business Trends', urlToImage='https://media.smallbiztrends.com/2024/01/thrift-store-flipping-10.png', Similarity=None, db_source='newsAPI', nlp_summary=None), Article(heading='Legacy Automakers Beware: Cheaper Chinese EVs Could Make You Obsolete', content='Legacy automakers could be walking into a trap. Chinese brands are coming, promising similar or better quality for lower prices – and their focus is on ', date='2024-02-24T10:00:00Z', url='https://www.forbes.com/sites/jamesmorris/2024/02/24/legacy-automakers-beware-cheaper-chinese-evs-could-make-you-obsolete/', source='Forbes', urlToImage='https://imageio.forbes.com/specials-images/imageserve/65d8bcf1c302460a8b991698/0x0.jpg?format=jpg&height=900&width=1600&fit=bounds', Similarity=None, db_source='newsAPI', nlp_summary=None), Article(heading='A Cycle of Misery: The business of building commercial aircraft', content='"There are no historic precedents or current parallels for the magnitude of financial exposure risked by an American airframe company" – George Ball, managing director at Lehman Brothers, 1982 "You can\'t win, you can\'t break even, and you can\'t quit" – Jea', date='2024-02-11T21:54:55Z', url='https://www.construction-physics.com/p/a-cycle-of-misery-the-business-of', source='Construction-physics.com', urlToImage='https://substackcdn.com/image/fetch/w_1200,h_600,c_fill,f_jpg,q_auto:good,fl_progressive:steep,g_auto/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F1f6c70d0-3cd7-4c7b-a137-92c546166d62_1300x934.png', Similarity=None, db_source='newsAPI', nlp_summary=None), Article(heading="New and used car prices are still soaring and show no sign of dropping. Here's why", content='The cost of new and second hand vehicles has sky-rocketed, adding to cost-of-living pressures already being experienced by most Australians. This is the reason, writes Vinh T', date='2024-02-07T04:40:36Z', url='https://www.abc.net.au/news/2024-02-07/new-car-second-hand-where-to-find-a-good-deal/103432990', source='ABC News (AU)', urlToImage='https://live-production.wcms.abc-cdn.net.au/09de9cf01f3e4a1256c5a10264bc10df?impolicy=wcms_crop_resize&cropH=472&cropW=840&xPos=0&yPos=0&width=862&height=485', Similarity=None, db_source='newsAPI', nlp_summary=None), Article(heading='‘Opening all these stores but they can’t pay the employees more’: Customer slams Dollar Tree for increasing prices to $1.50', content='A Dollar Tree customer posted a viral video saying the store raised its prices from $1.25 to $1.50. Viewers say some locations have items up to $5.\n\n\nHolly Brooke (@hollybrooke92) has reached over 2.2 million views and 118,000 likes on her video by Wednesd', date='2024-02-15T01:00:00Z', url='https://www.dailydot.com/?p=1525360', source='The Daily Dot', urlToImage='https://uploads.dailydot.com/2024/02/dollar-tree-now-more-expensive.jpg?auto=compress&fm=pjpg', Similarity=None, db_source='newsAPI', nlp_summary=None), Article(heading='What To Expect From Booking Holdings’ Q4 After Stock Up A Strong 84% Since 2023?', content='We expect the company’s stock to likely trade lower with revenues and earnings missing market expectations margina', date='2024-02-21T17:00:53Z', url='https://www.forbes.com/sites/greatspeculations/2024/02/21/what-to-expect-from-booking-holdings-q4-after-stock-up-a-strong-84-since-2023/', source='Forbes', urlToImage='https://imageio.forbes.com/specials-images/imageserve/65d6121e01bacced7efc823e/0x0.jpg?format=jpg&height=900&width=1600&fit=bounds', Similarity=None, db_source='newsAPI', nlp_summary=None), Article(heading='2023 Chevy Bolt EUV Is A Steal With Advanced Driver Assist Tech', content='General Motors doesn’t get the street cred it deserves. But I give the Chevy Bolt EUV a lot of cred — Tesla enthusiasts notwithstand', date='2024-01-28T22:32:08Z', url='https://www.forbes.com/sites/brookecrothers/2024/01/28/2023-chevy-bolt-euv-is-a-steal-with-advanced-driver-assist-tech/', source='Forbes', urlToImage='https://imageio.forbes.com/specials-images/imageserve/65b6d416321500ee3dd224b1/0x0.jpg?format=jpg&height=900&width=1600&fit=bounds', Similarity=None, db_source='newsAPI', nlp_summary=None), Article(heading='The New 2024 Porsche Taycan Goes Much Further And Charges Even Quicker', content='Porsche has just revealed the new Taycan EV, and while little has changed on the outside, much is new under the s', date='2024-02-06T23:15:00Z', url='https://www.forbes.com/sites/alistaircharlton/2024/02/06/the-new-2024-porsche-taycan-goes-much-further-and-charges-even-quicker/', source='Forbes', urlToImage='https://imageio.forbes.com/specials-images/imageserve/65c2048113d6515a219ad2c5/0x0.jpg?format=jpg&height=900&width=1600&fit=bounds', Similarity=None, db_source='newsAPI', nlp_summary=None), Article(heading='AfCFTA: Can Africa’s new trade treaty boost business on the continent?', content='African countries that have long traded with others outside the continent are now shipping goods to each ot', date='2024-02-16T12:47:11Z', url='https://www.aljazeera.com/news/2024/2/16/afcfta-can-africas-new-trade-treaty-boost-business-on-the-continent', source='Al Jazeera English', urlToImage='https://www.aljazeera.com/wp-content/uploads/2023/08/AP22036570863291-1692704711.jpg?resize=1920%2C1440', Similarity=None, db_source='newsAPI', nlp_summary=None), Article(heading='A New Driver Of Gold?', content='BMO argues that the relationship between gold and real interest rates has weaken', date='2024-01-30T14:48:11Z', url='https://www.forbes.com/sites/greatspeculations/2024/01/30/a-new-driver-of-gold/', source='Forbes', urlToImage='https://imageio.forbes.com/specials-images/imageserve/65b90ac54fcd1efe7163568b/0x0.jpg?format=jpg&height=900&width=1600&fit=bounds', Similarity=None, db_source='newsAPI', nlp_summary=None), Article(heading='‘Lousy Month’: CNBC Host Breaks Down Where Rising Prices Are Squeezing Americans', content='CNBC Host Steve Liesman explained on Tuesday that multiple sectors experienced price increases in January, hurting Americans&#039; pocketbo', date='2024-02-13T15:42:14Z', url='https://dailycaller.com/2024/02/13/steve-liesman-breaks-down-where-rising-prices-are-squeezing-americans/', source='The Daily Caller', urlToImage='https://cdn01.dailycaller.com/wp-content/uploads/2024/02/Screenshot-2024-02-13-9.41.25-AM-e1707835425963.png', Similarity=None, db_source='newsAPI', nlp_summary=None)]
+2024-02-27 22:16:36,598 - Chirava.chirava - INFO - Running chirava runner....
+2024-02-27 22:16:36,599 - Chirava.chirava - INFO - Scraping article: https://www.cnn.com/2024/02/02/tech/paytm-india-rbi-intl-hnk/index.html
+2024-02-27 22:16:37,405 - Chirava.chirava - ERROR - Error scraping article: https://www.cnn.com/2024/02/02/tech/paytm-india-rbi-intl-hnk/index.html
+2024-02-27 22:16:37,405 - Chirava.chirava - ERROR - 
+**********************************************************************
+  Resource [93mpunkt[0m not found.
+  Please use the NLTK Downloader to obtain the resource:
+
+  [31m>>> import nltk
+  >>> nltk.download('punkt')
+  [0m
+  For more information see: https://www.nltk.org/data.html
+
+  Attempted to load [93mtokenizers/punkt/english.pickle[0m
+
+  Searched in:
+    - 'C:\\Users\\joels/nltk_data'
+    - 'D:\\Educational\\MACE\\Final Project\\Summarization\\env\\nltk_data'
+    - 'D:\\Educational\\MACE\\Final Project\\Summarization\\env\\share\\nltk_data'
+    - 'D:\\Educational\\MACE\\Final Project\\Summarization\\env\\lib\\nltk_data'
+    - 'C:\\Users\\joels\\AppData\\Roaming\\nltk_data'
+    - 'C:\\nltk_data'
+    - 'D:\\nltk_data'
+    - 'E:\\nltk_data'
+    - ''
+**********************************************************************
+
+2024-02-27 22:16:37,405 - Chirava.chirava - INFO - Scraping article: https://www.livemint.com/companies/news/the-paytm-saga-so-far-from-rbi-intervention-to-stock-crash-and-sale-speculation-11707196053279.html
+2024-02-27 22:16:37,761 - Chirava.chirava - ERROR - Error scraping article: https://www.livemint.com/companies/news/the-paytm-saga-so-far-from-rbi-intervention-to-stock-crash-and-sale-speculation-11707196053279.html
+2024-02-27 22:16:37,761 - Chirava.chirava - ERROR - 
+**********************************************************************
+  Resource [93mpunkt[0m not found.
+  Please use the NLTK Downloader to obtain the resource:
+
+  [31m>>> import nltk
+  >>> nltk.download('punkt')
+  [0m
+  For more information see: https://www.nltk.org/data.html
+
+  Attempted to load [93mtokenizers/punkt/english.pickle[0m
+
+  Searched in:
+    - 'C:\\Users\\joels/nltk_data'
+    - 'D:\\Educational\\MACE\\Final Project\\Summarization\\env\\nltk_data'
+    - 'D:\\Educational\\MACE\\Final Project\\Summarization\\env\\share\\nltk_data'
+    - 'D:\\Educational\\MACE\\Final Project\\Summarization\\env\\lib\\nltk_data'
+    - 'C:\\Users\\joels\\AppData\\Roaming\\nltk_data'
+    - 'C:\\nltk_data'
+    - 'D:\\nltk_data'
+    - 'E:\\nltk_data'
+    - ''
+**********************************************************************
+
+2024-02-27 22:16:37,761 - Chirava.chirava - INFO - Scraping article: https://economictimes.indiatimes.com/markets/stocks/news/paytm-crisis-makes-investors-hunt-for-other-fertile-fintechs-top-2-stocks-on-radar/articleshow/107424239.cms
+2024-02-27 22:16:38,242 - Chirava.chirava - ERROR - Error scraping article: https://economictimes.indiatimes.com/markets/stocks/news/paytm-crisis-makes-investors-hunt-for-other-fertile-fintechs-top-2-stocks-on-radar/articleshow/107424239.cms
+2024-02-27 22:16:38,242 - Chirava.chirava - ERROR - 
+**********************************************************************
+  Resource [93mpunkt[0m not found.
+  Please use the NLTK Downloader to obtain the resource:
+
+  [31m>>> import nltk
+  >>> nltk.download('punkt')
+  [0m
+  For more information see: https://www.nltk.org/data.html
+
+  Attempted to load [93mtokenizers/punkt/english.pickle[0m
+
+  Searched in:
+    - 'C:\\Users\\joels/nltk_data'
+    - 'D:\\Educational\\MACE\\Final Project\\Summarization\\env\\nltk_data'
+    - 'D:\\Educational\\MACE\\Final Project\\Summarization\\env\\share\\nltk_data'
+    - 'D:\\Educational\\MACE\\Final Project\\Summarization\\env\\lib\\nltk_data'
+    - 'C:\\Users\\joels\\AppData\\Roaming\\nltk_data'
+    - 'C:\\nltk_data'
+    - 'D:\\nltk_data'
+    - 'E:\\nltk_data'
+    - ''
+**********************************************************************
+
+2024-02-27 22:16:38,242 - Chirava.chirava - INFO - Scraping article: https://www.ndtv.com/india-news/paytm-news-paytm-shares-drop-after-rbi-action-against-payments-bank-trigger-meme-fest-4972159
+2024-02-27 22:16:38,657 - Chirava.chirava - ERROR - Error scraping article: https://www.ndtv.com/india-news/paytm-news-paytm-shares-drop-after-rbi-action-against-payments-bank-trigger-meme-fest-4972159
+2024-02-27 22:16:38,657 - Chirava.chirava - ERROR - 
+**********************************************************************
+  Resource [93mpunkt[0m not found.
+  Please use the NLTK Downloader to obtain the resource:
+
+  [31m>>> import nltk
+  >>> nltk.download('punkt')
+  [0m
+  For more information see: https://www.nltk.org/data.html
+
+  Attempted to load [93mtokenizers/punkt/english.pickle[0m
+
+  Searched in:
+    - 'C:\\Users\\joels/nltk_data'
+    - 'D:\\Educational\\MACE\\Final Project\\Summarization\\env\\nltk_data'
+    - 'D:\\Educational\\MACE\\Final Project\\Summarization\\env\\share\\nltk_data'
+    - 'D:\\Educational\\MACE\\Final Project\\Summarization\\env\\lib\\nltk_data'
+    - 'C:\\Users\\joels\\AppData\\Roaming\\nltk_data'
+    - 'C:\\nltk_data'
+    - 'D:\\nltk_data'
+    - 'E:\\nltk_data'
+    - ''
+**********************************************************************
+
+2024-02-27 22:16:38,657 - Chirava.chirava - INFO - Scraping article: https://economictimes.indiatimes.com/markets/stocks/news/paytm-shares-jump-7-after-vijay-shekhar-sharma-meets-rbi-fm-nirmala-sitharaman/articleshow/107476562.cms
+2024-02-27 22:16:39,087 - Chirava.chirava - ERROR - Error scraping article: https://economictimes.indiatimes.com/markets/stocks/news/paytm-shares-jump-7-after-vijay-shekhar-sharma-meets-rbi-fm-nirmala-sitharaman/articleshow/107476562.cms
+2024-02-27 22:16:39,087 - Chirava.chirava - ERROR - 
+**********************************************************************
+  Resource [93mpunkt[0m not found.
+  Please use the NLTK Downloader to obtain the resource:
+
+  [31m>>> import nltk
+  >>> nltk.download('punkt')
+  [0m
+  For more information see: https://www.nltk.org/data.html
+
+  Attempted to load [93mtokenizers/punkt/english.pickle[0m
+
+  Searched in:
+    - 'C:\\Users\\joels/nltk_data'
+    - 'D:\\Educational\\MACE\\Final Project\\Summarization\\env\\nltk_data'
+    - 'D:\\Educational\\MACE\\Final Project\\Summarization\\env\\share\\nltk_data'
+    - 'D:\\Educational\\MACE\\Final Project\\Summarization\\env\\lib\\nltk_data'
+    - 'C:\\Users\\joels\\AppData\\Roaming\\nltk_data'
+    - 'C:\\nltk_data'
+    - 'D:\\nltk_data'
+    - 'E:\\nltk_data'
+    - ''
+**********************************************************************
+
+2024-02-27 22:16:39,087 - Chirava.chirava - INFO - Scraping article: https://economictimes.indiatimes.com/markets/stocks/news/macquarie-cuts-paytm-target-price-to-rs-275-in-fresh-downgrade/articleshow/107645887.cms
+2024-02-27 22:16:39,826 - Chirava.chirava - ERROR - Error scraping article: https://economictimes.indiatimes.com/markets/stocks/news/macquarie-cuts-paytm-target-price-to-rs-275-in-fresh-downgrade/articleshow/107645887.cms
+2024-02-27 22:16:39,826 - Chirava.chirava - ERROR - Article `download()` failed with 503 Server Error: Service Unavailable for url: https://economictimes.indiatimes.com/markets/stocks/news/macquarie-cuts-paytm-target-price-to-rs-275-in-fresh-downgrade/articleshow/107645887.cms on URL https://economictimes.indiatimes.com/markets/stocks/news/macquarie-cuts-paytm-target-price-to-rs-275-in-fresh-downgrade/articleshow/107645887.cms
+2024-02-27 22:16:39,826 - Chirava.chirava - INFO - Scraping article: https://www.livemint.com/companies/start-ups/have-paytm-and-byjus-debacles-dented-indian-startups-prospects-experts-weigh-in-11708939170426.html
+2024-02-27 22:16:40,158 - Chirava.chirava - ERROR - Error scraping article: https://www.livemint.com/companies/start-ups/have-paytm-and-byjus-debacles-dented-indian-startups-prospects-experts-weigh-in-11708939170426.html
+2024-02-27 22:16:40,159 - Chirava.chirava - ERROR - 
+**********************************************************************
+  Resource [93mpunkt[0m not found.
+  Please use the NLTK Downloader to obtain the resource:
+
+  [31m>>> import nltk
+  >>> nltk.download('punkt')
+  [0m
+  For more information see: https://www.nltk.org/data.html
+
+  Attempted to load [93mtokenizers/punkt/english.pickle[0m
+
+  Searched in:
+    - 'C:\\Users\\joels/nltk_data'
+    - 'D:\\Educational\\MACE\\Final Project\\Summarization\\env\\nltk_data'
+    - 'D:\\Educational\\MACE\\Final Project\\Summarization\\env\\share\\nltk_data'
+    - 'D:\\Educational\\MACE\\Final Project\\Summarization\\env\\lib\\nltk_data'
+    - 'C:\\Users\\joels\\AppData\\Roaming\\nltk_data'
+    - 'C:\\nltk_data'
+    - 'D:\\nltk_data'
+    - 'E:\\nltk_data'
+    - ''
+**********************************************************************
+
+2024-02-27 22:16:40,159 - Chirava.chirava - INFO - Scraping article: https://economictimes.indiatimes.com/markets/stocks/news/paytm-shares-jump-7-after-vijay-shekhar-sharma-meets-rbi-fm-nirmala-sitharaman/articleshow/107474809.cms
+2024-02-27 22:16:40,636 - Chirava.chirava - ERROR - Error scraping article: https://economictimes.indiatimes.com/markets/stocks/news/paytm-shares-jump-7-after-vijay-shekhar-sharma-meets-rbi-fm-nirmala-sitharaman/articleshow/107474809.cms
+2024-02-27 22:16:40,636 - Chirava.chirava - ERROR - 
+**********************************************************************
+  Resource [93mpunkt[0m not found.
+  Please use the NLTK Downloader to obtain the resource:
+
+  [31m>>> import nltk
+  >>> nltk.download('punkt')
+  [0m
+  For more information see: https://www.nltk.org/data.html
+
+  Attempted to load [93mtokenizers/punkt/english.pickle[0m
+
+  Searched in:
+    - 'C:\\Users\\joels/nltk_data'
+    - 'D:\\Educational\\MACE\\Final Project\\Summarization\\env\\nltk_data'
+    - 'D:\\Educational\\MACE\\Final Project\\Summarization\\env\\share\\nltk_data'
+    - 'D:\\Educational\\MACE\\Final Project\\Summarization\\env\\lib\\nltk_data'
+    - 'C:\\Users\\joels\\AppData\\Roaming\\nltk_data'
+    - 'C:\\nltk_data'
+    - 'D:\\nltk_data'
+    - 'E:\\nltk_data'
+    - ''
+**********************************************************************
+
+2024-02-27 22:16:40,636 - Chirava.chirava - INFO - Scraping article: https://economictimes.indiatimes.com/markets/stocks/news/exchanges-lower-paytms-circuit-limits-to-10-after-price-crash/articleshow/107398872.cms
+2024-02-27 22:16:41,227 - Chirava.chirava - ERROR - Error scraping article: https://economictimes.indiatimes.com/markets/stocks/news/exchanges-lower-paytms-circuit-limits-to-10-after-price-crash/articleshow/107398872.cms
+2024-02-27 22:16:41,228 - Chirava.chirava - ERROR - 
+**********************************************************************
+  Resource [93mpunkt[0m not found.
+  Please use the NLTK Downloader to obtain the resource:
+
+  [31m>>> import nltk
+  >>> nltk.download('punkt')
+  [0m
+  For more information see: https://www.nltk.org/data.html
+
+  Attempted to load [93mtokenizers/punkt/english.pickle[0m
+
+  Searched in:
+    - 'C:\\Users\\joels/nltk_data'
+    - 'D:\\Educational\\MACE\\Final Project\\Summarization\\env\\nltk_data'
+    - 'D:\\Educational\\MACE\\Final Project\\Summarization\\env\\share\\nltk_data'
+    - 'D:\\Educational\\MACE\\Final Project\\Summarization\\env\\lib\\nltk_data'
+    - 'C:\\Users\\joels\\AppData\\Roaming\\nltk_data'
+    - 'C:\\nltk_data'
+    - 'D:\\nltk_data'
+    - 'E:\\nltk_data'
+    - ''
+**********************************************************************
+
+2024-02-27 22:16:41,228 - Chirava.chirava - INFO - Scraping article: https://economictimes.indiatimes.com/markets/stocks/news/paytm-shares-crash-20-after-rbi-damages-reputation-brokers-downgrade/articleshow/107310663.cms
+2024-02-27 22:16:41,794 - Chirava.chirava - ERROR - Error scraping article: https://economictimes.indiatimes.com/markets/stocks/news/paytm-shares-crash-20-after-rbi-damages-reputation-brokers-downgrade/articleshow/107310663.cms
+2024-02-27 22:16:42,067 - Chirava.chirava - ERROR - 
+**********************************************************************
+  Resource [93mpunkt[0m not found.
+  Please use the NLTK Downloader to obtain the resource:
+
+  [31m>>> import nltk
+  >>> nltk.download('punkt')
+  [0m
+  For more information see: https://www.nltk.org/data.html
+
+  Attempted to load [93mtokenizers/punkt/english.pickle[0m
+
+  Searched in:
+    - 'C:\\Users\\joels/nltk_data'
+    - 'D:\\Educational\\MACE\\Final Project\\Summarization\\env\\nltk_data'
+    - 'D:\\Educational\\MACE\\Final Project\\Summarization\\env\\share\\nltk_data'
+    - 'D:\\Educational\\MACE\\Final Project\\Summarization\\env\\lib\\nltk_data'
+    - 'C:\\Users\\joels\\AppData\\Roaming\\nltk_data'
+    - 'C:\\nltk_data'
+    - 'D:\\nltk_data'
+    - 'E:\\nltk_data'
+    - ''
+**********************************************************************
+
+2024-02-27 22:16:42,067 - Chirava.chirava - INFO - Scraping article: https://economictimes.indiatimes.com/markets/stocks/news/shree-cement-shares-jump-6-on-strong-q3-earnings-nuvama-upgrades-stock-to-hold/articleshow/107313216.cms
+2024-02-27 22:16:42,579 - Chirava.chirava - ERROR - Error scraping article: https://economictimes.indiatimes.com/markets/stocks/news/shree-cement-shares-jump-6-on-strong-q3-earnings-nuvama-upgrades-stock-to-hold/articleshow/107313216.cms
+2024-02-27 22:16:42,579 - Chirava.chirava - ERROR - 
+**********************************************************************
+  Resource [93mpunkt[0m not found.
+  Please use the NLTK Downloader to obtain the resource:
+
+  [31m>>> import nltk
+  >>> nltk.download('punkt')
+  [0m
+  For more information see: https://www.nltk.org/data.html
+
+  Attempted to load [93mtokenizers/punkt/english.pickle[0m
+
+  Searched in:
+    - 'C:\\Users\\joels/nltk_data'
+    - 'D:\\Educational\\MACE\\Final Project\\Summarization\\env\\nltk_data'
+    - 'D:\\Educational\\MACE\\Final Project\\Summarization\\env\\share\\nltk_data'
+    - 'D:\\Educational\\MACE\\Final Project\\Summarization\\env\\lib\\nltk_data'
+    - 'C:\\Users\\joels\\AppData\\Roaming\\nltk_data'
+    - 'C:\\nltk_data'
+    - 'D:\\nltk_data'
+    - 'E:\\nltk_data'
+    - ''
+**********************************************************************
+
+2024-02-27 22:16:42,579 - Chirava.chirava - INFO - Scraping article: https://economictimes.indiatimes.com/tech/newsletters/tech-top-5/juspay-others-get-rbi-nod-for-payment-aggregator-biz-paytm-shares-rebound/articleshow/107495759.cms
+2024-02-27 22:16:43,037 - Chirava.chirava - ERROR - Error scraping article: https://economictimes.indiatimes.com/tech/newsletters/tech-top-5/juspay-others-get-rbi-nod-for-payment-aggregator-biz-paytm-shares-rebound/articleshow/107495759.cms
+2024-02-27 22:16:43,037 - Chirava.chirava - ERROR - 
+**********************************************************************
+  Resource [93mpunkt[0m not found.
+  Please use the NLTK Downloader to obtain the resource:
+
+  [31m>>> import nltk
+  >>> nltk.download('punkt')
+  [0m
+  For more information see: https://www.nltk.org/data.html
+
+  Attempted to load [93mtokenizers/punkt/english.pickle[0m
+
+  Searched in:
+    - 'C:\\Users\\joels/nltk_data'
+    - 'D:\\Educational\\MACE\\Final Project\\Summarization\\env\\nltk_data'
+    - 'D:\\Educational\\MACE\\Final Project\\Summarization\\env\\share\\nltk_data'
+    - 'D:\\Educational\\MACE\\Final Project\\Summarization\\env\\lib\\nltk_data'
+    - 'C:\\Users\\joels\\AppData\\Roaming\\nltk_data'
+    - 'C:\\nltk_data'
+    - 'D:\\nltk_data'
+    - 'E:\\nltk_data'
+    - ''
+**********************************************************************
+
+2024-02-27 22:16:43,038 - Chirava.chirava - INFO - Scraping article: https://economictimes.indiatimes.com/markets/stocks/news/spicejet-shares-fall-over-4-as-investors-remain-apprehensive-of-fund-infusion/articleshow/107682187.cms
+2024-02-27 22:16:43,525 - Chirava.chirava - ERROR - Error scraping article: https://economictimes.indiatimes.com/markets/stocks/news/spicejet-shares-fall-over-4-as-investors-remain-apprehensive-of-fund-infusion/articleshow/107682187.cms
+2024-02-27 22:16:43,525 - Chirava.chirava - ERROR - 
+**********************************************************************
+  Resource [93mpunkt[0m not found.
+  Please use the NLTK Downloader to obtain the resource:
+
+  [31m>>> import nltk
+  >>> nltk.download('punkt')
+  [0m
+  For more information see: https://www.nltk.org/data.html
+
+  Attempted to load [93mtokenizers/punkt/english.pickle[0m
+
+  Searched in:
+    - 'C:\\Users\\joels/nltk_data'
+    - 'D:\\Educational\\MACE\\Final Project\\Summarization\\env\\nltk_data'
+    - 'D:\\Educational\\MACE\\Final Project\\Summarization\\env\\share\\nltk_data'
+    - 'D:\\Educational\\MACE\\Final Project\\Summarization\\env\\lib\\nltk_data'
+    - 'C:\\Users\\joels\\AppData\\Roaming\\nltk_data'
+    - 'C:\\nltk_data'
+    - 'D:\\nltk_data'
+    - 'E:\\nltk_data'
+    - ''
+**********************************************************************
+
+2024-02-27 22:16:43,525 - Chirava.chirava - INFO - Scraping article: https://economictimes.indiatimes.com/markets/stocks/news/retail-investors-sold-stocks-worth-rs-12000-crore-in-q3-hdfc-bank-among-top-10-sells/articleshow/107511880.cms
+2024-02-27 22:16:44,028 - Chirava.chirava - ERROR - Error scraping article: https://economictimes.indiatimes.com/markets/stocks/news/retail-investors-sold-stocks-worth-rs-12000-crore-in-q3-hdfc-bank-among-top-10-sells/articleshow/107511880.cms
+2024-02-27 22:16:44,028 - Chirava.chirava - ERROR - 
+**********************************************************************
+  Resource [93mpunkt[0m not found.
+  Please use the NLTK Downloader to obtain the resource:
+
+  [31m>>> import nltk
+  >>> nltk.download('punkt')
+  [0m
+  For more information see: https://www.nltk.org/data.html
+
+  Attempted to load [93mtokenizers/punkt/english.pickle[0m
+
+  Searched in:
+    - 'C:\\Users\\joels/nltk_data'
+    - 'D:\\Educational\\MACE\\Final Project\\Summarization\\env\\nltk_data'
+    - 'D:\\Educational\\MACE\\Final Project\\Summarization\\env\\share\\nltk_data'
+    - 'D:\\Educational\\MACE\\Final Project\\Summarization\\env\\lib\\nltk_data'
+    - 'C:\\Users\\joels\\AppData\\Roaming\\nltk_data'
+    - 'C:\\nltk_data'
+    - 'D:\\nltk_data'
+    - 'E:\\nltk_data'
+    - ''
+**********************************************************************
+
+2024-02-27 22:16:44,028 - Chirava.chirava - INFO - Chirava runner complete and returning result.... [Article(heading='Paytm, once India’s hottest startup, sees its stock fall 80% since market debut', content='Paytm, once the hottest of India’s startups, has seen a stunning fall on the stock market since last week, extending a plunge that has wiped nearly 80% off its value since it went public in the country’s biggest IPO in 2', date='2024-02-05T05:03:25Z', url='https://www.cnn.com/2024/02/02/tech/paytm-india-rbi-intl-hnk/index.html', source='CNN', urlToImage='https://media.cnn.com/api/v1/images/stellar/prod/gettyimages-1968516080.jpeg?c=16x9&q=w_800,c_fill', Similarity=None, db_source='newsAPI', nlp_summary=None), Article(heading='The Paytm saga so far… from RBI intervention to stock crash and sale speculation', content="Paytm Payments Bank faces an existential crisis as the Reserve Bank of India cracks down on the fintech firm. Here's all the low", date='2024-02-06T05:57:37Z', url='https://www.livemint.com/companies/news/the-paytm-saga-so-far-from-rbi-intervention-to-stock-crash-and-sale-speculation-11707196053279.html', source='Livemint', urlToImage='https://www.livemint.com/lm-img/img/2024/02/06/1600x900/Paytm_founder_ceo_vijay_shekhar_sharma_rbi__1707196186259_1707196186407.JPG', Similarity=None, db_source='newsAPI', nlp_summary=None), Article(heading='Paytm crisis makes investors hunt for other fertile fintechs. Top 2 stocks on radar', content='Fino Payments Bank shares, which competes with Paytm, hit the 20% upper circuit limit at Rs 372.30. Jio Financial or JFSL shares rallied 16% to hit a fresh high of Rs 295 after a newspaper reported that One 97 Communications is in talks with Jio to sell th', date='2024-02-05T09:06:37Z', url='https://economictimes.indiatimes.com/markets/stocks/news/paytm-crisis-makes-investors-hunt-for-other-fertile-fintechs-top-2-stocks-on-radar/articleshow/107424239.cms', source='The Times of India', urlToImage='https://img.etimg.com/thumb/msid-107424360,width-1200,height-630,imgsize-58956,overlay-etmarkets/photo.jpg', Similarity=None, db_source='newsAPI', nlp_summary=None), Article(heading='Paytm Shares Drop After RBI Action Against Payments Bank, Trigger Meme Fest', content='Digital payments firm Paytm lost a fifth of its market value on Thursday after the Reserve Bank of India (RBI) directed its associate Paytm Payments Bank to halt its business, sparking a meme fest on the inter', date='2024-02-01T06:38:17Z', url='https://www.ndtv.com/india-news/paytm-news-paytm-shares-drop-after-rbi-action-against-payments-bank-trigger-meme-fest-4972159', source='NDTV News', urlToImage='https://c.ndtvimg.com/2024-02/9tebo574_paytm-generic-reuters_625x300_01_February_24.jpeg', Similarity=None, db_source='newsAPI', nlp_summary=None), Article(heading='Paytm shares jump 9% after Vijay Shekhar Sharma meets RBI, FM Nirmala Sitharaman', content='Following three days of non-stop selling in lower circuits which led to 42% crash in the stock, Paytm shares ended 3% higher yesterday. At this stage, Paytm shares are solely guided by investor sentiment around the regulatory trouble and Indian fintech pos', date='2024-02-07T04:00:46Z', url='https://economictimes.indiatimes.com/markets/stocks/news/paytm-shares-jump-7-after-vijay-shekhar-sharma-meets-rbi-fm-nirmala-sitharaman/articleshow/107476562.cms', source='The Times of India', urlToImage='https://img.etimg.com/thumb/msid-107474793,width-1200,height-630,imgsize-923764,overlay-ettech/photo.jpg', Similarity=None, db_source='newsAPI', nlp_summary=None), Article(heading='Macquarie cuts Paytm target price to Rs 275 in fresh downgrade', content='Macquarie downgraded Paytm following a ban on Paytm Payments Bank. Loss estimates increased by 170%/40% over FY25/26. Lending partners are re-evaluating their relationship with Paytm, said Macquarie. In the bull case scenario, the stock can rally up to Rs ', date='2024-02-13T03:46:08Z', url='https://economictimes.indiatimes.com/markets/stocks/news/macquarie-cuts-paytm-target-price-to-rs-275-in-fresh-downgrade/articleshow/107645887.cms', source='The Times of India', urlToImage='https://img.etimg.com/thumb/msid-107645864,width-1200,height-630,imgsize-41352,overlay-etmarkets/photo.jpg', Similarity=None, db_source='newsAPI', nlp_summary=None), Article(heading="Have Paytm and Byju's debacles dented Indian startups' prospects? Experts weigh in", content='Amid the uncertainty, Mint asked industry stakeholders to explore the impact of these setbacks and share insights on the future trajectory of the start-up space in In', date='2024-02-26T10:25:20Z', url='https://www.livemint.com/companies/start-ups/have-paytm-and-byjus-debacles-dented-indian-startups-prospects-experts-weigh-in-11708939170426.html', source='Livemint', urlToImage='https://www.livemint.com/lm-img/img/2024/02/26/1600x900/startups_India_Byjus_Paytm_sector_outlook_1708939360125_1708939360233.jpg', Similarity=None, db_source='newsAPI', nlp_summary=None), Article(heading='Paytm shares jump 7% after Vijay Shekhar Sharma meets RBI, FM Nirmala Sitharaman', content='Following three days of non-stop selling in lower circuits which led to 42% crash in the stock, Paytm shares ended 3% higher yesterday. At this stage, Paytm shares are solely guided by investor sentiment around the regulatory trouble and Indian fintech pos', date='2024-02-07T04:00:46Z', url='https://economictimes.indiatimes.com/markets/stocks/news/paytm-shares-jump-7-after-vijay-shekhar-sharma-meets-rbi-fm-nirmala-sitharaman/articleshow/107474809.cms', source='The Times of India', urlToImage='https://img.etimg.com/thumb/msid-107474793,width-1200,height-630,imgsize-923764,overlay-etmarkets/photo.jpg', Similarity=None, db_source='newsAPI', nlp_summary=None), Article(heading="Exchanges lower Paytm's circuit limits to 10% after price crash", content="Stock exchanges BSE and NSE have revised the circuit limits for Paytm parent company One97 Communications following a steep price crash caused by RBI's crackdown on Paytm Payments Bank. The circuit limits have been changed to 10%, and the stock cannot fall", date='2024-02-04T07:25:36Z', url='https://economictimes.indiatimes.com/markets/stocks/news/exchanges-lower-paytms-circuit-limits-to-10-after-price-crash/articleshow/107398872.cms', source='The Times of India', urlToImage='https://img.etimg.com/thumb/msid-107399019,width-1200,height-630,imgsize-1146815,overlay-etmarkets/photo.jpg', Similarity=None, db_source='newsAPI', nlp_summary=None), Article(heading='Paytm shares crash 20% after RBI damages reputation, brokers downgrade', content="Shares of Paytm, owned by One 97 Communications, crashed 20% on BSE after the RBI directed Paytm Payments Bank to halt new credit and deposit operations. Jefferies, a global broking firm, downgraded Paytm and highlighted the impact on Paytm's wallet busine", date='2024-02-01T03:55:45Z', url='https://economictimes.indiatimes.com/markets/stocks/news/paytm-shares-crash-20-after-rbi-damages-reputation-brokers-downgrade/articleshow/107310663.cms', source='The Times of India', urlToImage='https://img.etimg.com/thumb/msid-107310609,width-1200,height-630,imgsize-41352,overlay-ettech/photo.jpg', Similarity=None, db_source='newsAPI', nlp_summary=None), Article(heading='Shree Cement shares jump 6% on strong Q3 earnings. Nuvama upgrades stock to ‘Hold’', content='Net revenue from operation stood at Rs 4,901 crore up 20% YoY from Rs 4,069 crore reported in the year-ago period. On a sequential basis, it was up 7% over Rs 4,585 crore reported in Q2F', date='2024-02-01T05:18:15Z', url='https://economictimes.indiatimes.com/markets/stocks/news/shree-cement-shares-jump-6-on-strong-q3-earnings-nuvama-upgrades-stock-to-hold/articleshow/107313216.cms', source='The Times of India', urlToImage='https://img.etimg.com/thumb/msid-107313179,width-1200,height-630,imgsize-23732,overlay-etmarkets/photo.jpg', Similarity=None, db_source='newsAPI', nlp_summary=None), Article(heading='Juspay, others get RBI nod for payment aggregator biz; Paytm shares rebound', content='Zoho is the first enterprise Saas player to get the payment aggregator nod from the RBI, joining the likes of Razorpay, Cashfree, Zomato and oth', date='2024-02-07T13:13:04Z', url='https://economictimes.indiatimes.com/tech/newsletters/tech-top-5/juspay-others-get-rbi-nod-for-payment-aggregator-biz-paytm-shares-rebound/articleshow/107495759.cms', source='The Times of India', urlToImage='https://img.etimg.com/thumb/msid-107495980,width-1070,height-580,imgsize-1005828,overlay-ettech/photo.jpg', Similarity=None, db_source='newsAPI', nlp_summary=None), Article(heading='SpiceJet shares fall over 4% as investors remain apprehensive of fund infusion', content='Cash-strapped SpiceJet is short on liquidity, and investors are apprehensive about fund infusion, CNBC-TV18 said, citing sources. Additionally, the airline company has also delayed salary payments to many of its employ', date='2024-02-14T06:33:43Z', url='https://economictimes.indiatimes.com/markets/stocks/news/spicejet-shares-fall-over-4-as-investors-remain-apprehensive-of-fund-infusion/articleshow/107682187.cms', source='The Times of India', urlToImage='https://img.etimg.com/thumb/msid-107682177,width-1200,height-630,imgsize-61786,overlay-etmarkets/photo.jpg', Similarity=None, db_source='newsAPI', nlp_summary=None), Article(heading='Retail investors sold stocks worth Rs 12,000 crore in Q3. HDFC Bank among top 10 sells', content='Retail investors sold over Rs 12,000 crore worth of stocks in Q3, including shares of HDFC Bank, Reliance Industries, TCS, Infosys, and others. They bought shares of Jio Financial, Paytm, IDFC First Bank, Suzlon Energy, and more. Retail holding in NSE-list', date='2024-02-08T04:43:23Z', url='https://economictimes.indiatimes.com/markets/stocks/news/retail-investors-sold-stocks-worth-rs-12000-crore-in-q3-hdfc-bank-among-top-10-sells/articleshow/107511880.cms', source='The Times of India', urlToImage='https://img.etimg.com/thumb/msid-107511873,width-1200,height-630,imgsize-33044,overlay-etmarkets/photo.jpg', Similarity=None, db_source='newsAPI', nlp_summary=None)]
+2024-02-27 22:19:19,230 - Chirava.chirava - INFO - Running chirava runner....
+2024-02-27 22:19:19,230 - Chirava.chirava - INFO - Scraping article: https://www.marketwatch.com/story/paytm-woes-send-one-97s-stock-plunging-prompting-analysts-sell-call-c040dfdf
+2024-02-27 22:19:21,207 - Chirava.chirava - ERROR - Error scraping article: https://www.marketwatch.com/story/paytm-woes-send-one-97s-stock-plunging-prompting-analysts-sell-call-c040dfdf
+2024-02-27 22:19:21,207 - Chirava.chirava - ERROR - 
+**********************************************************************
+  Resource [93mpunkt[0m not found.
+  Please use the NLTK Downloader to obtain the resource:
+
+  [31m>>> import nltk
+  >>> nltk.download('punkt')
+  [0m
+  For more information see: https://www.nltk.org/data.html
+
+  Attempted to load [93mtokenizers/punkt/english.pickle[0m
+
+  Searched in:
+    - 'C:\\Users\\joels/nltk_data'
+    - 'D:\\Educational\\MACE\\Final Project\\Summarization\\env\\nltk_data'
+    - 'D:\\Educational\\MACE\\Final Project\\Summarization\\env\\share\\nltk_data'
+    - 'D:\\Educational\\MACE\\Final Project\\Summarization\\env\\lib\\nltk_data'
+    - 'C:\\Users\\joels\\AppData\\Roaming\\nltk_data'
+    - 'C:\\nltk_data'
+    - 'D:\\nltk_data'
+    - 'E:\\nltk_data'
+    - ''
+**********************************************************************
+
+2024-02-27 22:19:21,207 - Chirava.chirava - INFO - Scraping article: https://indianexpress.com/article/business/companies/paytm-shares-after-axis-bank-deal-fresh-rbi-deadline-9168778/
+2024-02-27 22:19:21,553 - Chirava.chirava - ERROR - Error scraping article: https://indianexpress.com/article/business/companies/paytm-shares-after-axis-bank-deal-fresh-rbi-deadline-9168778/
+2024-02-27 22:19:21,553 - Chirava.chirava - ERROR - 
+**********************************************************************
+  Resource [93mpunkt[0m not found.
+  Please use the NLTK Downloader to obtain the resource:
+
+  [31m>>> import nltk
+  >>> nltk.download('punkt')
+  [0m
+  For more information see: https://www.nltk.org/data.html
+
+  Attempted to load [93mtokenizers/punkt/english.pickle[0m
+
+  Searched in:
+    - 'C:\\Users\\joels/nltk_data'
+    - 'D:\\Educational\\MACE\\Final Project\\Summarization\\env\\nltk_data'
+    - 'D:\\Educational\\MACE\\Final Project\\Summarization\\env\\share\\nltk_data'
+    - 'D:\\Educational\\MACE\\Final Project\\Summarization\\env\\lib\\nltk_data'
+    - 'C:\\Users\\joels\\AppData\\Roaming\\nltk_data'
+    - 'C:\\nltk_data'
+    - 'D:\\nltk_data'
+    - 'E:\\nltk_data'
+    - ''
+**********************************************************************
+
+2024-02-27 22:19:21,553 - Chirava.chirava - INFO - Scraping article: https://www.forbes.com/sites/zennonkapron/2024/02/16/across-asia-super-apps-are-facing-a-moment-of-truth/
+2024-02-27 22:19:21,628 - Chirava.chirava - ERROR - Error scraping article: https://www.forbes.com/sites/zennonkapron/2024/02/16/across-asia-super-apps-are-facing-a-moment-of-truth/
+2024-02-27 22:19:21,628 - Chirava.chirava - ERROR - Article `download()` failed with 403 Client Error: Max restarts limit reached for url: https://www.forbes.com/sites/zennonkapron/2024/02/16/across-asia-super-apps-are-facing-a-moment-of-truth/ on URL https://www.forbes.com/sites/zennonkapron/2024/02/16/across-asia-super-apps-are-facing-a-moment-of-truth/
+2024-02-27 22:19:21,629 - Chirava.chirava - INFO - Scraping article: https://www.moneycontrol.com/news/business/stocks/additional-fund-requirement-might-have-fuelled-the-fall-in-paytm-stock-12204471.html
+2024-02-27 22:19:22,066 - Chirava.chirava - ERROR - Error scraping article: https://www.moneycontrol.com/news/business/stocks/additional-fund-requirement-might-have-fuelled-the-fall-in-paytm-stock-12204471.html
+2024-02-27 22:19:22,066 - Chirava.chirava - ERROR - 
+**********************************************************************
+  Resource [93mpunkt[0m not found.
+  Please use the NLTK Downloader to obtain the resource:
+
+  [31m>>> import nltk
+  >>> nltk.download('punkt')
+  [0m
+  For more information see: https://www.nltk.org/data.html
+
+  Attempted to load [93mtokenizers/punkt/english.pickle[0m
+
+  Searched in:
+    - 'C:\\Users\\joels/nltk_data'
+    - 'D:\\Educational\\MACE\\Final Project\\Summarization\\env\\nltk_data'
+    - 'D:\\Educational\\MACE\\Final Project\\Summarization\\env\\share\\nltk_data'
+    - 'D:\\Educational\\MACE\\Final Project\\Summarization\\env\\lib\\nltk_data'
+    - 'C:\\Users\\joels\\AppData\\Roaming\\nltk_data'
+    - 'C:\\nltk_data'
+    - 'D:\\nltk_data'
+    - 'E:\\nltk_data'
+    - ''
+**********************************************************************
+
+2024-02-27 22:19:22,066 - Chirava.chirava - INFO - Scraping article: https://www.moneycontrol.com/news/business/markets/paytm-stock-continues-to-recover-hits-upper-circuit-3rd-day-in-a-row-12320921.html
+2024-02-27 22:19:22,529 - Chirava.chirava - ERROR - Error scraping article: https://www.moneycontrol.com/news/business/markets/paytm-stock-continues-to-recover-hits-upper-circuit-3rd-day-in-a-row-12320921.html
+2024-02-27 22:19:22,529 - Chirava.chirava - ERROR - 
+**********************************************************************
+  Resource [93mpunkt[0m not found.
+  Please use the NLTK Downloader to obtain the resource:
+
+  [31m>>> import nltk
+  >>> nltk.download('punkt')
+  [0m
+  For more information see: https://www.nltk.org/data.html
+
+  Attempted to load [93mtokenizers/punkt/english.pickle[0m
+
+  Searched in:
+    - 'C:\\Users\\joels/nltk_data'
+    - 'D:\\Educational\\MACE\\Final Project\\Summarization\\env\\nltk_data'
+    - 'D:\\Educational\\MACE\\Final Project\\Summarization\\env\\share\\nltk_data'
+    - 'D:\\Educational\\MACE\\Final Project\\Summarization\\env\\lib\\nltk_data'
+    - 'C:\\Users\\joels\\AppData\\Roaming\\nltk_data'
+    - 'C:\\nltk_data'
+    - 'D:\\nltk_data'
+    - 'E:\\nltk_data'
+    - ''
+**********************************************************************
+
+2024-02-27 22:19:22,529 - Chirava.chirava - INFO - Scraping article: https://economictimes.indiatimes.com/markets/expert-view/what-to-expect-from-sbi-shares-going-ahead-sandip-sabharwal-answers/articleshow/107416052.cms
+2024-02-27 22:19:23,051 - Chirava.chirava - ERROR - Error scraping article: https://economictimes.indiatimes.com/markets/expert-view/what-to-expect-from-sbi-shares-going-ahead-sandip-sabharwal-answers/articleshow/107416052.cms
+2024-02-27 22:19:23,051 - Chirava.chirava - ERROR - 
+**********************************************************************
+  Resource [93mpunkt[0m not found.
+  Please use the NLTK Downloader to obtain the resource:
+
+  [31m>>> import nltk
+  >>> nltk.download('punkt')
+  [0m
+  For more information see: https://www.nltk.org/data.html
+
+  Attempted to load [93mtokenizers/punkt/english.pickle[0m
+
+  Searched in:
+    - 'C:\\Users\\joels/nltk_data'
+    - 'D:\\Educational\\MACE\\Final Project\\Summarization\\env\\nltk_data'
+    - 'D:\\Educational\\MACE\\Final Project\\Summarization\\env\\share\\nltk_data'
+    - 'D:\\Educational\\MACE\\Final Project\\Summarization\\env\\lib\\nltk_data'
+    - 'C:\\Users\\joels\\AppData\\Roaming\\nltk_data'
+    - 'C:\\nltk_data'
+    - 'D:\\nltk_data'
+    - 'E:\\nltk_data'
+    - ''
+**********************************************************************
+
+2024-02-27 22:19:23,051 - Chirava.chirava - INFO - Scraping article: https://indianexpress.com/article/upsc-current-affairs/upsc-key-1st-february-2024-paytm-payments-bank-prakash-singh-judgment-and-sixteenth-finance-commission-9139612/
+2024-02-27 22:19:25,329 - Chirava.chirava - ERROR - Error scraping article: https://indianexpress.com/article/upsc-current-affairs/upsc-key-1st-february-2024-paytm-payments-bank-prakash-singh-judgment-and-sixteenth-finance-commission-9139612/
+2024-02-27 22:19:25,330 - Chirava.chirava - ERROR - 
+**********************************************************************
+  Resource [93mpunkt[0m not found.
+  Please use the NLTK Downloader to obtain the resource:
+
+  [31m>>> import nltk
+  >>> nltk.download('punkt')
+  [0m
+  For more information see: https://www.nltk.org/data.html
+
+  Attempted to load [93mtokenizers/punkt/english.pickle[0m
+
+  Searched in:
+    - 'C:\\Users\\joels/nltk_data'
+    - 'D:\\Educational\\MACE\\Final Project\\Summarization\\env\\nltk_data'
+    - 'D:\\Educational\\MACE\\Final Project\\Summarization\\env\\share\\nltk_data'
+    - 'D:\\Educational\\MACE\\Final Project\\Summarization\\env\\lib\\nltk_data'
+    - 'C:\\Users\\joels\\AppData\\Roaming\\nltk_data'
+    - 'C:\\nltk_data'
+    - 'D:\\nltk_data'
+    - 'E:\\nltk_data'
+    - ''
+**********************************************************************
+
+2024-02-27 22:19:25,330 - Chirava.chirava - INFO - Scraping article: https://economictimes.indiatimes.com/markets/expert-view/sanjiv-bhasin-on-what-should-investors-do-with-omc-stocks/articleshow/107445425.cms
+2024-02-27 22:19:26,004 - Chirava.chirava - ERROR - Error scraping article: https://economictimes.indiatimes.com/markets/expert-view/sanjiv-bhasin-on-what-should-investors-do-with-omc-stocks/articleshow/107445425.cms
+2024-02-27 22:19:26,004 - Chirava.chirava - ERROR - 
+**********************************************************************
+  Resource [93mpunkt[0m not found.
+  Please use the NLTK Downloader to obtain the resource:
+
+  [31m>>> import nltk
+  >>> nltk.download('punkt')
+  [0m
+  For more information see: https://www.nltk.org/data.html
+
+  Attempted to load [93mtokenizers/punkt/english.pickle[0m
+
+  Searched in:
+    - 'C:\\Users\\joels/nltk_data'
+    - 'D:\\Educational\\MACE\\Final Project\\Summarization\\env\\nltk_data'
+    - 'D:\\Educational\\MACE\\Final Project\\Summarization\\env\\share\\nltk_data'
+    - 'D:\\Educational\\MACE\\Final Project\\Summarization\\env\\lib\\nltk_data'
+    - 'C:\\Users\\joels\\AppData\\Roaming\\nltk_data'
+    - 'C:\\nltk_data'
+    - 'D:\\nltk_data'
+    - 'E:\\nltk_data'
+    - ''
+**********************************************************************
+
+2024-02-27 22:19:26,004 - Chirava.chirava - INFO - Scraping article: https://www.moneycontrol.com/news/business/personal-finance/rbi-action-against-paytm-what-would-be-mutual-fund-managers-reaction-12164771.html
+2024-02-27 22:19:26,451 - Chirava.chirava - ERROR - Error scraping article: https://www.moneycontrol.com/news/business/personal-finance/rbi-action-against-paytm-what-would-be-mutual-fund-managers-reaction-12164771.html
+2024-02-27 22:19:26,452 - Chirava.chirava - ERROR - 
+**********************************************************************
+  Resource [93mpunkt[0m not found.
+  Please use the NLTK Downloader to obtain the resource:
+
+  [31m>>> import nltk
+  >>> nltk.download('punkt')
+  [0m
+  For more information see: https://www.nltk.org/data.html
+
+  Attempted to load [93mtokenizers/punkt/english.pickle[0m
+
+  Searched in:
+    - 'C:\\Users\\joels/nltk_data'
+    - 'D:\\Educational\\MACE\\Final Project\\Summarization\\env\\nltk_data'
+    - 'D:\\Educational\\MACE\\Final Project\\Summarization\\env\\share\\nltk_data'
+    - 'D:\\Educational\\MACE\\Final Project\\Summarization\\env\\lib\\nltk_data'
+    - 'C:\\Users\\joels\\AppData\\Roaming\\nltk_data'
+    - 'C:\\nltk_data'
+    - 'D:\\nltk_data'
+    - 'E:\\nltk_data'
+    - ''
+**********************************************************************
+
+2024-02-27 22:19:26,452 - Chirava.chirava - INFO - Scraping article: https://www.moneycontrol.com/news/business/markets/paytm-shares-crash-20-to-lower-circuit-as-rbi-effectively-ends-payments-bank-biz-12166521.html
+2024-02-27 22:19:26,960 - Chirava.chirava - ERROR - Error scraping article: https://www.moneycontrol.com/news/business/markets/paytm-shares-crash-20-to-lower-circuit-as-rbi-effectively-ends-payments-bank-biz-12166521.html
+2024-02-27 22:19:26,960 - Chirava.chirava - ERROR - 
+**********************************************************************
+  Resource [93mpunkt[0m not found.
+  Please use the NLTK Downloader to obtain the resource:
+
+  [31m>>> import nltk
+  >>> nltk.download('punkt')
+  [0m
+  For more information see: https://www.nltk.org/data.html
+
+  Attempted to load [93mtokenizers/punkt/english.pickle[0m
+
+  Searched in:
+    - 'C:\\Users\\joels/nltk_data'
+    - 'D:\\Educational\\MACE\\Final Project\\Summarization\\env\\nltk_data'
+    - 'D:\\Educational\\MACE\\Final Project\\Summarization\\env\\share\\nltk_data'
+    - 'D:\\Educational\\MACE\\Final Project\\Summarization\\env\\lib\\nltk_data'
+    - 'C:\\Users\\joels\\AppData\\Roaming\\nltk_data'
+    - 'C:\\nltk_data'
+    - 'D:\\nltk_data'
+    - 'E:\\nltk_data'
+    - ''
+**********************************************************************
+
+2024-02-27 22:19:26,960 - Chirava.chirava - INFO - Scraping article: https://www.moneycontrol.com/news/business/markets/paytm-sheds-42-in-3-days-will-the-stock-slide-more-as-regulatory-woes-linger-12200891.html
+2024-02-27 22:19:27,401 - Chirava.chirava - ERROR - Error scraping article: https://www.moneycontrol.com/news/business/markets/paytm-sheds-42-in-3-days-will-the-stock-slide-more-as-regulatory-woes-linger-12200891.html
+2024-02-27 22:19:27,401 - Chirava.chirava - ERROR - 
+**********************************************************************
+  Resource [93mpunkt[0m not found.
+  Please use the NLTK Downloader to obtain the resource:
+
+  [31m>>> import nltk
+  >>> nltk.download('punkt')
+  [0m
+  For more information see: https://www.nltk.org/data.html
+
+  Attempted to load [93mtokenizers/punkt/english.pickle[0m
+
+  Searched in:
+    - 'C:\\Users\\joels/nltk_data'
+    - 'D:\\Educational\\MACE\\Final Project\\Summarization\\env\\nltk_data'
+    - 'D:\\Educational\\MACE\\Final Project\\Summarization\\env\\share\\nltk_data'
+    - 'D:\\Educational\\MACE\\Final Project\\Summarization\\env\\lib\\nltk_data'
+    - 'C:\\Users\\joels\\AppData\\Roaming\\nltk_data'
+    - 'C:\\nltk_data'
+    - 'D:\\nltk_data'
+    - 'E:\\nltk_data'
+    - ''
+**********************************************************************
+
+2024-02-27 22:19:27,401 - Chirava.chirava - INFO - Scraping article: https://www.moneycontrol.com/news/business/earnings/paytm-crashes-over-20-takes-rs-585-crore-toll-on-fund-houses-insurance-companies-12166661.html
+2024-02-27 22:19:28,134 - Chirava.chirava - ERROR - Error scraping article: https://www.moneycontrol.com/news/business/earnings/paytm-crashes-over-20-takes-rs-585-crore-toll-on-fund-houses-insurance-companies-12166661.html
+2024-02-27 22:19:28,134 - Chirava.chirava - ERROR - 
+**********************************************************************
+  Resource [93mpunkt[0m not found.
+  Please use the NLTK Downloader to obtain the resource:
+
+  [31m>>> import nltk
+  >>> nltk.download('punkt')
+  [0m
+  For more information see: https://www.nltk.org/data.html
+
+  Attempted to load [93mtokenizers/punkt/english.pickle[0m
+
+  Searched in:
+    - 'C:\\Users\\joels/nltk_data'
+    - 'D:\\Educational\\MACE\\Final Project\\Summarization\\env\\nltk_data'
+    - 'D:\\Educational\\MACE\\Final Project\\Summarization\\env\\share\\nltk_data'
+    - 'D:\\Educational\\MACE\\Final Project\\Summarization\\env\\lib\\nltk_data'
+    - 'C:\\Users\\joels\\AppData\\Roaming\\nltk_data'
+    - 'C:\\nltk_data'
+    - 'D:\\nltk_data'
+    - 'E:\\nltk_data'
+    - ''
+**********************************************************************
+
+2024-02-27 22:19:28,134 - Chirava.chirava - INFO - Scraping article: https://www.cnn.com/2024/02/02/tech/paytm-india-rbi-intl-hnk/index.html
+2024-02-27 22:19:28,733 - Chirava.chirava - ERROR - Error scraping article: https://www.cnn.com/2024/02/02/tech/paytm-india-rbi-intl-hnk/index.html
+2024-02-27 22:19:28,733 - Chirava.chirava - ERROR - 
+**********************************************************************
+  Resource [93mpunkt[0m not found.
+  Please use the NLTK Downloader to obtain the resource:
+
+  [31m>>> import nltk
+  >>> nltk.download('punkt')
+  [0m
+  For more information see: https://www.nltk.org/data.html
+
+  Attempted to load [93mtokenizers/punkt/english.pickle[0m
+
+  Searched in:
+    - 'C:\\Users\\joels/nltk_data'
+    - 'D:\\Educational\\MACE\\Final Project\\Summarization\\env\\nltk_data'
+    - 'D:\\Educational\\MACE\\Final Project\\Summarization\\env\\share\\nltk_data'
+    - 'D:\\Educational\\MACE\\Final Project\\Summarization\\env\\lib\\nltk_data'
+    - 'C:\\Users\\joels\\AppData\\Roaming\\nltk_data'
+    - 'C:\\nltk_data'
+    - 'D:\\nltk_data'
+    - 'E:\\nltk_data'
+    - ''
+**********************************************************************
+
+2024-02-27 22:19:28,733 - Chirava.chirava - INFO - Scraping article: https://www.moneycontrol.com/news/business/markets/paytm-shares-fall-2-to-fresh-record-low-tank-23-in-last-5-days-12285111.html
+2024-02-27 22:19:29,197 - Chirava.chirava - ERROR - Error scraping article: https://www.moneycontrol.com/news/business/markets/paytm-shares-fall-2-to-fresh-record-low-tank-23-in-last-5-days-12285111.html
+2024-02-27 22:19:29,197 - Chirava.chirava - ERROR - 
+**********************************************************************
+  Resource [93mpunkt[0m not found.
+  Please use the NLTK Downloader to obtain the resource:
+
+  [31m>>> import nltk
+  >>> nltk.download('punkt')
+  [0m
+  For more information see: https://www.nltk.org/data.html
+
+  Attempted to load [93mtokenizers/punkt/english.pickle[0m
+
+  Searched in:
+    - 'C:\\Users\\joels/nltk_data'
+    - 'D:\\Educational\\MACE\\Final Project\\Summarization\\env\\nltk_data'
+    - 'D:\\Educational\\MACE\\Final Project\\Summarization\\env\\share\\nltk_data'
+    - 'D:\\Educational\\MACE\\Final Project\\Summarization\\env\\lib\\nltk_data'
+    - 'C:\\Users\\joels\\AppData\\Roaming\\nltk_data'
+    - 'C:\\nltk_data'
+    - 'D:\\nltk_data'
+    - 'E:\\nltk_data'
+    - ''
+**********************************************************************
+
+2024-02-27 22:19:29,197 - Chirava.chirava - INFO - Scraping article: https://www.moneycontrol.com/news/business/economy/no-law-agency-probe-into-paytm-as-of-now-says-revenue-secretary-12194971.html
+2024-02-27 22:19:29,660 - Chirava.chirava - ERROR - Error scraping article: https://www.moneycontrol.com/news/business/economy/no-law-agency-probe-into-paytm-as-of-now-says-revenue-secretary-12194971.html
+2024-02-27 22:19:29,660 - Chirava.chirava - ERROR - 
+**********************************************************************
+  Resource [93mpunkt[0m not found.
+  Please use the NLTK Downloader to obtain the resource:
+
+  [31m>>> import nltk
+  >>> nltk.download('punkt')
+  [0m
+  For more information see: https://www.nltk.org/data.html
+
+  Attempted to load [93mtokenizers/punkt/english.pickle[0m
+
+  Searched in:
+    - 'C:\\Users\\joels/nltk_data'
+    - 'D:\\Educational\\MACE\\Final Project\\Summarization\\env\\nltk_data'
+    - 'D:\\Educational\\MACE\\Final Project\\Summarization\\env\\share\\nltk_data'
+    - 'D:\\Educational\\MACE\\Final Project\\Summarization\\env\\lib\\nltk_data'
+    - 'C:\\Users\\joels\\AppData\\Roaming\\nltk_data'
+    - 'C:\\nltk_data'
+    - 'D:\\nltk_data'
+    - 'E:\\nltk_data'
+    - ''
+**********************************************************************
+
+2024-02-27 22:19:29,660 - Chirava.chirava - INFO - Scraping article: https://www.moneycontrol.com/news/business/markets/paytm-hits-upper-circuit-6-times-in-7-days-time-to-buy-12352831.html
+2024-02-27 22:19:30,089 - Chirava.chirava - ERROR - Error scraping article: https://www.moneycontrol.com/news/business/markets/paytm-hits-upper-circuit-6-times-in-7-days-time-to-buy-12352831.html
+2024-02-27 22:19:30,089 - Chirava.chirava - ERROR - 
+**********************************************************************
+  Resource [93mpunkt[0m not found.
+  Please use the NLTK Downloader to obtain the resource:
+
+  [31m>>> import nltk
+  >>> nltk.download('punkt')
+  [0m
+  For more information see: https://www.nltk.org/data.html
+
+  Attempted to load [93mtokenizers/punkt/english.pickle[0m
+
+  Searched in:
+    - 'C:\\Users\\joels/nltk_data'
+    - 'D:\\Educational\\MACE\\Final Project\\Summarization\\env\\nltk_data'
+    - 'D:\\Educational\\MACE\\Final Project\\Summarization\\env\\share\\nltk_data'
+    - 'D:\\Educational\\MACE\\Final Project\\Summarization\\env\\lib\\nltk_data'
+    - 'C:\\Users\\joels\\AppData\\Roaming\\nltk_data'
+    - 'C:\\nltk_data'
+    - 'D:\\nltk_data'
+    - 'E:\\nltk_data'
+    - ''
+**********************************************************************
+
+2024-02-27 22:19:30,089 - Chirava.chirava - INFO - Scraping article: https://www.moneycontrol.com/news/business/markets/paytm-crisis-compliance-issues-regulatory-overhang-keeps-mutual-funds-away-12264931.html
+2024-02-27 22:19:30,788 - Chirava.chirava - ERROR - Error scraping article: https://www.moneycontrol.com/news/business/markets/paytm-crisis-compliance-issues-regulatory-overhang-keeps-mutual-funds-away-12264931.html
+2024-02-27 22:19:30,788 - Chirava.chirava - ERROR - 
+**********************************************************************
+  Resource [93mpunkt[0m not found.
+  Please use the NLTK Downloader to obtain the resource:
+
+  [31m>>> import nltk
+  >>> nltk.download('punkt')
+  [0m
+  For more information see: https://www.nltk.org/data.html
+
+  Attempted to load [93mtokenizers/punkt/english.pickle[0m
+
+  Searched in:
+    - 'C:\\Users\\joels/nltk_data'
+    - 'D:\\Educational\\MACE\\Final Project\\Summarization\\env\\nltk_data'
+    - 'D:\\Educational\\MACE\\Final Project\\Summarization\\env\\share\\nltk_data'
+    - 'D:\\Educational\\MACE\\Final Project\\Summarization\\env\\lib\\nltk_data'
+    - 'C:\\Users\\joels\\AppData\\Roaming\\nltk_data'
+    - 'C:\\nltk_data'
+    - 'D:\\nltk_data'
+    - 'E:\\nltk_data'
+    - ''
+**********************************************************************
+
+2024-02-27 22:19:30,789 - Chirava.chirava - INFO - Scraping article: https://www.moneycontrol.com/news/business/markets/paytm-pains-far-from-over-but-sandeep-tandon-of-quant-mf-sees-digital-banking-new-reality-12279401.html
+2024-02-27 22:19:31,796 - Chirava.chirava - ERROR - Error scraping article: https://www.moneycontrol.com/news/business/markets/paytm-pains-far-from-over-but-sandeep-tandon-of-quant-mf-sees-digital-banking-new-reality-12279401.html
+2024-02-27 22:19:31,796 - Chirava.chirava - ERROR - 
+**********************************************************************
+  Resource [93mpunkt[0m not found.
+  Please use the NLTK Downloader to obtain the resource:
+
+  [31m>>> import nltk
+  >>> nltk.download('punkt')
+  [0m
+  For more information see: https://www.nltk.org/data.html
+
+  Attempted to load [93mtokenizers/punkt/english.pickle[0m
+
+  Searched in:
+    - 'C:\\Users\\joels/nltk_data'
+    - 'D:\\Educational\\MACE\\Final Project\\Summarization\\env\\nltk_data'
+    - 'D:\\Educational\\MACE\\Final Project\\Summarization\\env\\share\\nltk_data'
+    - 'D:\\Educational\\MACE\\Final Project\\Summarization\\env\\lib\\nltk_data'
+    - 'C:\\Users\\joels\\AppData\\Roaming\\nltk_data'
+    - 'C:\\nltk_data'
+    - 'D:\\nltk_data'
+    - 'E:\\nltk_data'
+    - ''
+**********************************************************************
+
+2024-02-27 22:19:31,796 - Chirava.chirava - INFO - Scraping article: https://www.moneycontrol.com/news/business/markets/paytm-will-continue-to-see-sharp-daily-volatility-investors-divided-on-value-in-stock-12220841.html
+2024-02-27 22:19:32,274 - Chirava.chirava - ERROR - Error scraping article: https://www.moneycontrol.com/news/business/markets/paytm-will-continue-to-see-sharp-daily-volatility-investors-divided-on-value-in-stock-12220841.html
+2024-02-27 22:19:32,274 - Chirava.chirava - ERROR - 
+**********************************************************************
+  Resource [93mpunkt[0m not found.
+  Please use the NLTK Downloader to obtain the resource:
+
+  [31m>>> import nltk
+  >>> nltk.download('punkt')
+  [0m
+  For more information see: https://www.nltk.org/data.html
+
+  Attempted to load [93mtokenizers/punkt/english.pickle[0m
+
+  Searched in:
+    - 'C:\\Users\\joels/nltk_data'
+    - 'D:\\Educational\\MACE\\Final Project\\Summarization\\env\\nltk_data'
+    - 'D:\\Educational\\MACE\\Final Project\\Summarization\\env\\share\\nltk_data'
+    - 'D:\\Educational\\MACE\\Final Project\\Summarization\\env\\lib\\nltk_data'
+    - 'C:\\Users\\joels\\AppData\\Roaming\\nltk_data'
+    - 'C:\\nltk_data'
+    - 'D:\\nltk_data'
+    - 'E:\\nltk_data'
+    - ''
+**********************************************************************
+
+2024-02-27 22:19:32,274 - Chirava.chirava - INFO - Scraping article: https://www.moneycontrol.com/news/business/markets/paytm-shares-crash-9-more-to-a-fresh-52-week-low-down-65-from-highs-12263511.html
+2024-02-27 22:19:32,703 - Chirava.chirava - ERROR - Error scraping article: https://www.moneycontrol.com/news/business/markets/paytm-shares-crash-9-more-to-a-fresh-52-week-low-down-65-from-highs-12263511.html
+2024-02-27 22:19:32,703 - Chirava.chirava - ERROR - 
+**********************************************************************
+  Resource [93mpunkt[0m not found.
+  Please use the NLTK Downloader to obtain the resource:
+
+  [31m>>> import nltk
+  >>> nltk.download('punkt')
+  [0m
+  For more information see: https://www.nltk.org/data.html
+
+  Attempted to load [93mtokenizers/punkt/english.pickle[0m
+
+  Searched in:
+    - 'C:\\Users\\joels/nltk_data'
+    - 'D:\\Educational\\MACE\\Final Project\\Summarization\\env\\nltk_data'
+    - 'D:\\Educational\\MACE\\Final Project\\Summarization\\env\\share\\nltk_data'
+    - 'D:\\Educational\\MACE\\Final Project\\Summarization\\env\\lib\\nltk_data'
+    - 'C:\\Users\\joels\\AppData\\Roaming\\nltk_data'
+    - 'C:\\nltk_data'
+    - 'D:\\nltk_data'
+    - 'E:\\nltk_data'
+    - ''
+**********************************************************************
+
+2024-02-27 22:19:32,703 - Chirava.chirava - INFO - Scraping article: https://www.moneycontrol.com/news/business/stocks/mc-markets-graphixstory-brokerages-cut-paytms-target-price-by-20-60-after-rbi-diktat-12257301.html
+2024-02-27 22:19:33,121 - Chirava.chirava - ERROR - Error scraping article: https://www.moneycontrol.com/news/business/stocks/mc-markets-graphixstory-brokerages-cut-paytms-target-price-by-20-60-after-rbi-diktat-12257301.html
+2024-02-27 22:19:33,121 - Chirava.chirava - ERROR - 
+**********************************************************************
+  Resource [93mpunkt[0m not found.
+  Please use the NLTK Downloader to obtain the resource:
+
+  [31m>>> import nltk
+  >>> nltk.download('punkt')
+  [0m
+  For more information see: https://www.nltk.org/data.html
+
+  Attempted to load [93mtokenizers/punkt/english.pickle[0m
+
+  Searched in:
+    - 'C:\\Users\\joels/nltk_data'
+    - 'D:\\Educational\\MACE\\Final Project\\Summarization\\env\\nltk_data'
+    - 'D:\\Educational\\MACE\\Final Project\\Summarization\\env\\share\\nltk_data'
+    - 'D:\\Educational\\MACE\\Final Project\\Summarization\\env\\lib\\nltk_data'
+    - 'C:\\Users\\joels\\AppData\\Roaming\\nltk_data'
+    - 'C:\\nltk_data'
+    - 'D:\\nltk_data'
+    - 'E:\\nltk_data'
+    - ''
+**********************************************************************
+
+2024-02-27 22:19:33,121 - Chirava.chirava - INFO - Scraping article: https://www.rt.com/india/592183-india-central-bank-paytm/
+2024-02-27 22:19:37,035 - Chirava.chirava - ERROR - Error scraping article: https://www.rt.com/india/592183-india-central-bank-paytm/
+2024-02-27 22:19:37,035 - Chirava.chirava - ERROR - 
+**********************************************************************
+  Resource [93mpunkt[0m not found.
+  Please use the NLTK Downloader to obtain the resource:
+
+  [31m>>> import nltk
+  >>> nltk.download('punkt')
+  [0m
+  For more information see: https://www.nltk.org/data.html
+
+  Attempted to load [93mtokenizers/punkt/english.pickle[0m
+
+  Searched in:
+    - 'C:\\Users\\joels/nltk_data'
+    - 'D:\\Educational\\MACE\\Final Project\\Summarization\\env\\nltk_data'
+    - 'D:\\Educational\\MACE\\Final Project\\Summarization\\env\\share\\nltk_data'
+    - 'D:\\Educational\\MACE\\Final Project\\Summarization\\env\\lib\\nltk_data'
+    - 'C:\\Users\\joels\\AppData\\Roaming\\nltk_data'
+    - 'C:\\nltk_data'
+    - 'D:\\nltk_data'
+    - 'E:\\nltk_data'
+    - ''
+**********************************************************************
+
+2024-02-27 22:19:37,035 - Chirava.chirava - INFO - Scraping article: https://www.bbc.com/news/world-asia-india-68248364
+2024-02-27 22:19:37,586 - Chirava.chirava - ERROR - Error scraping article: https://www.bbc.com/news/world-asia-india-68248364
+2024-02-27 22:19:37,586 - Chirava.chirava - ERROR - 
+**********************************************************************
+  Resource [93mpunkt[0m not found.
+  Please use the NLTK Downloader to obtain the resource:
+
+  [31m>>> import nltk
+  >>> nltk.download('punkt')
+  [0m
+  For more information see: https://www.nltk.org/data.html
+
+  Attempted to load [93mtokenizers/punkt/english.pickle[0m
+
+  Searched in:
+    - 'C:\\Users\\joels/nltk_data'
+    - 'D:\\Educational\\MACE\\Final Project\\Summarization\\env\\nltk_data'
+    - 'D:\\Educational\\MACE\\Final Project\\Summarization\\env\\share\\nltk_data'
+    - 'D:\\Educational\\MACE\\Final Project\\Summarization\\env\\lib\\nltk_data'
+    - 'C:\\Users\\joels\\AppData\\Roaming\\nltk_data'
+    - 'C:\\nltk_data'
+    - 'D:\\nltk_data'
+    - 'E:\\nltk_data'
+    - ''
+**********************************************************************
+
+2024-02-27 22:19:37,586 - Chirava.chirava - INFO - Scraping article: https://www.bbc.com/news/world-asia-india-68248364?xtor=AL-72-%5Bpartner%5D-%5Byahoo.north.america%5D-%5Bheadline%5D-%5Bnews%5D-%5Bbizdev%5D-%5Bisapi%5D
+2024-02-27 22:19:37,868 - Chirava.chirava - ERROR - Error scraping article: https://www.bbc.com/news/world-asia-india-68248364?xtor=AL-72-%5Bpartner%5D-%5Byahoo.north.america%5D-%5Bheadline%5D-%5Bnews%5D-%5Bbizdev%5D-%5Bisapi%5D
+2024-02-27 22:19:37,868 - Chirava.chirava - ERROR - 
+**********************************************************************
+  Resource [93mpunkt[0m not found.
+  Please use the NLTK Downloader to obtain the resource:
+
+  [31m>>> import nltk
+  >>> nltk.download('punkt')
+  [0m
+  For more information see: https://www.nltk.org/data.html
+
+  Attempted to load [93mtokenizers/punkt/english.pickle[0m
+
+  Searched in:
+    - 'C:\\Users\\joels/nltk_data'
+    - 'D:\\Educational\\MACE\\Final Project\\Summarization\\env\\nltk_data'
+    - 'D:\\Educational\\MACE\\Final Project\\Summarization\\env\\share\\nltk_data'
+    - 'D:\\Educational\\MACE\\Final Project\\Summarization\\env\\lib\\nltk_data'
+    - 'C:\\Users\\joels\\AppData\\Roaming\\nltk_data'
+    - 'C:\\nltk_data'
+    - 'D:\\nltk_data'
+    - 'E:\\nltk_data'
+    - ''
+**********************************************************************
+
+2024-02-27 22:19:37,868 - Chirava.chirava - INFO - Scraping article: https://www.moneycontrol.com/news/business/stocks/will-paytm-stock-recoup-losses-today-after-36-fall-circuit-narrowed-to-10-12192181.html
+2024-02-27 22:19:38,296 - Chirava.chirava - ERROR - Error scraping article: https://www.moneycontrol.com/news/business/stocks/will-paytm-stock-recoup-losses-today-after-36-fall-circuit-narrowed-to-10-12192181.html
+2024-02-27 22:19:38,296 - Chirava.chirava - ERROR - 
+**********************************************************************
+  Resource [93mpunkt[0m not found.
+  Please use the NLTK Downloader to obtain the resource:
+
+  [31m>>> import nltk
+  >>> nltk.download('punkt')
+  [0m
+  For more information see: https://www.nltk.org/data.html
+
+  Attempted to load [93mtokenizers/punkt/english.pickle[0m
+
+  Searched in:
+    - 'C:\\Users\\joels/nltk_data'
+    - 'D:\\Educational\\MACE\\Final Project\\Summarization\\env\\nltk_data'
+    - 'D:\\Educational\\MACE\\Final Project\\Summarization\\env\\share\\nltk_data'
+    - 'D:\\Educational\\MACE\\Final Project\\Summarization\\env\\lib\\nltk_data'
+    - 'C:\\Users\\joels\\AppData\\Roaming\\nltk_data'
+    - 'C:\\nltk_data'
+    - 'D:\\nltk_data'
+    - 'E:\\nltk_data'
+    - ''
+**********************************************************************
+
+2024-02-27 22:19:38,296 - Chirava.chirava - INFO - Chirava runner complete and returning result.... [Article(heading='Paytm woes send One 97’s stock plunging, prompting analyst’s ‘sell’ call', content='One 97 Communications’s stock continued to plunge after a bank used the company’s popular Paytm mobile-payments service was effectively shutdown by bank regulat', date='2024-02-02T14:58:00Z', url='https://www.marketwatch.com/story/paytm-woes-send-one-97s-stock-plunging-prompting-analysts-sell-call-c040dfdf', source='MarketWatch', urlToImage='https://images.mktw.net/im-81811532/social', Similarity=None, db_source='newsAPI', nlp_summary=None), Article(heading='Paytm shares jump 5% after Axis Bank deal, fresh RBI deadline', content='The Reserve Bank of India (RBI) on Friday extended the deadline for Paytm Payments Bank to stop accepting fresh deposits in its accounts or wallets to March 15 from Feb.', date='2024-02-19T05:20:36Z', url='https://indianexpress.com/article/business/companies/paytm-shares-after-axis-bank-deal-fresh-rbi-deadline-9168778/', source='The Indian Express', urlToImage='https://images.indianexpress.com/2024/02/Untitled-design-12-1.jpg', Similarity=None, db_source='newsAPI', nlp_summary=None), Article(heading='Across Asia, Super Apps Are Facing A Moment Of Truth', content='Don’t Say We Didn’t Warn You. Some of the most prominent platform companies in Asia are facing intensifying regulatory scrutiny due at least in part to their own misst', date='2024-02-17T02:56:40Z', url='https://www.forbes.com/sites/zennonkapron/2024/02/16/across-asia-super-apps-are-facing-a-moment-of-truth/', source='Forbes', urlToImage='https://imageio.forbes.com/specials-images/imageserve/65d01f7126198f28b6475d32/0x0.jpg?format=jpg&height=900&width=1600&fit=bounds', Similarity=None, db_source='newsAPI', nlp_summary=None), Article(heading='Additional fund requirement might have fuelled the fall in Paytm stock', content='Sources said that the margin funding book for the Paytm stock stood at close to Rs 250-300 crore before the carnage started. What caused precipitous selling was the call by some brokers for additional margins, not just for Paytm stock they were holding but', date='2024-02-06T12:46:21Z', url='https://www.moneycontrol.com/news/business/stocks/additional-fund-requirement-might-have-fuelled-the-fall-in-paytm-stock-12204471.html', source='Moneycontrol', urlToImage='https://images.moneycontrol.com/static-mcnews/2021/11/Vijay-Shekhar-Sharma-in-tears-at-BSE-770x433.jpg', Similarity=None, db_source='newsAPI', nlp_summary=None), Article(heading='Paytm stock continues to recover, hits upper circuit 3rd day in a row', content='Bernstein expects Paytm to successfully execute the operational changes required to remove the dependency on Paytm Payments Bank with limited long-term impact to the fintech firm#39;s overall busi', date='2024-02-21T07:53:03Z', url='https://www.moneycontrol.com/news/business/markets/paytm-stock-continues-to-recover-hits-upper-circuit-3rd-day-in-a-row-12320921.html', source='Moneycontrol', urlToImage='https://images.moneycontrol.com/static-mcnews/2017/11/RTX30SOV-770x433.jpg', Similarity=None, db_source='newsAPI', nlp_summary=None), Article(heading='What to expect from SBI shares going ahead? Sandip Sabharwal answers', content='\u200bAnd for many of the banks, the big boost to earnings which came out of improvement in asset quality given that most large banks including SBI now have net NPAs at 0.5-0.6% or lower, from next year that benefit also will not be there to add to the earni', date='2024-02-05T05:20:15Z', url='https://economictimes.indiatimes.com/markets/expert-view/what-to-expect-from-sbi-shares-going-ahead-sandip-sabharwal-answers/articleshow/107416052.cms', source='The Times of India', urlToImage='https://img.etimg.com/thumb/msid-107416010,width-1200,height-630,imgsize-15384,overlay-etmarkets/photo.jpg', Similarity=None, db_source='newsAPI', nlp_summary=None), Article(heading='UPSC Key—1st February, 2024: Paytm Payments Bank, Prakash Singh judgment and Sixteenth Finance Commission', content='Exclusive for Subscribers from Monday to Friday: Why Article 280 of the Constitution and ‘minority character’ of an educational institution are relevant to the UPSC Exam? What significance do topics like ‘acting’ DGP, Paytm and India’s fintech revolution h', date='2024-02-01T15:39:11Z', url='https://indianexpress.com/article/upsc-current-affairs/upsc-key-1st-february-2024-paytm-payments-bank-prakash-singh-judgment-and-sixteenth-finance-commission-9139612/', source='The Indian Express', urlToImage='https://images.indianexpress.com/2024/02/UPSC-Key-1st-Feb-2024.png', Similarity=None, db_source='newsAPI', nlp_summary=None), Article(heading='Sanjiv Bhasin on what should investors do with OMC stocks', content='US yields and Indian midcaps are experiencing a shift in the market. There are now three rate cuts, softening yields, and a potential correction in the PSU basket. PSUs have seen under ownership and outperformance, but there is extreme overbought condition', date='2024-02-06T04:30:22Z', url='https://economictimes.indiatimes.com/markets/expert-view/sanjiv-bhasin-on-what-should-investors-do-with-omc-stocks/articleshow/107445425.cms', source='The Times of India', urlToImage='https://img.etimg.com/thumb/msid-107445460,width-1200,height-630,imgsize-18648,overlay-etmarkets/photo.jpg', Similarity=None, db_source='newsAPI', nlp_summary=None), Article(heading='RBI action against Paytm: What would be mutual fund managersâ\x80\x99 reaction?', content='Paytm is not among heavily-owned stocks by mutual funds in India as 23 fund houses via 69 schemes have invested Rs 1,995 crore in the company. Paytmâ\x80\x99s average market-cap was Rs 53,327 crore during the June to December per', date='2024-01-31T17:38:00Z', url='https://www.moneycontrol.com/news/business/personal-finance/rbi-action-against-paytm-what-would-be-mutual-fund-managers-reaction-12164771.html', source='Moneycontrol', urlToImage='https://images.moneycontrol.com/static-mcnews/2017/11/RTX30SOV-770x433.jpg', Similarity=None, db_source='newsAPI', nlp_summary=None), Article(heading='Paytm shares crash 20% to lower circuit as RBI effectively ends payments bank biz', content='Paytm Payments Bank houses all the key products offered by Paytm including wallets, FASTags, UPI and deposit accounts of millions of mercha', date='2024-02-01T03:46:02Z', url='https://www.moneycontrol.com/news/business/markets/paytm-shares-crash-20-to-lower-circuit-as-rbi-effectively-ends-payments-bank-biz-12166521.html', source='Moneycontrol', urlToImage='https://images.moneycontrol.com/static-mcnews/2018/08/paytm-770x433.jpg', Similarity=None, db_source='newsAPI', nlp_summary=None), Article(heading='Paytm falls further, sheds 43% in 4 days as regulatory woes linger', content='Confederation of All India Traders (CAIT) has issued an advisory urging brick-and-mortar businesses to shift from Paytm to alternative payment applicat', date='2024-02-06T03:29:15Z', url='https://www.moneycontrol.com/news/business/markets/paytm-sheds-42-in-3-days-will-the-stock-slide-more-as-regulatory-woes-linger-12200891.html', source='Moneycontrol', urlToImage='https://images.moneycontrol.com/static-mcnews/2024/01/Stock-Market-Selloff-1-770x433.jpg', Similarity=None, db_source='newsAPI', nlp_summary=None), Article(heading='Paytm crashes over 20%, takes Rs 585-crore toll on fund houses, insurance companies', content='The stock declined after the Reserve Bank of India imposed major restrictions on the company#39;s lending business which also includes a prohibition on accepting fresh deposits and doing credit transactions after Februar', date='2024-02-01T04:01:44Z', url='https://www.moneycontrol.com/news/business/earnings/paytm-crashes-over-20-takes-rs-585-crore-toll-on-fund-houses-insurance-companies-12166661.html', source='Moneycontrol', urlToImage='https://images.moneycontrol.com/static-mcnews/2018/07/Paytm-770x433.jpg', Similarity=None, db_source='newsAPI', nlp_summary=None), Article(heading='Paytm, once India’s hottest startup, sees its stock fall 80% since market debut', content='Paytm, once the hottest of India’s startups, has seen a stunning fall on the stock market since last week, extending a plunge that has wiped nearly 80% off its value since it went public in the country’s biggest IPO in 2', date='2024-02-05T05:03:25Z', url='https://www.cnn.com/2024/02/02/tech/paytm-india-rbi-intl-hnk/index.html', source='CNN', urlToImage='https://media.cnn.com/api/v1/images/stellar/prod/gettyimages-1968516080.jpeg?c=16x9&q=w_800,c_fill', Similarity=None, db_source='newsAPI', nlp_summary=None), Article(heading='Paytm shares fall 2% to fresh record low, tank 23% in last 5 days', content='Paytm has now lost about Rs 27,000 crore or 57 percent of its value in the last 11 trading days since the trouble began after RBI#39;s ban on the Paytm Payments Bank which also houses Paytm wal', date='2024-02-16T04:00:41Z', url='https://www.moneycontrol.com/news/business/markets/paytm-shares-fall-2-to-fresh-record-low-tank-23-in-last-5-days-12285111.html', source='Moneycontrol', urlToImage='https://images.moneycontrol.com/static-mcnews/2023/06/sensexdown_niftydown-1-770x433.jpg', Similarity=None, db_source='newsAPI', nlp_summary=None), Article(heading='No law agency probe into Paytm as of now, says revenue secretary', content='Parent One97 Communications has also said there is no investigation by the Enforcement Directorate against Paytm, its associates and founder for money launde', date='2024-02-05T08:33:39Z', url='https://www.moneycontrol.com/news/business/economy/no-law-agency-probe-into-paytm-as-of-now-says-revenue-secretary-12194971.html', source='Moneycontrol', urlToImage='https://images.moneycontrol.com/static-mcnews/2017/12/Paytm-Ka-ATM-final-3-1-770x433.jpg', Similarity=None, db_source='newsAPI', nlp_summary=None), Article(heading='Paytm hits upper circuit 6 times in 7 days. Time to buy?', content='Despite the recovery, the market capitalisation of the payments major is 30 percent down from January 31, when the RBI slapped restrictions on Paytm Payments ', date='2024-02-26T10:38:12Z', url='https://www.moneycontrol.com/news/business/markets/paytm-hits-upper-circuit-6-times-in-7-days-time-to-buy-12352831.html', source='Moneycontrol', urlToImage='https://images.moneycontrol.com/static-mcnews/2024/02/paytm4-770x431.jpg', Similarity=None, db_source='newsAPI', nlp_summary=None), Article(heading='Paytm crisis: Compliance issues, regulatory overhang keeps mutual funds away', content='At the end of the December quarter, mutual funds held 4.99 percent stake in Paytm, up from 2.79 percent in the previous quarter. Nippon held a 1.05 percent and Mirae a 2.5 percent stake in the com', date='2024-02-14T08:43:21Z', url='https://www.moneycontrol.com/news/business/markets/paytm-crisis-compliance-issues-regulatory-overhang-keeps-mutual-funds-away-12264931.html', source='Moneycontrol', urlToImage='https://images.moneycontrol.com/static-mcnews/2024/02/Paytm-3-770x433.jpg', Similarity=None, db_source='newsAPI', nlp_summary=None), Article(heading='Paytm pains far from over, but Sandeep Tandon of Quant MF sees digital banking new reality', content='On January 31, the RBI placed restrictions on Paytm Payments Bank, saying the actions were warranted by â\x80\x9cpersistent non-compliances and continued material supervisory concerns in the ban', date='2024-02-15T08:48:54Z', url='https://www.moneycontrol.com/news/business/markets/paytm-pains-far-from-over-but-sandeep-tandon-of-quant-mf-sees-digital-banking-new-reality-12279401.html', source='Moneycontrol', urlToImage='https://images.moneycontrol.com/static-mcnews/2023/06/sensexdown_niftydown-1-770x433.jpg', Similarity=None, db_source='newsAPI', nlp_summary=None), Article(heading='Paytm will continue to see sharp daily volatility; investors divided on â\x80\x98valueâ\x80\x99 in stock', content='As of December-end, domestic mutual funds held a 6.07 percent stake in Paytm, while FPIs held 63.72 percent. No big blocks have been reported on the exchanges except a Rs 244 crore purchase by Morgan Stanley in a client acco', date='2024-02-08T06:39:06Z', url='https://www.moneycontrol.com/news/business/markets/paytm-will-continue-to-see-sharp-daily-volatility-investors-divided-on-value-in-stock-12220841.html', source='Moneycontrol', urlToImage='https://images.moneycontrol.com/static-mcnews/2024/02/Paytm-crisis-2-770x433.jpg', Similarity=None, db_source='newsAPI', nlp_summary=None), Article(heading='Paytm shares crash 9% more to a fresh 52-week low, down 65% from highs', content='Since January 31, after the RBI imposed its restrictions, Paytm shares have shed more than half their value, tanking around 53 perc', date='2024-02-14T04:14:05Z', url='https://www.moneycontrol.com/news/business/markets/paytm-shares-crash-9-more-to-a-fresh-52-week-low-down-65-from-highs-12263511.html', source='Moneycontrol', urlToImage='https://images.moneycontrol.com/static-mcnews/2024/02/Paytm-3-770x433.jpg', Similarity=None, db_source='newsAPI', nlp_summary=None), Article(heading='MC Markets Graphixstory: Brokerages cut Paytm#39;s target price by 20-60% after RBI diktat', content='WhileÂ\xa0restrictions on Paytm Payments Bank do not directly impact One97 Communications lending business, brokerages seem to be divided on the matter. Some brokerages see a huge customer exodusÂ\xa0impacting loan distribution, while someÂ\xa0say the impact will o', date='2024-02-14T01:27:17Z', url='https://www.moneycontrol.com/news/business/stocks/mc-markets-graphixstory-brokerages-cut-paytms-target-price-by-20-60-after-rbi-diktat-12257301.html', source='Moneycontrol', urlToImage='https://images.moneycontrol.com/static-mcnews/2024/02/Paytm-3-770x433.jpg', Similarity=None, db_source='newsAPI', nlp_summary=None), Article(heading='Fintech face-off: How India’s central bank cracked the whip on e-wallet giant Paytm', content='The survival of the startup that drove financial inclusion in the country and boosted the nation’s economy is now at stake Read Full Article at RT', date='2024-02-10T08:53:00Z', url='https://www.rt.com/india/592183-india-central-bank-paytm/', source='RT', urlToImage='https://mf.b37mrtl.ru/files/2024.02/article/65c737c520302711dc7d864b.jpg', Similarity=None, db_source='newsAPI', nlp_summary=None), Article(heading='Paytm: Rockstar Indian fintech start-up faces serious crisis', content="Paytm - India's famous payments app - is facing a regulatory crackdown that's impacting milli", date='2024-02-12T23:23:36Z', url='https://www.bbc.com/news/world-asia-india-68248364', source='BBC News', urlToImage='https://ichef.bbci.co.uk/news/1024/branded_news/01F4/production/_132600500_gettyimages-1968973729.jpg', Similarity=None, db_source='newsAPI', nlp_summary=None), Article(heading='Paytm: Rockstar Indian fintech start-up faces serious crisis', content="Paytm - India's famous payments app - is facing a regulatory crackdown that's impacting milli", date='2024-02-12T23:23:36Z', url='https://www.bbc.com/news/world-asia-india-68248364?xtor=AL-72-%5Bpartner%5D-%5Byahoo.north.america%5D-%5Bheadline%5D-%5Bnews%5D-%5Bbizdev%5D-%5Bisapi%5D', source='BBC News', urlToImage='https://media.zenfs.com/en/bbc_us_articles_995/3e90e928571659413dd664be31ae1b10', Similarity=None, db_source='newsAPI', nlp_summary=None), Article(heading='Will Paytm stock recoup losses today after 36% fall? Circuit narrowed to 10%', content='News reports also said the Reserve Bank of India may consider cancelling Paytmâ\x80\x99s banking licence, as early as next month, once the depositors money is s', date='2024-02-05T03:41:17Z', url='https://www.moneycontrol.com/news/business/stocks/will-paytm-stock-recoup-losses-today-after-36-fall-circuit-narrowed-to-10-12192181.html', source='Moneycontrol', urlToImage='https://images.moneycontrol.com/static-mcnews/2024/02/paytm-770x431.jpg', Similarity=None, db_source='newsAPI', nlp_summary=None)]
+2024-02-27 22:24:01,431 - Chirava.chirava - INFO - Running chirava runner....
+2024-02-27 22:24:01,432 - Chirava.chirava - INFO - Scraping article: https://www.cnn.com/2024/02/02/tech/paytm-india-rbi-intl-hnk/index.html
+2024-02-27 22:24:02,342 - Chirava.chirava - ERROR - Error scraping article: https://www.cnn.com/2024/02/02/tech/paytm-india-rbi-intl-hnk/index.html
+2024-02-27 22:24:02,342 - Chirava.chirava - ERROR - 
+**********************************************************************
+  Resource [93mpunkt[0m not found.
+  Please use the NLTK Downloader to obtain the resource:
+
+  [31m>>> import nltk
+  >>> nltk.download('punkt')
+  [0m
+  For more information see: https://www.nltk.org/data.html
+
+  Attempted to load [93mtokenizers/punkt/english.pickle[0m
+
+  Searched in:
+    - 'C:\\Users\\joels/nltk_data'
+    - 'D:\\Educational\\MACE\\Final Project\\Summarization\\env\\nltk_data'
+    - 'D:\\Educational\\MACE\\Final Project\\Summarization\\env\\share\\nltk_data'
+    - 'D:\\Educational\\MACE\\Final Project\\Summarization\\env\\lib\\nltk_data'
+    - 'C:\\Users\\joels\\AppData\\Roaming\\nltk_data'
+    - 'C:\\nltk_data'
+    - 'D:\\nltk_data'
+    - 'E:\\nltk_data'
+    - ''
+**********************************************************************
+
+2024-02-27 22:24:02,342 - Chirava.chirava - INFO - Scraping article: https://www.livemint.com/companies/news/the-paytm-saga-so-far-from-rbi-intervention-to-stock-crash-and-sale-speculation-11707196053279.html
+2024-02-27 22:24:02,869 - Chirava.chirava - ERROR - Error scraping article: https://www.livemint.com/companies/news/the-paytm-saga-so-far-from-rbi-intervention-to-stock-crash-and-sale-speculation-11707196053279.html
+2024-02-27 22:24:02,870 - Chirava.chirava - ERROR - 
+**********************************************************************
+  Resource [93mpunkt[0m not found.
+  Please use the NLTK Downloader to obtain the resource:
+
+  [31m>>> import nltk
+  >>> nltk.download('punkt')
+  [0m
+  For more information see: https://www.nltk.org/data.html
+
+  Attempted to load [93mtokenizers/punkt/english.pickle[0m
+
+  Searched in:
+    - 'C:\\Users\\joels/nltk_data'
+    - 'D:\\Educational\\MACE\\Final Project\\Summarization\\env\\nltk_data'
+    - 'D:\\Educational\\MACE\\Final Project\\Summarization\\env\\share\\nltk_data'
+    - 'D:\\Educational\\MACE\\Final Project\\Summarization\\env\\lib\\nltk_data'
+    - 'C:\\Users\\joels\\AppData\\Roaming\\nltk_data'
+    - 'C:\\nltk_data'
+    - 'D:\\nltk_data'
+    - 'E:\\nltk_data'
+    - ''
+**********************************************************************
+
+2024-02-27 22:24:02,870 - Chirava.chirava - INFO - Scraping article: https://economictimes.indiatimes.com/markets/stocks/news/paytm-crisis-makes-investors-hunt-for-other-fertile-fintechs-top-2-stocks-on-radar/articleshow/107424239.cms
+2024-02-27 22:24:03,791 - Chirava.chirava - ERROR - Error scraping article: https://economictimes.indiatimes.com/markets/stocks/news/paytm-crisis-makes-investors-hunt-for-other-fertile-fintechs-top-2-stocks-on-radar/articleshow/107424239.cms
+2024-02-27 22:24:03,791 - Chirava.chirava - ERROR - 
+**********************************************************************
+  Resource [93mpunkt[0m not found.
+  Please use the NLTK Downloader to obtain the resource:
+
+  [31m>>> import nltk
+  >>> nltk.download('punkt')
+  [0m
+  For more information see: https://www.nltk.org/data.html
+
+  Attempted to load [93mtokenizers/punkt/english.pickle[0m
+
+  Searched in:
+    - 'C:\\Users\\joels/nltk_data'
+    - 'D:\\Educational\\MACE\\Final Project\\Summarization\\env\\nltk_data'
+    - 'D:\\Educational\\MACE\\Final Project\\Summarization\\env\\share\\nltk_data'
+    - 'D:\\Educational\\MACE\\Final Project\\Summarization\\env\\lib\\nltk_data'
+    - 'C:\\Users\\joels\\AppData\\Roaming\\nltk_data'
+    - 'C:\\nltk_data'
+    - 'D:\\nltk_data'
+    - 'E:\\nltk_data'
+    - ''
+**********************************************************************
+
+2024-02-27 22:24:03,791 - Chirava.chirava - INFO - Scraping article: https://www.ndtv.com/india-news/paytm-news-paytm-shares-drop-after-rbi-action-against-payments-bank-trigger-meme-fest-4972159
+2024-02-27 22:24:04,920 - Chirava.chirava - ERROR - Error scraping article: https://www.ndtv.com/india-news/paytm-news-paytm-shares-drop-after-rbi-action-against-payments-bank-trigger-meme-fest-4972159
+2024-02-27 22:24:04,920 - Chirava.chirava - ERROR - 
+**********************************************************************
+  Resource [93mpunkt[0m not found.
+  Please use the NLTK Downloader to obtain the resource:
+
+  [31m>>> import nltk
+  >>> nltk.download('punkt')
+  [0m
+  For more information see: https://www.nltk.org/data.html
+
+  Attempted to load [93mtokenizers/punkt/english.pickle[0m
+
+  Searched in:
+    - 'C:\\Users\\joels/nltk_data'
+    - 'D:\\Educational\\MACE\\Final Project\\Summarization\\env\\nltk_data'
+    - 'D:\\Educational\\MACE\\Final Project\\Summarization\\env\\share\\nltk_data'
+    - 'D:\\Educational\\MACE\\Final Project\\Summarization\\env\\lib\\nltk_data'
+    - 'C:\\Users\\joels\\AppData\\Roaming\\nltk_data'
+    - 'C:\\nltk_data'
+    - 'D:\\nltk_data'
+    - 'E:\\nltk_data'
+    - ''
+**********************************************************************
+
+2024-02-27 22:24:04,920 - Chirava.chirava - INFO - Scraping article: https://economictimes.indiatimes.com/markets/stocks/news/paytm-shares-jump-7-after-vijay-shekhar-sharma-meets-rbi-fm-nirmala-sitharaman/articleshow/107476562.cms
+2024-02-27 22:24:05,298 - Chirava.chirava - ERROR - Error scraping article: https://economictimes.indiatimes.com/markets/stocks/news/paytm-shares-jump-7-after-vijay-shekhar-sharma-meets-rbi-fm-nirmala-sitharaman/articleshow/107476562.cms
+2024-02-27 22:24:05,298 - Chirava.chirava - ERROR - 
+**********************************************************************
+  Resource [93mpunkt[0m not found.
+  Please use the NLTK Downloader to obtain the resource:
+
+  [31m>>> import nltk
+  >>> nltk.download('punkt')
+  [0m
+  For more information see: https://www.nltk.org/data.html
+
+  Attempted to load [93mtokenizers/punkt/english.pickle[0m
+
+  Searched in:
+    - 'C:\\Users\\joels/nltk_data'
+    - 'D:\\Educational\\MACE\\Final Project\\Summarization\\env\\nltk_data'
+    - 'D:\\Educational\\MACE\\Final Project\\Summarization\\env\\share\\nltk_data'
+    - 'D:\\Educational\\MACE\\Final Project\\Summarization\\env\\lib\\nltk_data'
+    - 'C:\\Users\\joels\\AppData\\Roaming\\nltk_data'
+    - 'C:\\nltk_data'
+    - 'D:\\nltk_data'
+    - 'E:\\nltk_data'
+    - ''
+**********************************************************************
+
+2024-02-27 22:24:05,299 - Chirava.chirava - INFO - Chirava runner complete and returning result.... [Article(heading='Paytm, once India’s hottest startup, sees its stock fall 80% since market debut', content='Paytm, once the hottest of India’s startups, has seen a stunning fall on the stock market since last week, extending a plunge that has wiped nearly 80% off its value since it went public in the country’s biggest IPO in 2', date='2024-02-05T05:03:25Z', url='https://www.cnn.com/2024/02/02/tech/paytm-india-rbi-intl-hnk/index.html', source='CNN', urlToImage='https://media.cnn.com/api/v1/images/stellar/prod/gettyimages-1968516080.jpeg?c=16x9&q=w_800,c_fill', Similarity=None, db_source='newsAPI', nlp_summary=None), Article(heading='The Paytm saga so far… from RBI intervention to stock crash and sale speculation', content="Paytm Payments Bank faces an existential crisis as the Reserve Bank of India cracks down on the fintech firm. Here's all the low", date='2024-02-06T05:57:37Z', url='https://www.livemint.com/companies/news/the-paytm-saga-so-far-from-rbi-intervention-to-stock-crash-and-sale-speculation-11707196053279.html', source='Livemint', urlToImage='https://www.livemint.com/lm-img/img/2024/02/06/1600x900/Paytm_founder_ceo_vijay_shekhar_sharma_rbi__1707196186259_1707196186407.JPG', Similarity=None, db_source='newsAPI', nlp_summary=None), Article(heading='Paytm crisis makes investors hunt for other fertile fintechs. Top 2 stocks on radar', content='Fino Payments Bank shares, which competes with Paytm, hit the 20% upper circuit limit at Rs 372.30. Jio Financial or JFSL shares rallied 16% to hit a fresh high of Rs 295 after a newspaper reported that One 97 Communications is in talks with Jio to sell th', date='2024-02-05T09:06:37Z', url='https://economictimes.indiatimes.com/markets/stocks/news/paytm-crisis-makes-investors-hunt-for-other-fertile-fintechs-top-2-stocks-on-radar/articleshow/107424239.cms', source='The Times of India', urlToImage='https://img.etimg.com/thumb/msid-107424360,width-1200,height-630,imgsize-58956,overlay-etmarkets/photo.jpg', Similarity=None, db_source='newsAPI', nlp_summary=None), Article(heading='Paytm Shares Drop After RBI Action Against Payments Bank, Trigger Meme Fest', content='Digital payments firm Paytm lost a fifth of its market value on Thursday after the Reserve Bank of India (RBI) directed its associate Paytm Payments Bank to halt its business, sparking a meme fest on the inter', date='2024-02-01T06:38:17Z', url='https://www.ndtv.com/india-news/paytm-news-paytm-shares-drop-after-rbi-action-against-payments-bank-trigger-meme-fest-4972159', source='NDTV News', urlToImage='https://c.ndtvimg.com/2024-02/9tebo574_paytm-generic-reuters_625x300_01_February_24.jpeg', Similarity=None, db_source='newsAPI', nlp_summary=None), Article(heading='Paytm shares jump 9% after Vijay Shekhar Sharma meets RBI, FM Nirmala Sitharaman', content='Following three days of non-stop selling in lower circuits which led to 42% crash in the stock, Paytm shares ended 3% higher yesterday. At this stage, Paytm shares are solely guided by investor sentiment around the regulatory trouble and Indian fintech pos', date='2024-02-07T04:00:46Z', url='https://economictimes.indiatimes.com/markets/stocks/news/paytm-shares-jump-7-after-vijay-shekhar-sharma-meets-rbi-fm-nirmala-sitharaman/articleshow/107476562.cms', source='The Times of India', urlToImage='https://img.etimg.com/thumb/msid-107474793,width-1200,height-630,imgsize-923764,overlay-ettech/photo.jpg', Similarity=None, db_source='newsAPI', nlp_summary=None)]

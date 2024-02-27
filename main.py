@@ -148,7 +148,7 @@ async def newsAI_api_v1(query: str, model: str) -> News_Articles:
     # get news from News_Fetcher
     try:
         if query:
-            get_news = News_Fetcher(query, 25)
+            get_news = News_Fetcher(query, 5)
             response_newsArticles = await get_news.runner()
             logger.info("News articles retrieved successfully")
             logger.info(
