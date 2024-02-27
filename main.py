@@ -151,7 +151,9 @@ async def newsAI_api_v1(query: str, model: str) -> News_Articles:
             get_news = News_Fetcher(query, 7)
             response_newsArticles = await get_news.runner()
             logger.info("News articles retrieved successfully")
-            logger.info(f"Number of news articles retrieved: {len(response_newsArticles)}")
+            logger.info(
+                f"Number of news articles retrieved: {len(response_newsArticles)}"
+            )
         else:
             logger.error("Bad Request - No query provided")
             return JSONResponse(status_code=400, content={"message": "Bad Request"})
