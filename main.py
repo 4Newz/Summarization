@@ -1,7 +1,7 @@
 from typing import List, Optional
 from fastapi import FastAPI
 from pydantic import BaseModel
-from Assistant_Api.summarizer import Summarize
+from Assistant_Api.summarizer import Summarize, SummarizeOllama
 from Similarity.similarity import Similarity
 from newsAPI.open_news_data import News_Fetcher
 from fastapi.responses import JSONResponse
@@ -54,8 +54,17 @@ class Get_Article_Payload(BaseModel):
 
 app = FastAPI()
 
+@app.post("/summarize-ollama")
+async def process_strings(payload: News_Articles):
+    try:
+        summary = SummarizeOllama(payload.news_articles, payload.prompt)
+        return {"summary": summary}
+    except:
+        return {"summary": "lorem ipsum"}
 
-@app.post("/summarize/")
+
+
+@app.post("/summarize")
 async def process_strings(payload: News_Articles):
     # get the list of strings from the JSON file
     try:
@@ -195,9 +204,14 @@ async def newsAI_api_v1(query: str, model: str) -> News_Articles:
             logger.error(f"Error getting summary: {str(e)}")
             return JSONResponse(status_code=500, content={"message": str(e)})
         data.summary = summary
-
+    elif model == "llama2":
+        try:
+            summary = SummarizeOllama(data.news_articles, query)
+            logger.info("Summary retrieved successfully")
+        except Exception as e:
+            logger.error(f"Error getting summary: {str(e)}")
+            return JSONResponse(status_code=500, content={"message": str(e)})
         return data
-
 
 # run the app as asynchrnous lib dosent work with normal run using uvicorn
 HOST = "localhost"

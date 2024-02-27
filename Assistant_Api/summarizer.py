@@ -5,6 +5,7 @@ from openai import OpenAI
 from dotenv import load_dotenv
 import os
 import time
+import ollama
 
 
 
@@ -26,7 +27,29 @@ openai_api_key = os.getenv("OPENAI_API_KEY")
 client = OpenAI()
 
 
-
+def SummarizeOllama(articles, prompt):
+    articleContent = ""
+    for i in range(len(articles)):
+        articleContent += f"{articles[i].date} - {articles[i].heading}\n{articles[i].content}\n"
+    logging.info(f"Article content: {articleContent}")
+    response = ollama.chat(
+        model="llama2",
+        messages=[
+            {
+                'role': 'system',
+                'content': 'You are a professional journalist. Summarize the given articles to form a structured chronological ordered story or news without loss of information, on the topic.' + prompt
+            },
+            {
+                'role': 'user',
+                'content': 'I have the following articles to summarize:\n' + articleContent
+            }
+        ],
+        stream=True
+    )
+    logging.info(f"Ollama response: {response}")
+    summary = response['messages']['content']
+    logging.info(f"Summarized text: {summary}")
+    return summary
 
 
 async def Summarize(articles, prompt):
