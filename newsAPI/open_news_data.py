@@ -70,9 +70,13 @@ class News_Fetcher:
 
         logger.info("Inside get_articles_newsAPI function...")
         # Get the articles from the News API
+
+        keywords = query.split(" ")
+        modified_query = "+".join(keywords)
+        logger.info(f"Modified query: {modified_query}")
         try:
             response = newsapi.get_everything(
-                q=query,
+                q=modified_query,
                 language='en',
                 page_size=number_of_articles,
                 page=1,
@@ -126,10 +130,10 @@ class News_Fetcher:
         # Get the articles from the NewsData API
         try:
             #  modify query to have %20 between words to get more relevant results
-            # keywords = query.split(" ")
-            # modified_query = " AND ".join(keywords)
-            # query = quote(modified_query)
-            articles = newsdataapi.news_api( q= query , language= "en")
+            keywords = query.split(" ")
+            modified_query = "%20".join(keywords)
+            logger.info(f"Modified query: {modified_query}")
+            articles = newsdataapi.news_api( q= modified_query , language= "en")
         except Exception as e:
             logger.error(f"Error getting articles: {str(e)}")
             return None

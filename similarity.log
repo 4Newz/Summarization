@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 2024-02-26 14:27:38,307 - Similarity.similarity - INFO - Running similarity runner
 2024-02-26 14:27:38,308 - Similarity.similarity - INFO - Running cosine runner
 2024-02-26 14:27:38,310 - Similarity.similarity - INFO - Running bert runner
@@ -2065,3 +2066,9 @@
 2024-02-26 22:02:04,069 - Similarity.similarity - INFO - Executed cosine runner
 2024-02-26 22:02:04,069 - Similarity.similarity - INFO - Executed bert runner
 2024-02-26 22:02:05,382 - Similarity.similarity - INFO - Executed sentence transformer runner
+=======
+2024-02-26 16:10:42,121 - Similarity.similarity - INFO - Running similarity runner
+2024-02-26 16:10:42,121 - Similarity.similarity - INFO - Running cosine runner
+2024-02-26 16:10:42,122 - Similarity.similarity - INFO - Running bert runner
+2024-02-26 16:10:42,122 - Similarity.similarity - INFO - Running sentence transformer runner
+>>>>>>> a8d691ddf7f175ccbc20260cf51f28c88cfddf7e
