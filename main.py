@@ -82,7 +82,7 @@ async def get_similarity(payload: Similarity_Payload):
 
             return response
         except Exception as e:
-            max_tries -= 1
+            # max_tries -= 1
             if max_tries == 0:
                 res = {}
                 res["error"] = str(e)
@@ -148,7 +148,7 @@ async def newsAI_api_v1(query: str, model: str) -> News_Articles:
     # get news from News_Fetcher
     try:
         if query:
-            get_news = News_Fetcher(query, 5)
+            get_news = News_Fetcher(query, 7)
             response_newsArticles = await get_news.runner()
             logger.info("News articles retrieved successfully")
             logger.info(f"Number of news articles retrieved: {len(response_newsArticles)}")
@@ -173,7 +173,7 @@ async def newsAI_api_v1(query: str, model: str) -> News_Articles:
         return JSONResponse(status_code=500, content={"message": str(e)})
 
     # print data to log to evaluate the responses
-    logger.info(f"data after chirava: {json.dumps(data.dict(), indent=4)}")
+    # logger.info(f"data after chirava: {json.dumps(data.dict(), indent=4)}")
 
     # get similarity scores
     similarity_retries = 2
@@ -185,7 +185,7 @@ async def newsAI_api_v1(query: str, model: str) -> News_Articles:
             break
         except Exception as e:
             logger.error(f"Error getting similarity scores: {str(e)}")
-            similarity_retries -= 1
+            # similarity_retries -= 1
             if similarity_retries == 0:
                 return JSONResponse(status_code=500, content={"message": str(e)})
             else:

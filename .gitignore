@@ -4,9 +4,12 @@
 *.log
 app.log
 /env
-newsApp.log
+app.log
+chirava.log
+similarity.log
 openAI.log
 
 *.pyc
 ```
 
+open_news_data.log
