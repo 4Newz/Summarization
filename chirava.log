@@ -1,7 +1,59 @@
-2024-02-27 15:02:37,443 - Chirava.chirava - INFO - Running chirava runner....
-2024-02-27 15:02:37,447 - Chirava.chirava - INFO - Scraping article: https://www.cnn.com/2024/02/02/tech/paytm-india-rbi-intl-hnk/index.html
-2024-02-27 15:02:42,322 - Chirava.chirava - INFO - Scraping article: https://www.livemint.com/companies/news/the-paytm-saga-so-far-from-rbi-intervention-to-stock-crash-and-sale-speculation-11707196053279.html
-2024-02-27 15:02:45,163 - Chirava.chirava - INFO - Scraping article: https://economictimes.indiatimes.com/markets/stocks/news/paytm-crisis-makes-investors-hunt-for-other-fertile-fintechs-top-2-stocks-on-radar/articleshow/107424239.cms
-2024-02-27 15:02:47,923 - Chirava.chirava - INFO - Scraping article: https://www.ndtv.com/india-news/paytm-news-paytm-shares-drop-after-rbi-action-against-payments-bank-trigger-meme-fest-4972159
-2024-02-27 15:02:58,713 - Chirava.chirava - INFO - Scraping article: https://economictimes.indiatimes.com/markets/stocks/news/paytm-shares-jump-7-after-vijay-shekhar-sharma-meets-rbi-fm-nirmala-sitharaman/articleshow/107476562.cms
-2024-02-27 15:03:01,301 - Chirava.chirava - INFO - Chirava runner complete and returning result....
+2024-02-27 22:17:57,601 - Chirava.chirava - INFO - Running chirava runner....
+2024-02-27 22:17:57,601 - Chirava.chirava - INFO - Scraping article: https://www.thehindubusinessline.com/markets/stock-market-highlights-16-february-2024/article67849197.ece
+2024-02-27 22:17:59,932 - Chirava.chirava - INFO - Chirava runner complete and returning result....
+2024-02-27 22:21:10,380 - Chirava.chirava - INFO - Running chirava runner....
+2024-02-27 22:21:10,385 - Chirava.chirava - INFO - Scraping article: https://www.theverge.com/2024/1/30/24056132/google-spent-two-billion-on-layoffs-severance-fourth-quarter-earnings-2023
+2024-02-27 22:21:21,821 - Chirava.chirava - INFO - Scraping article: https://www.engadget.com/paypal-is-laying-off-2500-employees-214628203.html
+2024-02-27 22:21:36,671 - Chirava.chirava - ERROR - Error scraping article: https://www.engadget.com/paypal-is-laying-off-2500-employees-214628203.html
+2024-02-27 22:21:36,671 - Chirava.chirava - ERROR - Article `download()` failed with HTTPSConnectionPool(host='www.engadget.com', port=443): Read timed out. on URL https://www.engadget.com/paypal-is-laying-off-2500-employees-214628203.html
+2024-02-27 22:21:36,671 - Chirava.chirava - INFO - Scraping article: https://www.businessinsider.com/google-2-billion-layoffs-severance-2023-earnings-2024-1
+2024-02-27 22:21:45,769 - Chirava.chirava - ERROR - Error scraping article: https://www.businessinsider.com/google-2-billion-layoffs-severance-2023-earnings-2024-1
+2024-02-27 22:21:45,770 - Chirava.chirava - ERROR - Article `download()` failed with HTTPSConnectionPool(host='www.businessinsider.in', port=443): Read timed out. (read timeout=7) on URL https://www.businessinsider.com/google-2-billion-layoffs-severance-2023-earnings-2024-1
+2024-02-27 22:21:45,770 - Chirava.chirava - INFO - Scraping article: https://www.businessinsider.com/tech-layoffs-contagious-get-worse-analyst-2024-2
+2024-02-27 22:21:50,682 - Chirava.chirava - INFO - Scraping article: https://www.businessinsider.com/more-tech-layoffs-to-come-amid-ai-boom-analyst-wedbush-2024-1
+2024-02-27 22:21:58,758 - Chirava.chirava - INFO - Scraping article: https://www.businessinsider.com/salesforce-latest-tech-giant-cut-jobs-700-layoffs-report-2024-1
+2024-02-27 22:22:11,162 - Chirava.chirava - INFO - Scraping article: https://www.businessinsider.com/tech-layoffs-way-down-from-2023-why-so-grim-2024-2
+2024-02-27 22:22:25,004 - Chirava.chirava - ERROR - Error scraping article: https://www.businessinsider.com/tech-layoffs-way-down-from-2023-why-so-grim-2024-2
+2024-02-27 22:22:25,005 - Chirava.chirava - ERROR - Article `download()` failed with HTTPSConnectionPool(host='www.businessinsider.in', port=443): Read timed out. (read timeout=7) on URL https://www.businessinsider.com/tech-layoffs-way-down-from-2023-why-so-grim-2024-2
+2024-02-27 22:22:25,005 - Chirava.chirava - INFO - Scraping article: https://www.androidcentral.com/apps-software/alphabet-q4-2023-earnings-report
+2024-02-27 22:22:29,942 - Chirava.chirava - INFO - Scraping article: https://readwrite.com/paypal-joins-tech-layoff-wave-with-major-workforce-reduction/
+2024-02-27 22:22:31,571 - Chirava.chirava - INFO - Scraping article: https://www.androidcentral.com/apps-software/pixel-launcher-mic-icon-remapped-voice-search
+2024-02-27 22:22:43,102 - Chirava.chirava - INFO - Scraping article: https://www.androidcentral.com/apps-software/google-deprecating-phone-app-nearby-places
+2024-02-27 22:22:50,852 - Chirava.chirava - ERROR - Error scraping article: https://www.androidcentral.com/apps-software/google-deprecating-phone-app-nearby-places
+2024-02-27 22:22:50,852 - Chirava.chirava - ERROR - Article `download()` failed with HTTPSConnectionPool(host='www.androidcentral.com', port=443): Read timed out. (read timeout=7) on URL https://www.androidcentral.com/apps-software/google-deprecating-phone-app-nearby-places
+2024-02-27 22:22:50,852 - Chirava.chirava - INFO - Scraping article: https://www.wired.com/story/apple-vision-pro-crack-in-front-screen/
+2024-02-27 22:22:59,183 - Chirava.chirava - ERROR - Error scraping article: https://www.wired.com/story/apple-vision-pro-crack-in-front-screen/
+2024-02-27 22:22:59,183 - Chirava.chirava - ERROR - Article `download()` failed with HTTPSConnectionPool(host='www.wired.com', port=443): Read timed out. (read timeout=7) on URL https://www.wired.com/story/apple-vision-pro-crack-in-front-screen/
+2024-02-27 22:22:59,183 - Chirava.chirava - INFO - Scraping article: https://www.businessinsider.com/google-tech-layoffs-earnings-impact-ai-search-revenue-2024-1
+2024-02-27 22:23:03,902 - Chirava.chirava - INFO - Scraping article: https://www.businessinsider.com/ai-companies-excuse-job-cuts-tech-layoffs-2024-1
+2024-02-27 22:23:12,680 - Chirava.chirava - ERROR - Error scraping article: https://www.businessinsider.com/ai-companies-excuse-job-cuts-tech-layoffs-2024-1
+2024-02-27 22:23:12,681 - Chirava.chirava - ERROR - Article `download()` failed with HTTPSConnectionPool(host='www.businessinsider.com', port=443): Read timed out. (read timeout=7) on URL https://www.businessinsider.com/ai-companies-excuse-job-cuts-tech-layoffs-2024-1
+2024-02-27 22:23:12,681 - Chirava.chirava - INFO - Scraping article: https://www.businessinsider.com/dream-job-linkedin-laid-off-google-high-salary-2024-1
+2024-02-27 22:23:22,810 - Chirava.chirava - INFO - Scraping article: https://consent.yahoo.com/v2/collectConsent?sessionId=1_cc-session_e9bb0de4-3663-4306-87cf-79699dc65484
+2024-02-27 22:23:26,911 - Chirava.chirava - ERROR - Error scraping article: https://consent.yahoo.com/v2/collectConsent?sessionId=1_cc-session_e9bb0de4-3663-4306-87cf-79699dc65484
+2024-02-27 22:23:26,911 - Chirava.chirava - ERROR - Article `download()` failed with 401 Client Error: Unauthorized for url: https://consent.yahoo.com/v2/collectConsent?sessionId=1_cc-session_e9bb0de4-3663-4306-87cf-79699dc65484 on URL https://consent.yahoo.com/v2/collectConsent?sessionId=1_cc-session_e9bb0de4-3663-4306-87cf-79699dc65484
+2024-02-27 22:23:26,911 - Chirava.chirava - INFO - Scraping article: https://www.androidcentral.com/apps-software/news-weekly-february-3-2024
+2024-02-27 22:23:34,506 - Chirava.chirava - INFO - Scraping article: https://www.businessinsider.com/silicon-valley-biggest-dogfooding-experiment-has-begun-ai-google-microsoft-2024-2
+2024-02-27 22:23:37,433 - Chirava.chirava - INFO - Scraping article: https://www.businessinsider.com/okta-layoffs-job-cuts-ceo-memo-2024-2
+2024-02-27 22:23:42,572 - Chirava.chirava - INFO - Scraping article: https://www.androidcentral.com/apps-software/google-gemini
+2024-02-27 22:23:53,651 - Chirava.chirava - INFO - Scraping article: https://www.businessinsider.com/google-new-ai-tool-highlights-risks-tech-taking-jobs-2024-2
+2024-02-27 22:23:56,215 - Chirava.chirava - INFO - Scraping article: https://www.businessinsider.com/recruiting-priorities-daily-ex-google-recruiter-tasks-inbound-outbound-2024-1
+2024-02-27 22:24:11,368 - Chirava.chirava - ERROR - Error scraping article: https://www.businessinsider.com/recruiting-priorities-daily-ex-google-recruiter-tasks-inbound-outbound-2024-1
+2024-02-27 22:24:11,368 - Chirava.chirava - ERROR - Article `download()` failed with HTTPSConnectionPool(host='www.businessinsider.com', port=443): Read timed out. (read timeout=7) on URL https://www.businessinsider.com/recruiting-priorities-daily-ex-google-recruiter-tasks-inbound-outbound-2024-1
+2024-02-27 22:24:11,368 - Chirava.chirava - INFO - Scraping article: https://www.businessinsider.com/startup-jobs-venture-capital-big-tech-work-2024-2
+2024-02-27 22:24:25,531 - Chirava.chirava - INFO - Scraping article: https://abcnews.go.com/Business/wireStory/us-applications-unemployment-benefits-fall-despite-recent-layoff-107058484
+2024-02-27 22:24:28,302 - Chirava.chirava - ERROR - Error scraping article: https://abcnews.go.com/Business/wireStory/us-applications-unemployment-benefits-fall-despite-recent-layoff-107058484
+2024-02-27 22:24:28,302 - Chirava.chirava - ERROR - Article `download()` failed with 404 Client Error: Not Found for url: https://abcnews.go.com/Business/wireStory/us-applications-unemployment-benefits-fall-despite-recent-layoff-107058484 on URL https://abcnews.go.com/Business/wireStory/us-applications-unemployment-benefits-fall-despite-recent-layoff-107058484
+2024-02-27 22:24:28,302 - Chirava.chirava - INFO - Scraping article: https://consent.yahoo.com/v2/collectConsent?sessionId=1_cc-session_0bbcc33a-85f3-490b-9f19-c77f31e60581
+2024-02-27 22:24:31,380 - Chirava.chirava - ERROR - Error scraping article: https://consent.yahoo.com/v2/collectConsent?sessionId=1_cc-session_0bbcc33a-85f3-490b-9f19-c77f31e60581
+2024-02-27 22:24:31,380 - Chirava.chirava - ERROR - Article `download()` failed with 401 Client Error: Unauthorized for url: https://consent.yahoo.com/v2/collectConsent?sessionId=1_cc-session_0bbcc33a-85f3-490b-9f19-c77f31e60581 on URL https://consent.yahoo.com/v2/collectConsent?sessionId=1_cc-session_0bbcc33a-85f3-490b-9f19-c77f31e60581
+2024-02-27 22:24:31,380 - Chirava.chirava - INFO - Chirava runner complete and returning result....
+2024-02-29 09:54:17,841 - Chirava.chirava - INFO - Running chirava runner....
+2024-02-29 09:54:17,851 - Chirava.chirava - INFO - Scraping article: https://www.bbc.co.uk/news/world-middle-east-68123222
+2024-02-29 09:54:23,401 - Chirava.chirava - INFO - Scraping article: https://www.npr.org/2024/02/08/1229749527/in-gaza-anger-grows-at-hamas
+2024-02-29 09:54:30,094 - Chirava.chirava - INFO - Scraping article: https://www.bbc.co.uk/news/world-middle-east-68141039
+2024-02-29 09:54:31,775 - Chirava.chirava - INFO - Scraping article: https://www.businessinsider.com/the-us-risks-joining-powers-that-failed-to-stop-houthis-2024-2
+2024-02-29 09:54:35,177 - Chirava.chirava - INFO - Scraping article: https://www.npr.org/2024/02/27/1234106750/uncommitted-voters-michigan-primary-arab-muslim-dearborn-hamtramck-detroit
+2024-02-29 09:54:38,337 - Chirava.chirava - INFO - Scraping article: https://www.npr.org/2024/02/14/1231310479/rafah-cease-fire-gaza-israel-hamas-cairo
+2024-02-29 09:54:41,427 - Chirava.chirava - INFO - Scraping article: https://www.npr.org/2024/02/22/1230604077/israel-hamas-war-hostages-prisoners-dead
+2024-02-29 09:54:44,734 - Chirava.chirava - INFO - Chirava runner complete and returning result....
