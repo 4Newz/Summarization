@@ -137,6 +137,7 @@ async def newsAI_api_v1(query: str, model: str) -> News_Articles:
 
 
 async def news_fetch(query: str):
+    # TOFIX minhaj :)
     if query:
         get_news = News_Fetcher(query, 5)
         response_newsArticles = await get_news.runner()
