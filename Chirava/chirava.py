@@ -54,7 +54,7 @@ class Scraper:
         # return type should be List[Article]
         # remove the None values from the list due to errors
         logger.info("Chirava runner complete and returning result....")
-        return [article for article in result if article.content is not None]
+        return [article for article in result if article is not None]
 
 
     async def chirava(self, article_data: Article_Data):

@@ -1,7 +1,7 @@
 from typing import List, Optional
 from fastapi import FastAPI
 from pydantic import BaseModel
-from Assistant_Api.summarizer import Summarize
+from Assistant_Api.summarizer import Summarize, Validate
 from Similarity.similarity import Similarity
 from newsAPI.open_news_data import News_Fetcher
 from fastapi.responses import JSONResponse
@@ -144,7 +144,7 @@ async def get_news_v2(query: str) -> News_Articles:
 
 # combine all the routes into a single route one where news is fetched, then scraped and scored for similarity, with highest similar news in top and then sent to summarizer
 @app.get("/kamisama_tasukete")
-async def newsAI_api_v1(query: str, model: str) -> News_Articles:
+async def newsAI_api_v1(query: str, model: str):
     # get news from News_Fetcher
     try:
         if query:
@@ -203,6 +203,38 @@ async def newsAI_api_v1(query: str, model: str) -> News_Articles:
         data.summary = summary
 
         return data
+
+
+
+
+
+
+
+
+
+
+
+
+
+@app.post("/summary_validation")
+async def validate_summary(data: News_Articles):
+    logger.info("Validating summary")
+    try:
+        response = await Validate(data)
+        logger.info("Summary validated successfully")
+        return response
+
+    except Exception as e:
+        logger.error(f"Error validating summary: {str(e)}")
+        return {"error": str(e)}
+
+
+
+
+
+
+
+
 
 
 # run the app as asynchrnous lib dosent work with normal run using uvicorn

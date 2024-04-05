@@ -74,7 +74,7 @@ class Similarity:
             self.text[i].Similarity = sum(
                 [result[j][i] * weights[j] for j in range(len(result))]
             )
-        logger.info(f"Returning similarity scores: {self.text} ")
+        logger.info("Returning similarity scores")
         return self.text
 
         # output = []

@@ -5,7 +5,8 @@ from openai import OpenAI
 from dotenv import load_dotenv
 import os
 import time
-
+from sklearn.metrics.pairwise import cosine_similarity
+import numpy as np
 
 
 # Configure logging with a custom format
@@ -31,25 +32,25 @@ client = OpenAI()
 
 async def Summarize(articles, prompt):
 
+    logger.info(f"Summarizing articles on the topic: {prompt}")
+
     # Create assistant and log the response using object mapper serialization
     my_assistant = client.beta.assistants.create(
-        instructions = f"You are a professional journalist for a news paper. Summarize the given articles to form a structured chronological ordered story or news on the topic {prompt} without loss of information.",
+        instructions = f"Use the below articles to form a structured ordered story or news on the topic {prompt}. The summary should be concise and coherent to the reader. only contain things that are relevant to the topic.",
         name="NewsAI",
         model="gpt-3.5-turbo-1106",
     )
     logger.info(f"Assistant created: {serialize_assistant(my_assistant)}")
 
-
-
     # conversation thread and log the response using object mapper serialization
     chat_thread = client.beta.threads.create()
     logger.info(f"Chat thread created: {serialize_chat_thread(chat_thread)}")
 
-
-
     # Sending messages to the conversation thread
     for i in range(len(articles)):
         # Format the content
+        # if articles[i].content == "":
+        #     continue
         content = f"{articles[i].date} - {articles[i].heading}\n{articles[i].content}"
 
         thread_message = client.beta.threads.messages.create(
@@ -60,16 +61,12 @@ async def Summarize(articles, prompt):
         # logger.info(f"Thread message sent: {serialize_thread_message(thread_message)}")
         logger.info(f"Thread message sent: {thread_message}")
 
-
-
     # run the assistant and log the response using object mapper serialization 
     run = client.beta.threads.runs.create(
         thread_id=chat_thread.id,
         assistant_id=my_assistant.id
     )
     logger.info(f"Run created: {serialize_run(run)}")
-
-
 
     # Polling loop to check the status of the run
     while True:
@@ -85,8 +82,6 @@ async def Summarize(articles, prompt):
 
         time.sleep(2)  # Wait for 5 seconds before checking again
 
-
-
     # Retrieve the messages from the conversation thread
     messages = client.beta.threads.messages.list(
         thread_id=chat_thread.id,
@@ -94,26 +89,68 @@ async def Summarize(articles, prompt):
     # print(messages.data)
     logger.info(f"Messages retrieved: {serialize_thread_message(messages.data)}")
 
-
     # Retrieve the last message from the conversation thread containing the summarized text
     summarized_text = messages.data[0].content[0].text.value
-
 
     # Delete the conversation thread once it's done
     response = client.beta.threads.delete(chat_thread.id)
     logger.info(f"Thread deleted: {response}")
 
-
     # Delete the assistant once it's done
     response = client.beta.assistants.delete(my_assistant.id)
     logger.info(f"Assistant deleted: {response}")
 
-
     logger.info(f"Summarized text: {summarized_text}")
-
     return summarized_text
 
 
+
+
+
+
+
+
+
+async def Validate(data):
+    dict_articles = {}
+    # create individual embeddings for each article and store them
+    for article in data.news_articles:
+        response = client.embeddings.create(
+            input=article.content,
+            model="text-embedding-3-small"
+        )
+        dict_articles[article.url] = response.data[0].embedding
+
+    # Split the summary into sentences
+    summary_sentences = data.summary.split('. ')
+
+    # Create embeddings for each sentence in the summary
+    sentence_embeddings = []
+    for sentence in summary_sentences:
+        response = client.embeddings.create(
+            input=sentence,
+            model="text-embedding-3-small"
+        )
+        sentence_embeddings.append(response.data[0].embedding)
+
+    # Calculate the cosine similarity between each sentence embedding and each article embedding
+    results = []
+    for sentence, sentence_embedding in zip(summary_sentences, sentence_embeddings):
+        similarities = []
+        for article, article_embedding in dict_articles.items():
+            similarity = cosine_similarity([sentence_embedding], [article_embedding])
+            similarities.append((article, similarity))
+
+        # Find the article with the highest similarity score
+        most_similar_article, max_similarity = max(similarities, key=lambda x: x[1])
+
+        # Extract the heading and URL from the most similar article
+        article_info = {"heading": most_similar_article.heading, "url": most_similar_article.url}
+
+        # Add the sentence, the article info, and the similarity score to the results
+        results.append({"sentence": sentence, "article": article_info, "score": max_similarity[0][0]})
+
+    return results
 
 
 
