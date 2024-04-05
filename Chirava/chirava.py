@@ -77,7 +77,6 @@ class Scraper:
             #     db_source=article_data.db_source,
             #     nlp_summary=self.article.summary
             # )
-
             article_data.content = self.article.text
             article_data.nlp_summary = self.article.summary
 
@@ -88,7 +87,6 @@ class Scraper:
         except Exception as e:
             logger.error(f"Error scraping article: {article_data.url}")
             logger.error(str(e))
-            article_data.content = article_data.content[:-4]
             return article_data
 
     async def response(self):
