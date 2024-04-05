@@ -1,6 +1,11 @@
 import logging
 import json
-from Assistant_Api.object_mapper import serialize_assistant, serialize_chat_thread, serialize_thread_message, serialize_run
+from Assistant_Api.object_mapper import (
+    serialize_assistant,
+    serialize_chat_thread,
+    serialize_thread_message,
+    serialize_run,
+)
 from openai import OpenAI
 from dotenv import load_dotenv
 import os
@@ -11,8 +16,8 @@ import numpy as np
 
 # Configure logging with a custom format
 logger = logging.getLogger(__name__)
-handler = logging.FileHandler('openAI.log')
-formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')
+handler = logging.FileHandler("openAI.log")
+formatter = logging.Formatter("%(asctime)s - %(name)s - %(levelname)s - %(message)s")
 handler.setFormatter(formatter)
 logger.addHandler(handler)
 logger.setLevel(logging.INFO)
@@ -25,9 +30,6 @@ load_dotenv()
 openai_api_key = os.getenv("OPENAI_API_KEY")
 
 client = OpenAI()
-
-
-
 
 
 async def Summarize(articles, prompt):
@@ -63,17 +65,13 @@ async def Summarize(articles, prompt):
 
     # run the assistant and log the response using object mapper serialization 
     run = client.beta.threads.runs.create(
-        thread_id=chat_thread.id,
-        assistant_id=my_assistant.id
+        thread_id=chat_thread.id, assistant_id=my_assistant.id
     )
     logger.info(f"Run created: {serialize_run(run)}")
 
     # Polling loop to check the status of the run
     while True:
-        run = client.beta.threads.runs.retrieve(
-            thread_id=chat_thread.id,
-            run_id=run.id
-        )
+        run = client.beta.threads.runs.retrieve(thread_id=chat_thread.id, run_id=run.id)
         status = run.status
         logger.info(f"Run status: {status}")
 

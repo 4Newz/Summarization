@@ -1,3 +1,5 @@
+/BertModel
+/BertTokenizer
 .venv
 .env
 .vscode

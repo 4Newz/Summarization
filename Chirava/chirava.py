@@ -6,12 +6,11 @@ import logging
 
 
 logger = logging.getLogger(__name__)
-handler = logging.FileHandler('chirava.log')
-formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')
+handler = logging.FileHandler("chirava.log")
+formatter = logging.Formatter("%(asctime)s - %(name)s - %(levelname)s - %(message)s")
 handler.setFormatter(formatter)
 logger.addHandler(handler)
 logger.setLevel(logging.INFO)
-
 
 
 class Article_Data(BaseModel):
@@ -35,7 +34,7 @@ class Article_Data(BaseModel):
             "urlToImage": self.urlToImage,
             "Similarity": self.Similarity,
             "db_source": self.db_source,
-            "nlp_summary": self.nlp_summary
+            "nlp_summary": self.nlp_summary,
         }
 
 
@@ -54,8 +53,7 @@ class Scraper:
         # return type should be List[Article]
         # remove the None values from the list due to errors
         logger.info("Chirava runner complete and returning result....")
-        return [article for article in result if article is not None]
-
+        return [article for article in result if article.content is not None]
 
     async def chirava(self, article_data: Article_Data):
         self.article_data = article_data
@@ -79,7 +77,6 @@ class Scraper:
             #     db_source=article_data.db_source,
             #     nlp_summary=self.article.summary
             # )
-
             article_data.content = self.article.text
             article_data.nlp_summary = self.article.summary
 
@@ -90,9 +87,7 @@ class Scraper:
         except Exception as e:
             logger.error(f"Error scraping article: {article_data.url}")
             logger.error(str(e))
-            return None
-
-
+            return article_data
 
     async def response(self):
         output = {
@@ -103,7 +98,7 @@ class Scraper:
             "authors": [],
             "publish_date": None,
             "top_image": "",
-            "error": None
+            "error": None,
         }
 
         try:
