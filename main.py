@@ -59,7 +59,8 @@ class Reference_Data(BaseModel):
 
 
 class Article_Response(BaseModel):
-    article: str
+    summary: str
+    articles: list[Article]
     reference: Reference_Data
 
 
@@ -172,14 +173,10 @@ def similarity_filter(articles: list[Article], prompt: str, N=3):
     return best_documents
 
 
-async def summarize(articles: list[Article], prompt: str, model: str):
+async def summarize(articles: list[Article], prompt: str, model: str) -> str:
     if model == "gpt3.5":
-        try:
-            summary = await Summarize(articles, prompt)
-            logger.info("Summary retrieved successfully")
-        except Exception as e:
-            logger.error(f"Error getting summary: {str(e)}")
-            return JSONResponse(status_code=500, content={"message": str(e)})
+        summary = await Summarize(articles, prompt)
+        logger.info("Summary retrieved successfully")
 
     return summary
 
@@ -196,7 +193,6 @@ def get_references(summarized: str, articles: list[Article]) -> Reference_Data:
 
     documents = [article.content for article in articles if article.content]
     sentences = summarized.split(".")
-    print(sentences, documents)
     similarity: list[list[int]] = Similarity.document_similarity(
         documents, sentences
     ).tolist()
@@ -219,11 +215,17 @@ async def newsAI_api_v2(query: str, model: str):
 
     data.news_articles = similarity_filter(data.news_articles, query)
 
-    summarized_article = await summarize(data.news_articles, query, model)
+    try:
+        summarized_article = await summarize(data.news_articles, query, model)
+    except Exception as e:
+        logger.error(f"Error getting summary: {str(e)}")
+        return JSONResponse(status_code=500, content={"message": str(e)})
 
     reference = get_references(summarized_article, data.news_articles)
 
-    response = Article_Response(article=summarized_article, reference=reference)
+    response = Article_Response(
+        summary=summarized_article, articles=data.news_articles, reference=reference
+    )
 
     return response
 
