@@ -150,9 +150,8 @@ async def validate_summary(data: News_Articles):
 
 
 async def news_fetch(query: str):
-    # TOFIX minhaj :)
     if query:
-        get_news = News_Fetcher(query, 5)
+        get_news = News_Fetcher(query, 7)
         response_newsArticles = await get_news.runner()
         logger.info("News articles retrieved successfully")
         logger.info(f"Number of news articles retrieved: {len(response_newsArticles)}")
@@ -173,9 +172,16 @@ def similarity_filter(articles: list[Article], prompt: str, N=3):
     return best_documents
 
 
-def summarize(articles: list[Article], prompt: str, model: str):
-    # Todo Shaheen :)
-    return articles[0].content or ""
+async def summarize(articles: list[Article], prompt: str, model: str):
+    if model == "gpt3.5":
+        try:
+            summary = await Summarize(articles, prompt)
+            logger.info("Summary retrieved successfully")
+        except Exception as e:
+            logger.error(f"Error getting summary: {str(e)}")
+            return JSONResponse(status_code=500, content={"message": str(e)})
+
+    return summary
 
 
 # Check the similarity of each sentence in genArticle with usedArticles and map them
@@ -213,7 +219,7 @@ async def newsAI_api_v2(query: str, model: str):
 
     data.news_articles = similarity_filter(data.news_articles, query)
 
-    summarized_article = summarize(data.news_articles, query, model)
+    summarized_article = await summarize(data.news_articles, query, model)
 
     reference = get_references(summarized_article, data.news_articles)
 
