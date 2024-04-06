@@ -136,17 +136,6 @@ async def newsAI_api_v1(query: str, model: str):
         return data
 
 
-
-
-
-
-
-
-
-
-
-
-
 @app.post("/summary_validation")
 async def validate_summary(data: News_Articles):
     logger.info("Validating summary")
@@ -158,14 +147,6 @@ async def validate_summary(data: News_Articles):
     except Exception as e:
         logger.error(f"Error validating summary: {str(e)}")
         return {"error": str(e)}
-
-
-
-
-
-
-
-
 
 
 async def news_fetch(query: str):
@@ -219,6 +200,7 @@ def get_references(summarized: str, articles: list[Article]) -> Reference_Data:
     return Reference_Data(doc_sentence_map=sparsify(doc_sentence_map), sources=sources)
 
 
+#
 @app.get("/generate_article")
 async def newsAI_api_v2(query: str, model: str):
     try:
