@@ -7,7 +7,7 @@ from newsAPI.open_news_data import News_Fetcher
 from fastapi.responses import JSONResponse
 from Chirava.chirava import Scraper
 import logging
-import uvicorn, json
+import uvicorn
 import heapq
 
 # Configure logging with a custom format
@@ -53,9 +53,20 @@ class Get_Article_Payload(BaseModel):
     articles: Optional[List[Article]] = None
 
 
+class Source(BaseModel):
+    url: str
+    image: str
+    heading: str
+
+
+class Doc_Sentence_Map(BaseModel):
+    similarity: float
+    source: int
+
+
 class Reference_Data(BaseModel):
-    doc_sentence_map: list[int | None]
-    sources: list[str]
+    doc_sentence_map: list[Doc_Sentence_Map | None]
+    sources: list[Source]
 
 
 class Article_Response(BaseModel):
@@ -195,10 +206,10 @@ async def summarize(articles: list[Article], prompt: str, model: str) -> str:
 
 # Check the similarity of each sentence in genArticle with usedArticles and map them
 def get_references(summarized: str, articles: list[Article]) -> Reference_Data:
-    def sparsify(arr: list[int]) -> list[int | None]:
+    def sparsify(arr: list[Doc_Sentence_Map]) -> list[Doc_Sentence_Map | None]:
         arr = arr[:]
         for i in range(len(arr) - 1):
-            if arr[i] == arr[i + 1]:
+            if arr[i].source == arr[i + 1].source:
                 arr[i] = None  # type: ignore
 
         return arr  # type: ignore
@@ -209,8 +220,16 @@ def get_references(summarized: str, articles: list[Article]) -> Reference_Data:
         documents, sentences
     ).tolist()
 
-    doc_sentence_map = [line.index(max(line)) for line in similarity]
-    sources = [article.url or "" for article in articles]
+    doc_sentence_map = [
+        Doc_Sentence_Map(similarity=max(line), source=line.index(max(line)))
+        for line in similarity
+    ]
+    print(articles)
+    sources = [
+        Source(heading=article.heading, image=article.urlToImage, url=article.url)
+        for article in articles
+    ]
+    print(sources)
     return Reference_Data(doc_sentence_map=sparsify(doc_sentence_map), sources=sources)
 
 
