@@ -119,20 +119,8 @@ async def newsAI_api_v1(query: str, model: str):
     # # logger.info(f"data after chirava: {json.dumps(data.dict(), indent=4)}")
 
     # get similarity scores
-    similarity_retries = 2
-    while similarity_retries:
-        try:
-            similarity = Similarity(data.prompt, data.news_articles)
-            data.news_articles = await similarity.runner()
-            logger.info("Similarity scores retrieved successfully")
-            break
-        except Exception as e:
-            logger.error(f"Error getting similarity scores: {str(e)}")
-            # # similarity_retries -= 1
-            if similarity_retries == 0:
-                return JSONResponse(status_code=500, content={"message": str(e)})
-            else:
-                similarity_retries -= 1
+
+    data.news_articles = similarity_filter(data.news_articles, data.prompt)
     # data = News_Articles(prompt=query, news_articles=response_similarity)
 
     # get summary
@@ -154,7 +142,7 @@ async def newsAI_api_v1(query: str, model: str):
             return JSONResponse(status_code=500, content={"message": str(e)})
         data.summary = summary
 
-        return data
+    return data
 
 
 @app.post("/summary_validation")
