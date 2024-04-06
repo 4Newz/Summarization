@@ -1,7 +1,7 @@
 from typing import List, Optional
 from fastapi import FastAPI
 from pydantic import BaseModel
-from Assistant_Api.summarizer import Summarize, Validate
+from Assistant_Api.summarizer import Summarize_openAI, Summarize_Gemini
 from Similarity.similarity import Similarity
 from newsAPI.open_news_data import News_Fetcher
 from fastapi.responses import JSONResponse
@@ -127,7 +127,16 @@ async def newsAI_api_v1(query: str, model: str):
     # get summary
     if model == "gpt3.5":
         try:
-            summary = await Summarize(data.news_articles, query)
+            summary = await Summarize_openAI(data.news_articles, query)
+            logger.info("Summary retrieved successfully")
+        except Exception as e:
+            logger.error(f"Error getting summary: {str(e)}")
+            return JSONResponse(status_code=500, content={"message": str(e)})
+        data.summary = summary
+
+    elif model == "gemini":
+        try:
+            summary = Summarize_Gemini(data.news_articles, query)
             logger.info("Summary retrieved successfully")
         except Exception as e:
             logger.error(f"Error getting summary: {str(e)}")
@@ -160,7 +169,7 @@ async def news_fetch(query: str):
     return News_Articles(prompt=query, news_articles=response_newsArticles)
 
 
-# Sort articles by similarity and pick best N articles and return it
+# Sort articles by similarity and pick best N articles and return it1edc 4dws
 def similarity_filter(articles: list[Article], prompt: str, N=3):
     documents = [article.content for article in articles if article.content]
     sentences = [prompt]
@@ -175,9 +184,12 @@ def similarity_filter(articles: list[Article], prompt: str, N=3):
 
 async def summarize(articles: list[Article], prompt: str, model: str) -> str:
     if model == "gpt3.5":
-        summary = await Summarize(articles, prompt)
-        logger.info("Summary retrieved successfully")
+        summary = await Summarize_openAI(articles, prompt)
 
+    elif model == "gemini":
+        summary = Summarize_Gemini(articles, prompt)
+
+    logger.info("Summary retrieved successfully")
     return summary
 
 
