@@ -212,12 +212,16 @@ def get_references(summarized: str, articles: list[Article]) -> Reference_Data:
         Doc_Sentence_Map(similarity=max(line), source=line.index(max(line)))
         for line in similarity
     ]
-    print(articles)
+
     sources = [
-        Source(heading=article.heading, image=article.urlToImage, url=article.url)
+        Source(
+            heading=(article.heading or ""),
+            image=(article.urlToImage or ""),
+            url=(article.url or ""),
+        )
         for article in articles
     ]
-    print(sources)
+
     return Reference_Data(doc_sentence_map=sparsify(doc_sentence_map), sources=sources)
 
 
@@ -228,23 +232,19 @@ async def newsAI_api_v2(query: str, model: str):
         data = await news_fetch(query)
         if len(data.news_articles) == 0:
             raise Exception("No News Found")
-    except Exception as e:
-        logger.error(f"Error getting news articles: {str(e)}")
-        return JSONResponse(status_code=500, content={"message": str(e)})
 
-    data.news_articles = similarity_filter(data.news_articles, query)
+        data.news_articles = similarity_filter(data.news_articles, query)
 
-    try:
         summarized_article = await summarize(data.news_articles, query, model)
+
+        reference = get_references(summarized_article, data.news_articles)
+
+        response = Article_Response(
+            summary=summarized_article, articles=data.news_articles, reference=reference
+        )
     except Exception as e:
-        logger.error(f"Error getting summary: {str(e)}")
-        return JSONResponse(status_code=500, content={"message": str(e)})
-
-    reference = get_references(summarized_article, data.news_articles)
-
-    response = Article_Response(
-        summary=summarized_article, articles=data.news_articles, reference=reference
-    )
+        logger.error(f"Error : {str(e)}")
+        return JSONResponse(status_code=500, content={str(e)})
 
     return response
 
