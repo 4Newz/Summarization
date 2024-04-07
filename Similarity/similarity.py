@@ -153,6 +153,7 @@ class Similarity:
 
     @staticmethod
     def document_similarity(documents: list[str], sentences: list[str]):
+        logger.info("Calculating document similarity")
         model = SentenceTransformer("./MiniLM-L6-v2")
 
         document_embeddings = model.encode(documents, convert_to_tensor=True)

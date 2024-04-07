@@ -145,27 +145,65 @@ async def newsAI_api_v1(query: str, model: str):
     return data
 
 
-@app.post("/summary_validation")
-async def validate_summary(data: News_Articles):
-    logger.info("Validating summary")
-    try:
-        response = await Validate(data)
-        logger.info("Summary validated successfully")
-        return response
 
-    except Exception as e:
-        logger.error(f"Error validating summary: {str(e)}")
-        return {"error": str(e)}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# @app.post("/summary_validation")
+# async def validate_summary(data: News_Articles):
+#     logger.info("Validating summary")
+#     try:
+#         response = await Validate(data)
+#         logger.info("Summary validated successfully")
+#         return response
+
+#     except Exception as e:
+#         logger.error(f"Error validating summary: {str(e)}")
+#         return {"error": str(e)}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 async def news_fetch(query: str):
-    if query:
-        get_news = News_Fetcher(query, 7)
-        response_newsArticles = await get_news.runner()
-        logger.info("News articles retrieved successfully")
-        logger.info(f"Number of news articles retrieved: {len(response_newsArticles)}")
+    if not query:
+        logger.error("Bad Request - No query provided")
+        raise Exception("Bad Request - No query provided")
 
-    return News_Articles(prompt=query, news_articles=response_newsArticles)
+    get_news = News_Fetcher(query, 7)
+    response_newsArticles = await get_news.runner()
+    logger.info("News articles retrieved successfully")
+    logger.info(f"Number of news articles retrieved: {len(response_newsArticles)}")
+
+    data =  News_Articles(prompt=query, news_articles=response_newsArticles)
+
+    scraper = Scraper(data.news_articles)
+    data.news_articles = await scraper.runner()
+    logger.info(f"Chirava scraper response retrieved successfully")
+
+    return data
 
 
 # Sort articles by similarity and pick best N articles and return it1edc 4dws
