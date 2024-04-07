@@ -197,8 +197,16 @@ def get_references(summarized: str, articles: list[Article]) -> Reference_Data:
     def sparsify(arr: list[Doc_Sentence_Map]) -> list[Doc_Sentence_Map | None]:
         arr = arr[:]
         for i in range(len(arr) - 1):
+            similarity_avg = 0
+            count = 0
             if arr[i].source == arr[i + 1].source:
                 arr[i] = None  # type: ignore
+                similarity_avg += arr[i].similarity
+                count += 1
+            else:
+                similarity_avg += arr[i].similarity
+                count += 1
+                arr[i].similarity = similarity_avg / count
 
         return arr  # type: ignore
 
