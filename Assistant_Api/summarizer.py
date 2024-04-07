@@ -44,7 +44,7 @@ async def Summarize_openAI(articles, prompt):
 
     # Create assistant and log the response using object mapper serialization
     my_assistant = client.beta.assistants.create(
-        instructions = f"Use the below articles to form a structured ordered story or news on the topic {prompt}. The summary should be concise and coherent to the reader. only contain things that are relevant to the topic.",
+        instructions = f"Use the below articles to form a structured ordered story or news on the topic {prompt}. The summary should be concise and coherent to the reader. only contain things that are relevant to the topic. minimun 600 words",
         name="NewsAI",
         model="gpt-3.5-turbo-1106",
     )
@@ -133,7 +133,7 @@ def Summarize_Gemini(articles, prompt):
 
     model = genai.GenerativeModel("gemini-1.0-pro")
 
-    query = f"Use the below articles to form a structured ordered story or news on the topic {prompt}. The generated article/story should be detailed to the reader, also only contain things that are relevant to the topic. \n"
+    query = f"Use the below articles to form a structured ordered story or news on the topic {prompt}. The generated article/story should be detailed to the reader, also only contain things that are relevant to the topic. minimun 600 words \n"
 
     for i in range(len(articles)):
         # Format the content

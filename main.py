@@ -207,7 +207,7 @@ async def news_fetch(query: str):
 
 
 # Sort articles by similarity and pick best N articles and return it1edc 4dws
-def similarity_filter(articles: list[Article], prompt: str, N=3):
+def similarity_filter(articles: list[Article], prompt: str, N=5):
     documents = [article.content for article in articles if article.content]
     sentences = [prompt]
     similarity = Similarity.document_similarity(documents, sentences).tolist()[0]
