@@ -10,8 +10,8 @@ from urllib.parse import quote
 
 # Configure logging with a custom format
 logger = logging.getLogger(__name__)
-handler = logging.FileHandler('open_news_data.log')
-formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')
+handler = logging.FileHandler("open_news_data.log")
+formatter = logging.Formatter("%(asctime)s - %(name)s - %(levelname)s - %(message)s")
 handler.setFormatter(formatter)
 logger.addHandler(handler)
 logger.setLevel(logging.INFO)
@@ -35,9 +35,7 @@ class Article(BaseModel):
     urlToImage: Optional[str] = None
     Similarity: Optional[float] = None
     db_source: Optional[str] = None
-
-
-
+    nlp_summary: Optional[str] = None
 
 
 class News_Fetcher:
@@ -52,19 +50,14 @@ class News_Fetcher:
         async def newsDataAPI_runner():
             return self.get_articles_newsDataAPI(self.prompt)
 
-        result = await asyncio.gather(
-            newsAPI_runner(), newsDataAPI_runner()
-        )
+        result = await asyncio.gather(newsAPI_runner(), newsDataAPI_runner())
         output = []
         output.extend(result[0])
         output.extend(result[1])
         return output
 
-
-
     # Function to get articles from the News API
     def get_articles_newsAPI(self, query: str, number_of_articles: int):
-
         # Initialize the NewsApiClient
         newsapi = NewsApiClient(api_key=news_api_key)
 
@@ -77,10 +70,10 @@ class News_Fetcher:
         try:
             response = newsapi.get_everything(
                 q=modified_query,
-                language='en',
+                language="en",
                 page_size=number_of_articles,
                 page=1,
-                sort_by="relevancy"
+                sort_by="relevancy",
             )
         except Exception as e:
             logger.error(f"Error getting articles: {str(e)}")
@@ -89,17 +82,17 @@ class News_Fetcher:
 
         list_of_articles = []
         try:
-            articles_data = response.get('articles', [])
+            articles_data = response.get("articles", [])
             logger.info(f"Articles data: {articles_data}")
             for article_data in articles_data:
                 article = Article(
-                    heading=article_data.get('title'),
-                    content=article_data.get('description'),
-                    date=article_data.get('publishedAt'),
-                    url=article_data.get('url'),
-                    source=article_data.get('source', {}).get('name'),
-                    urlToImage=article_data.get('urlToImage'),
-                    db_source = "newsAPI"
+                    heading=article_data.get("title"),
+                    content=article_data.get("description"),
+                    date=article_data.get("publishedAt"),
+                    url=article_data.get("url"),
+                    source=article_data.get("source", {}).get("name"),
+                    urlToImage=article_data.get("urlToImage"),
+                    db_source="newsAPI",
                 )
                 list_of_articles.append(article)
 
@@ -115,14 +108,8 @@ class News_Fetcher:
 
     # get_articles_newsAPI("covid", 10)
 
-
-
-
-
-
     # Function to get articles from the NewsData API
     def get_articles_newsDataAPI(self, query: str):
-
         # Initialize the NewsDataApiClient
         newsdataapi = NewsDataApiClient(apikey=news_dataio_api_key)
 
@@ -133,7 +120,7 @@ class News_Fetcher:
             keywords = query.split(" ")
             modified_query = "%20".join(keywords)
             logger.info(f"Modified query: {modified_query}")
-            articles = newsdataapi.news_api( q= modified_query , language= "en")
+            articles = newsdataapi.news_api(q=modified_query, language="en")
         except Exception as e:
             logger.error(f"Error getting articles: {str(e)}")
             return None
@@ -142,16 +129,16 @@ class News_Fetcher:
         list_of_articles = []
         db_source = "newsDataio"
         try:
-            articles_data = articles.get('results', [])
+            articles_data = articles.get("results", [])
             for article_data in articles_data:
                 article = Article(
-                    heading=article_data.get('title'),
-                    content=article_data.get('description'),
-                    date=article_data.get('pubDate'),
-                    url=article_data.get('link'),
-                    source=article_data.get('source_id'),
-                    urlToImage=article_data.get('image_url'),
-                    db_source = db_source
+                    heading=article_data.get("title"),
+                    content=article_data.get("description"),
+                    date=article_data.get("pubDate"),
+                    url=article_data.get("link"),
+                    source=article_data.get("source_id"),
+                    urlToImage=article_data.get("image_url"),
+                    db_source=db_source,
                 )
                 list_of_articles.append(article)
 
@@ -166,4 +153,3 @@ class News_Fetcher:
         return articles
 
     # get_articles_newsDataAPI("covid")
-
