@@ -145,48 +145,6 @@ async def newsAI_api_v1(query: str, model: str):
     return data
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-# @app.post("/summary_validation")
-# async def validate_summary(data: News_Articles):
-#     logger.info("Validating summary")
-#     try:
-#         response = await Validate(data)
-#         logger.info("Summary validated successfully")
-#         return response
-
-#     except Exception as e:
-#         logger.error(f"Error validating summary: {str(e)}")
-#         return {"error": str(e)}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 async def news_fetch(query: str):
     if not query:
         logger.error("Bad Request - No query provided")
@@ -197,7 +155,7 @@ async def news_fetch(query: str):
     logger.info("News articles retrieved successfully")
     logger.info(f"Number of news articles retrieved: {len(response_newsArticles)}")
 
-    data =  News_Articles(prompt=query, news_articles=response_newsArticles)
+    data = News_Articles(prompt=query, news_articles=response_newsArticles)
 
     scraper = Scraper(data.news_articles)
     data.news_articles = await scraper.runner()
@@ -272,7 +230,6 @@ def get_references(summarized: str, articles: list[Article]) -> Reference_Data:
     return Reference_Data(doc_sentence_map=sparsify(doc_sentence_map), sources=sources)
 
 
-#
 @app.get("/generate_article")
 async def newsAI_api_v2(query: str, model: str):
     try:
@@ -294,6 +251,12 @@ async def newsAI_api_v2(query: str, model: str):
         return JSONResponse(status_code=500, content={str(e)})
 
     return response
+
+
+@app.get("/query_open_news_data")
+async def getNewsArticles(query):
+    articles = await news_fetch(query)
+    return similarity_filter(articles.news_articles, query)
 
 
 # run the app as asynchrnous lib dosent work with normal run using uvicorn
