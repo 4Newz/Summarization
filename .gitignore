@@ -10,7 +10,7 @@ app.log
 chirava.log
 similarity.log
 openAI.log
-
+./FineTunedBert
 *.pyc
 ```
 
