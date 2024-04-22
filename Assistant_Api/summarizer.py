@@ -35,16 +35,12 @@ client = OpenAI()
 genai.configure(api_key=google_api_key)
 
 
-
-
-
 async def Summarize_openAI(articles, prompt):
-
     logger.info(f"Summarizing articles on the topic: {prompt} using OpenAI")
 
     # Create assistant and log the response using object mapper serialization
     my_assistant = client.beta.assistants.create(
-        instructions = f"Use the below articles to form a structured ordered story or news on the topic {prompt}. The summary should be concise and coherent to the reader. only contain things that are relevant to the topic. minimun 600 words",
+        instructions=f"Use the below articles to form a structured ordered story or news on the topic {prompt}. The summary should be concise and coherent to the reader. only contain things that are relevant to the topic. minimun 600 words",
         name="NewsAI",
         model="gpt-3.5-turbo-1106",
     )
@@ -58,14 +54,17 @@ async def Summarize_openAI(articles, prompt):
     for i in range(len(articles)):
         # Format the content
         if articles[i].Similarity is None or articles[i].Similarity >= 0.5:
-
             # check if the token count of the content is more than 1000
             if len(articles[i].content.split()) > 1000:
                 logger.info(f"Article {i} is too long, using the NLP summary instead")
                 content = f"{articles[i].date} - {articles[i].heading}\n{articles[i].nlp_summary}"
             else:
-                logger.info(f"Article {i} is within the token limit directly using the content")
-                content = f"{articles[i].date} - {articles[i].heading}\n{articles[i].content}"
+                logger.info(
+                    f"Article {i} is within the token limit directly using the content"
+                )
+                content = (
+                    f"{articles[i].date} - {articles[i].heading}\n{articles[i].content}"
+                )
 
             thread_message = client.beta.threads.messages.create(
                 thread_id=chat_thread.id,
@@ -78,7 +77,7 @@ async def Summarize_openAI(articles, prompt):
         else:
             continue
 
-    # run the assistant and log the response using object mapper serialization 
+    # run the assistant and log the response using object mapper serialization
     run = client.beta.threads.runs.create(
         thread_id=chat_thread.id, assistant_id=my_assistant.id
     )
@@ -117,18 +116,7 @@ async def Summarize_openAI(articles, prompt):
     return summarized_text
 
 
-
-
-
-
-
-
-
-
-
-
 def Summarize_Gemini(articles, prompt):
-
     logger.info(f"Summarizing articles on the topic: {prompt} using Gemini")
 
     model = genai.GenerativeModel("gemini-1.0-pro")
@@ -138,14 +126,17 @@ def Summarize_Gemini(articles, prompt):
     for i in range(len(articles)):
         # Format the content
         if articles[i].Similarity is None or articles[i].Similarity >= 0.5:
-
             # check if the token count of the content is more than 2000
             if model.count_tokens(articles[i].content).total_tokens > 2000:
                 logger.info(f"Article {i} is too long, using the NLP summary instead")
                 content = f"{articles[i].date} - {articles[i].heading}\n{articles[i].nlp_summary}"
             else:
-                logger.info(f"Article {i} is within the token limit directly using the content")
-                content = f"{articles[i].date} - {articles[i].heading}\n{articles[i].content}"
+                logger.info(
+                    f"Article {i} is within the token limit directly using the content"
+                )
+                content = (
+                    f"{articles[i].date} - {articles[i].heading}\n{articles[i].content}"
+                )
             query += content + "\n"
 
             logger.info(f"Article {i} added to the query")
@@ -157,59 +148,6 @@ def Summarize_Gemini(articles, prompt):
     response = model.generate_content(query)
     logger.info("Article generated successfully and returned to the user")
     return response.text
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 # async def Validate(data):
@@ -252,6 +190,3 @@ def Summarize_Gemini(articles, prompt):
 #         results.append({"sentence": sentence, "article": article_info, "score": max_similarity[0][0]})
 
 #     return results
-
-
-

@@ -168,7 +168,7 @@ async def news_fetch(query: str):
 def similarity_filter(articles: list[Article], prompt: str, N=5):
     documents = [article.content for article in articles if article.content]
     sentences = [prompt]
-    similarity = Similarity.document_similarity(documents, sentences)
+    similarity = Similarity.document_similarity(documents, sentences)[0]
     best_N_indices = [similarity.index(i) for i in heapq.nlargest(N, similarity)]
 
     best_documents = []
@@ -208,11 +208,12 @@ def get_references(summarized: str, articles: list[Article]) -> Reference_Data:
 
         return arr  # type: ignore
 
+    print("Ethi 0")
     documents = [article.content for article in articles if article.content]
     sentences = summarized.split(".")
     similarity: list[list[int]] = Similarity.document_similarity(
-        documents, sentences
-    ).tolist()
+        documents, sentences, True
+    )
 
     doc_sentence_map = [
         Doc_Sentence_Map(similarity=max(line), source=line.index(max(line)))
@@ -227,7 +228,7 @@ def get_references(summarized: str, articles: list[Article]) -> Reference_Data:
         )
         for article in articles
     ]
-
+    print("ethi 3")
     return Reference_Data(doc_sentence_map=sparsify(doc_sentence_map), sources=sources)
 
 
