@@ -211,7 +211,10 @@ def get_references(summarized: str, articles: list[Article]) -> Reference_Data:
     print("Ethi 0")
     documents = [article.content for article in articles if article.content]
     sentences = summarized.split(".")
-    similarity: list[list[int]] = Similarity.document_similarity(documents, sentences)
+    similarity: list[list[int]] = Similarity.document_similarity(
+        documents, sentences, True
+    )
+
     doc_sentence_map = [
         Doc_Sentence_Map(similarity=max(line), source=line.index(max(line)))
         for line in similarity

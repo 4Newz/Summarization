@@ -165,9 +165,13 @@ class Similarity:
         return response.json()
 
     @staticmethod
-    def document_similarity(documents: list[str], sentences: list[str]):
+    def document_similarity(documents: list[str], sentences: list[str], st_only=False):
         logger.info("Calculating document similarity")
         st = Similarity.st_similarity(documents, sentences).tolist()
+        print("ethi inside 0", st_only)
+        if st_only:
+            return st
+
         result = []
         for i, sentence in enumerate(sentences):
             result.append([])
