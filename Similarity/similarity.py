@@ -167,17 +167,16 @@ class Similarity:
     @staticmethod
     def document_similarity(documents: list[str], sentences: list[str]):
         logger.info("Calculating document similarity")
-        st  = Similarity.st_similarity(documents, sentences).tolist()
+        st = Similarity.st_similarity(documents, sentences).tolist()
         result = []
-        for i,sentence in enumerate(sentences):
+        for i, sentence in enumerate(sentences):
             result.append([])
-            for j,document in enumerate(documents):
-                custom = Similarity.custom_similarity(sentence,document)
+            for j, document in enumerate(documents):
+                custom = Similarity.custom_similarity(sentence, document)
                 if custom:
-                    result[-1].append((st[i][j]+custom)/2)
+                    result[-1].append((st[i][j] + custom) / 2)
                 else:
                     result[-1].append(st[i][j])
-        
 
         return result
 
@@ -186,12 +185,15 @@ class Similarity:
         try:
             model = BertForSTS()
             model.load_state_dict(
-                torch.load("./FineTunedBert/bert-sts.pt", map_location=torch.device("cpu"))
+                torch.load(
+                    "./FineTunedBert/bert-sts.pt", map_location=torch.device("cpu")
+                )
             )
             model.eval()
             tokenizer = tokenizer = BertTokenizer.from_pretrained("bert-base-uncased")
         except Exception:
             return None
+
         def predict_similarity(sentence_pair):
             test_input = tokenizer(
                 sentence_pair,
