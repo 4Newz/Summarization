@@ -1,7 +1,7 @@
 from typing import List, Optional
 from fastapi import FastAPI
 from pydantic import BaseModel
-from Assistant_Api.summarizer import Summarize_openAI, Summarize_Gemini
+from Assistant_Api.summarizer import Summarize_openAI, Summarize_Gemini, ask_question
 from Similarity.similarity import Similarity
 from newsAPI.open_news_data import News_Fetcher
 from fastapi.responses import JSONResponse
@@ -145,6 +145,18 @@ async def newsAI_api_v1(query: str, model: str):
     return data
 
 
+
+
+
+
+
+
+
+
+
+
+
+
 async def news_fetch(query: str):
     if not query:
         logger.error("Bad Request - No query provided")
@@ -208,7 +220,7 @@ def get_references(summarized: str, articles: list[Article]) -> Reference_Data:
 
         return arr  # type: ignore
 
-    print("Ethi 0")
+    # print("Ethi 0")
     documents = [article.content for article in articles if article.content]
     sentences = summarized.split(".")
     similarity: list[list[int]] = Similarity.document_similarity(
@@ -228,8 +240,10 @@ def get_references(summarized: str, articles: list[Article]) -> Reference_Data:
         )
         for article in articles
     ]
-    print("ethi 3")
+    # print("ethi 3")
     return Reference_Data(doc_sentence_map=sparsify(doc_sentence_map), sources=sources)
+
+
 
 
 @app.get("/generate_article")
@@ -242,7 +256,7 @@ async def newsAI_api_v2(query: str, model: str):
         data.news_articles = similarity_filter(data.news_articles, query)
 
         summarized_article = await summarize(data.news_articles, query, model)
-        print((summarized_article))
+
         reference = get_references(summarized_article, data.news_articles)
 
         response = Article_Response(
@@ -255,10 +269,27 @@ async def newsAI_api_v2(query: str, model: str):
     return response
 
 
-@app.get("/query_open_news_data")
-async def getNewsArticles(query):
-    articles = await news_fetch(query)
-    return similarity_filter(articles.news_articles, query)
+
+
+# @app.get("/query_open_news_data")
+# async def getNewsArticles(query):
+#     articles = await news_fetch(query)
+#     return similarity_filter(articles.news_articles, query)
+
+
+
+
+# route to ask question and get answer from gemini using the context and question
+@app.get("/ask_question")
+async def ask_question_api(question: str, paragraph: str):
+    try:
+        response = await ask_question(question, paragraph)
+        logger.info("Question answered successfully")
+    except Exception as e:
+        logger.error(f"Error asking question: {str(e)}")
+        return JSONResponse(status_code=500, content={"message": str(e)})
+
+    return response
 
 
 # run the app as asynchrnous lib dosent work with normal run using uvicorn

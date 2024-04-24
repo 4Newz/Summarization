@@ -116,7 +116,9 @@ async def Summarize_openAI(articles, prompt):
     return summarized_text
 
 
-def Summarize_Gemini(articles, prompt):
+
+
+async def Summarize_Gemini(articles, prompt):
     logger.info(f"Summarizing articles on the topic: {prompt} using Gemini")
 
     model = genai.GenerativeModel("gemini-1.0-pro")
@@ -150,43 +152,27 @@ def Summarize_Gemini(articles, prompt):
     return response.text
 
 
-# async def Validate(data):
-#     dict_articles = {}
-#     # create individual embeddings for each article and store them
-#     for article in data.news_articles:
-#         response = client.embeddings.create(
-#             input=article.content,
-#             model="text-embedding-3-small"
-#         )
-#         dict_articles[article.url] = response.data[0].embedding
 
-#     # Split the summary into sentences
-#     summary_sentences = data.summary.split('. ')
 
-#     # Create embeddings for each sentence in the summary
-#     sentence_embeddings = []
-#     for sentence in summary_sentences:
-#         response = client.embeddings.create(
-#             input=sentence,
-#             model="text-embedding-3-small"
-#         )
-#         sentence_embeddings.append(response.data[0].embedding)
 
-#     # Calculate the cosine similarity between each sentence embedding and each article embedding
-#     results = []
-#     for sentence, sentence_embedding in zip(summary_sentences, sentence_embeddings):
-#         similarities = []
-#         for article, article_embedding in dict_articles.items():
-#             similarity = cosine_similarity([sentence_embedding], [article_embedding])
-#             similarities.append((article, similarity))
+# create a function to sent a question and a paragraph to gemini and get the answer. the paragraph should be the context of the question and the question should be the question to be answered
+async def ask_question(question: str, paragraph: str):
+    model = genai.GenerativeModel("gemini-1.0-pro")
 
-#         # Find the article with the highest similarity score
-#         most_similar_article, max_similarity = max(similarities, key=lambda x: x[1])
+    prompt = "I have a question about the following topic in context. Can you help me with the answer? only answer if you are sure of the answer otherwise let me no if ur not sure\n"
+    prompt += f" Question: {question}\n"
 
-#         # Extract the heading and URL from the most similar article
-#         article_info = {"heading": most_similar_article.heading, "url": most_similar_article.url}
+    # check if the token count of the content is more than 5000
+    if model.count_tokens(paragraph).total_tokens > 5000:
+        logger.info(f"Paragraph is too long")
+        summary = model.generate_content(f"summarize: {paragraph}")
+        prompt += f" Context: {summary.text}\n"
 
-#         # Add the sentence, the article info, and the similarity score to the results
-#         results.append({"sentence": sentence, "article": article_info, "score": max_similarity[0][0]})
+        # wait for 5 seconds before sending the question
+        time.sleep(5)
+    else:
+        prompt += f" Context: {paragraph}\n"
 
-#     return results
+    response = model.generate_content(prompt)
+    return response.text
+
