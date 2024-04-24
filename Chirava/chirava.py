@@ -3,6 +3,8 @@ from pydantic import BaseModel
 from typing import Optional
 import asyncio
 import logging
+import requests
+from bs4 import BeautifulSoup
 
 
 logger = logging.getLogger(__name__)
@@ -55,6 +57,26 @@ class Scraper:
         logger.info("Chirava runner complete and returning result....")
         return [article for article in result if article.content is not None]
 
+    async def fallback_scraper(self, url: str):
+        response = requests.get(url)
+        html = response.content
+
+        soup = BeautifulSoup(html, "html.parser")
+        # Try to find the article tag
+        article_tag = soup.find("article")
+
+        # If article tag exists, extract all p tags inside it
+        if article_tag:
+            paragraphs = article_tag.find_all("p")
+        else:
+            # If article tag doesn't exist, extract all p tags from the HTML content
+            paragraphs = soup.find_all("p")
+
+        result = ""
+        for paragraph in paragraphs:
+            result += paragraph.text
+        return result
+
     async def chirava(self, article_data: Article_Data):
         self.article_data = article_data
 
@@ -85,9 +107,17 @@ class Scraper:
             return article_data
             # return resultant_article
         except Exception as e:
-            logger.error(f"Error scraping article: {article_data.url}")
+            logger.error(f"Error  scraping article: {article_data.url}")
             logger.error(str(e))
-            return article_data
+            try:
+                data = await self.fallback_scraper(article_data.url)
+                article_data.content = data
+                article_data.nlp_summary = data
+            except Exception as e:
+                logger.error(f"Error fall back scraping article: {article_data.url}")
+                logger.error(str(e))
+            finally:
+                return article_data
 
     async def response(self):
         output = {

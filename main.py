@@ -168,7 +168,7 @@ async def news_fetch(query: str):
 def similarity_filter(articles: list[Article], prompt: str, N=5):
     documents = [article.content for article in articles if article.content]
     sentences = [prompt]
-    similarity = Similarity.document_similarity(documents, sentences).tolist()[0]
+    similarity = Similarity.document_similarity(documents, sentences)[0]
     best_N_indices = [similarity.index(i) for i in heapq.nlargest(N, similarity)]
 
     best_documents = []
@@ -193,25 +193,27 @@ async def summarize(articles: list[Article], prompt: str, model: str) -> str:
 def get_references(summarized: str, articles: list[Article]) -> Reference_Data:
     def sparsify(arr: list[Doc_Sentence_Map]) -> list[Doc_Sentence_Map | None]:
         arr = arr[:]
+        similarity_avg = 0
+        count = 0
         for i in range(len(arr) - 1):
-            similarity_avg = 0
-            count = 0
+            similarity_avg += arr[i].similarity
+            count += 1
             if arr[i].source == arr[i + 1].source:
-                similarity_avg += arr[i].similarity
-                count += 1
                 arr[i] = None  # type: ignore
+
             else:
-                similarity_avg += arr[i].similarity
-                count += 1
                 arr[i].similarity = similarity_avg / count
+                similarity_avg = 0
+                count = 0
 
         return arr  # type: ignore
 
+    print("Ethi 0")
     documents = [article.content for article in articles if article.content]
     sentences = summarized.split(".")
     similarity: list[list[int]] = Similarity.document_similarity(
-        documents, sentences
-    ).tolist()
+        documents, sentences, True
+    )
 
     doc_sentence_map = [
         Doc_Sentence_Map(similarity=max(line), source=line.index(max(line)))
@@ -226,7 +228,7 @@ def get_references(summarized: str, articles: list[Article]) -> Reference_Data:
         )
         for article in articles
     ]
-
+    print("ethi 3")
     return Reference_Data(doc_sentence_map=sparsify(doc_sentence_map), sources=sources)
 
 
@@ -240,7 +242,7 @@ async def newsAI_api_v2(query: str, model: str):
         data.news_articles = similarity_filter(data.news_articles, query)
 
         summarized_article = await summarize(data.news_articles, query, model)
-
+        print((summarized_article))
         reference = get_references(summarized_article, data.news_articles)
 
         response = Article_Response(
