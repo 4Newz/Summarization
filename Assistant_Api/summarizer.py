@@ -53,7 +53,7 @@ async def Summarize_openAI(articles, prompt):
     # Sending messages to the conversation thread
     for i in range(len(articles)):
         # Format the content
-        if articles[i].Similarity is None or articles[i].Similarity >= 0.5:
+        if articles[i].Similarity is None or articles[i].Similarity >= 0:
             # check if the token count of the content is more than 1000
             if len(articles[i].content.split()) > 1000:
                 logger.info(f"Article {i} is too long, using the NLP summary instead")
@@ -117,8 +117,6 @@ async def Summarize_openAI(articles, prompt):
     return summarized_text.split(" - ")[1]
 
 
-
-
 async def Summarize_Gemini(articles, prompt):
     logger.info(f"Summarizing articles on the topic: {prompt} using Gemini")
 
@@ -156,14 +154,12 @@ async def Summarize_Gemini(articles, prompt):
     return response.text
 
 
-
-
-
 # create a function to sent a question and a paragraph to gemini and get the answer. the paragraph should be the context of the question and the question should be the question to be answered
 async def ask_question(question: str, paragraph: str):
+    print("started")
     model = genai.GenerativeModel("gemini-1.0-pro")
 
-    prompt = "I have a question about the following topic in context. Can you help me with the answer? only answer if you are sure of the answer otherwise let me no if ur not sure\n"
+    prompt = "I have a question about the following topic with relation to the context. Can you help me with the answer? Always answer with sentences and donot use markdown. \n"
     prompt += f" Question: {question}\n"
 
     # check if the token count of the content is more than 5000
@@ -179,4 +175,3 @@ async def ask_question(question: str, paragraph: str):
 
     response = model.generate_content(prompt)
     return response.text
-

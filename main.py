@@ -185,7 +185,7 @@ async def summarize(articles: list[Article], prompt: str, model: str) -> str:
         summary = await Summarize_openAI(articles, prompt)
 
     elif model == "gemini":
-        summary = Summarize_Gemini(articles, prompt)
+        summary = await Summarize_Gemini(articles, prompt)
 
     logger.info("Summary retrieved successfully")
     return summary
@@ -263,10 +263,17 @@ async def newsAI_api_v2(query: str, model: str):
 
 
 # route to ask question and get answer from gemini using the context and question
-@app.get("/ask_question")
-async def ask_question_api(question: str, paragraph: str):
+
+
+class questionBody(BaseModel):
+    question: str
+    paragraph: str
+
+
+@app.post("/ask_question")
+async def ask_question_api(body: questionBody):
     try:
-        response = await ask_question(question, paragraph)
+        response = await ask_question(body.question, body.paragraph)
         logger.info("Question answered successfully")
     except Exception as e:
         logger.error(f"Error asking question: {str(e)}")
