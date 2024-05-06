@@ -102,6 +102,7 @@ async def Summarize_openAI(articles, prompt):
     logger.info(f"Messages retrieved: {serialize_thread_message(messages.data)}")
 
     # Retrieve the last message from the conversation thread containing the summarized text
+    print(messages)
     summarized_text = messages.data[0].content[0].text.value
 
     # Delete the conversation thread once it's done
@@ -113,7 +114,7 @@ async def Summarize_openAI(articles, prompt):
     logger.info(f"Assistant deleted: {response}")
 
     logger.info(f"Summarized text: {summarized_text}")
-    return summarized_text
+    return summarized_text.split(" - ")[1]
 
 
 
@@ -127,8 +128,11 @@ async def Summarize_Gemini(articles, prompt):
 
     for i in range(len(articles)):
         # Format the content
-        if articles[i].Similarity is None or articles[i].Similarity >= 0.5:
+        if articles[i].Similarity is None or articles[i].Similarity >= 0:
             # check if the token count of the content is more than 2000
+            if len(articles[i].content) == 0:
+                logger.info(f"Article {i} is empty skipping it")
+                continue
             if model.count_tokens(articles[i].content).total_tokens > 2000:
                 logger.info(f"Article {i} is too long, using the NLP summary instead")
                 content = f"{articles[i].date} - {articles[i].heading}\n{articles[i].nlp_summary}"
@@ -146,7 +150,7 @@ async def Summarize_Gemini(articles, prompt):
         else:
             logger.info(f"Article {i} skipped due to low similarity score")
             continue
-
+    print(query)
     response = model.generate_content(query)
     logger.info("Article generated successfully and returned to the user")
     return response.text

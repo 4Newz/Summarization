@@ -145,18 +145,6 @@ async def newsAI_api_v1(query: str, model: str):
     return data
 
 
-
-
-
-
-
-
-
-
-
-
-
-
 async def news_fetch(query: str):
     if not query:
         logger.error("Bad Request - No query provided")
@@ -181,12 +169,14 @@ def similarity_filter(articles: list[Article], prompt: str, N=5):
     documents = [article.content for article in articles if article.content]
     sentences = [prompt]
     similarity = Similarity.document_similarity(documents, sentences)[0]
+    print(similarity)
     best_N_indices = [similarity.index(i) for i in heapq.nlargest(N, similarity)]
 
     best_documents = []
     for index in best_N_indices:
         articles[index].Similarity = similarity[index]
         best_documents.append(articles[index])
+
     return best_documents
 
 
@@ -244,8 +234,6 @@ def get_references(summarized: str, articles: list[Article]) -> Reference_Data:
     return Reference_Data(doc_sentence_map=sparsify(doc_sentence_map), sources=sources)
 
 
-
-
 @app.get("/generate_article")
 async def newsAI_api_v2(query: str, model: str):
     try:
@@ -254,7 +242,6 @@ async def newsAI_api_v2(query: str, model: str):
             raise Exception("No News Found")
 
         data.news_articles = similarity_filter(data.news_articles, query)
-
         summarized_article = await summarize(data.news_articles, query, model)
 
         reference = get_references(summarized_article, data.news_articles)
@@ -269,14 +256,10 @@ async def newsAI_api_v2(query: str, model: str):
     return response
 
 
-
-
 # @app.get("/query_open_news_data")
 # async def getNewsArticles(query):
 #     articles = await news_fetch(query)
 #     return similarity_filter(articles.news_articles, query)
-
-
 
 
 # route to ask question and get answer from gemini using the context and question
